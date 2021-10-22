@@ -25,7 +25,7 @@ names(Mastertable_fluctron)
 ### subdataframe with nutrient informations only ####
 
 nutrients_master <- Mastertable_fluctron %>% 
-  dplyr::select( fluctuation, sampling, planktotron, carbon_umol_l, C_Zoo_µmol_l, Chl.a_invivo,Chl.a_microg_l) %>%
+  dplyr::select( fluctuation, sampling, planktotron, carbon_umol_l, C_Zoo_µmol_l, Chl.a_invivo) %>%
   drop_na(C_Zoo_µmol_l) %>%
   mutate(day = sampling * 2,
          carbo = carbon_umol_l-C_Zoo_µmol_l)
@@ -109,9 +109,9 @@ ggscatter(., y = "C_Zoo_µmol_l", x = "carbo",
 
 #### Stoichiometry ####
 
-nutrients <- dplyr::select(Mastertable_fluctron, fluctuation, sampling, planktotron, C_Zoo_µmol_l, carbon_umol_l, Chl.a_microg_l, nitrate_umol_l, n_ug_l,
-                                  'diss_Nitrat+Nitrit_umol_l', 'diss_Nitrat+Nitrit_ug_l', diss_Silikat_umol_l, diss_Phosphat_umol_l,diss_Phosphat_ug_l,
-                                  POP_micromol_l, POP_microg_l, SiP_micromol_l, srp_micromol_l) %>%
+nutrients <- dplyr::select(Mastertable_fluctron, fluctuation, sampling, planktotron, C_Zoo_µmol_l, carbon_umol_l,  nitrate_umol_l, 
+                                  'diss_Nitrat+Nitrit_umol_l', 'diss_Nitrat+Nitrit_ug_l', diss_Silikat_umol_l, diss_Phosphat_umol_l,diss_Phosphat__ug_l,
+                                  POP_micromol_l,  SiP_micromol_l, srp_micromol_l) %>%
   mutate(carbon_phyto = carbon_umol_l-C_Zoo_µmol_l)
   
 names(nutrients)
@@ -140,18 +140,6 @@ ratio <- nutrients %>%
          ci_l = 10^lower.ci,
          ci_u = 10^upper.ci) #create new column named trans_pred with transformed predictions.
 
-ratio$fluctuation <- factor(as.factor(ratio$fluctuation),levels=c("0", "48", "36", '24', '12', '6'))
-
-ggplot(ratio, aes( x = day, y = mean))+
-  geom_point(aes(fill = fluctuation), pch = 21, size = 3.5, col = 'black')+
-  geom_line(linetype = 'dashed' , aes(col = fluctuation,  group = fluctuation))+
-  geom_errorbar(aes(ymin = mean -se, ymax = mean + se, color = fluctuation), width = .5)+
-  facet_wrap(~ratio, scales = 'free_y')+
-  scale_fill_manual(values = c( '#000000', '#addd8e','#31a354','#41b6c4','#0868ac','#fed976'))+
-  scale_color_manual(values = c( '#000000', '#addd8e','#31a354','#41b6c4','#0868ac','#fed976'))+
-  labs(x = 'Time (in days)', y = 'mean Molar ratio')+
-  theme_classic()
-ggsave(plot = last_plot(), file = 'molar_ratios.png')
 
 #### calculate RUE ####
 # RUE = Biomass (micromol) / TP bzw. TN 
@@ -185,50 +173,48 @@ RUE12 <- nutrients %>%
 RUE12$fluctuation <- factor(as.factor(RUE12$fluctuation),levels=c("0", "48", "36", '24', '12', '6'))
 
 
+
 ##########################################################
-RUE_N <- ggplot(subset(RUE12, nutrient == 'N_RUE'), aes(x = day, y = mean_N))+
-  geom_line(linetype = 'dashed', aes(col = fluctuation))+
-  geom_errorbar(aes(ymin = lower.ci, ymax = upper.ci, color = fluctuation), width = .5,position = position_dodge2(width = .5))+
-  geom_point(aes(fill = fluctuation), pch = 21, col = 'black', size = 3,position = position_dodge2(width = .5))+
-  scale_fill_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
+RUE_N <- ggplot(subset(RUE12, nutrient == 'N_RUE'), aes(x = day, y = mean_N, color = fluctuation))+
+  geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
+  geom_point(aes(color = fluctuation), pch=21,size = 3,position = position_dodge2(width = .5))+
+ # scale_fill_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
-  labs(x = 'Time [days]', y = 'RUE (Total N)')+
+  labs(x = 'Time [days]', y = expression(RUE[N]), color = 'Fluctuation frequency (in h)' )+
   theme( panel.background = element_rect(fill = NA), 
          panel.border= element_rect(colour = "black", fill=NA, size=1),
          strip.background = element_rect(color ='black', fill = 'white'),
          strip.text = element_text(face = 'bold'),
          legend.background = element_blank(),
-         legend.position  ='none',
+         legend.position  ='bottom',
          legend.key = element_blank(),
          text = element_text(size=18))
 RUE_N
 
 
-RUE_P <- ggplot(subset(RUE12, nutrient == 'P_RUE'), aes(x = day, y = mean_N))+
-  geom_line(linetype = 'dashed', aes(col = fluctuation))+
-  geom_errorbar(aes(ymin = lower.ci, ymax = upper.ci, color = fluctuation), width = .5,position = position_dodge2(width = .5))+
-  geom_point(aes(fill = fluctuation), pch = 21, col = 'black', size = 3,position = position_dodge2(width = .5))+
-  scale_fill_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
+RUE_P <- ggplot(subset(RUE12, nutrient == 'P_RUE'), aes(x = day, y = mean_N, color = fluctuation))+
+  geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
+  geom_point(aes(color = fluctuation), pch = 21,  size = 3,position = position_dodge2(width = .5))+
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
-  labs(x = 'Time [days]', y = 'RUE (Total P)')+
+  labs(x = 'Time [days]', y = expression(RUE[P]), color = 'Fluctuation frequency (in h)')+
   theme( panel.background = element_rect(fill = NA), 
          panel.border= element_rect(colour = "black", fill=NA, size=1),
          strip.background = element_rect(color ='black', fill = 'white'),
          strip.text = element_text(face = 'bold'),
          legend.background = element_blank(),
-         legend.position  ='none',
+         legend.position  ='bottom',
          legend.key = element_blank(),
          text = element_text(size=18))
 RUE_P
 
 plot_grid(RUE_N, RUE_P,labels=c("A","B", 'C', 'D'),ncol = 2, label_size = 17.5, hjust = 0, vjust = 1.2)
-ggsave(plot = last_plot(), file = 'RUE.png', width = 9, height = 4)
+ggsave(plot = last_plot(), file = 'RUE.png', width = 12, height = 4)
 
-CN <- ggplot(subset(ratio, ratio == 'CN') , aes( x = day, y = mean))+
-  geom_line(linetype = 'dashed' , aes(col = fluctuation,  group = fluctuation))+
-  geom_errorbar(aes(ymin = lower.ci, ymax =upper.ci , color = fluctuation), width = .5,position = position_dodge2(width = .5))+
-  geom_point(aes(fill = fluctuation), pch = 21, size = 3, col = 'black',position = position_dodge2(width = .5))+
-  scale_fill_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
+ratio$fluctuation <- factor(as.factor(ratio$fluctuation),levels=c("0", "48", "36", '24', '12', '6'))
+
+CN <- ggplot(subset(ratio, ratio == 'CN') , aes( x = day, y = mean,color = fluctuation))+
+  geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
+  geom_point(aes(color = fluctuation), pch = 21,  size = 3,position = position_dodge2(width = .5))+
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
   labs(x = ' ', y = 'C:N ratio')+
   theme( panel.background = element_rect(fill = NA),
@@ -241,11 +227,9 @@ CN <- ggplot(subset(ratio, ratio == 'CN') , aes( x = day, y = mean))+
          text = element_text(size=18))
 CN
 
-CP <- ggplot(subset(ratio, ratio == 'CP') , aes( x = day, y = mean))+
-  geom_line(linetype = 'dashed' , aes(col = fluctuation,  group = fluctuation))+
-  geom_errorbar(aes(ymin = lower.ci, ymax = upper.ci, col = fluctuation), width = .5,position = position_dodge2(width = .5))+
-  geom_point(aes(fill = fluctuation), pch = 21, size = 3, col = 'black',position = position_dodge2(width = .5))+
-  scale_fill_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
+CP <- ggplot(subset(ratio, ratio == 'CP') , aes( x = day, y = mean,color = fluctuation))+
+  geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
+  geom_point(aes(color = fluctuation), pch = 21,  size = 3,position = position_dodge2(width = .5))+
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
   labs(x = '', y = 'C:P ratio')+
   theme( panel.background = element_rect(fill = NA), 
@@ -258,11 +242,9 @@ CP <- ggplot(subset(ratio, ratio == 'CP') , aes( x = day, y = mean))+
          text = element_text(size=18))
 CP
 
-CSi <- ggplot(subset(ratio, ratio == 'CSi') , aes( x = day, y = mean))+
-  geom_line(linetype = 'dashed' , aes(col = fluctuation,  group = fluctuation))+
-  geom_errorbar(aes(ymin = lower.ci, ymax = upper.ci, col = fluctuation), width = .5,position = position_dodge2(width = .5))+
-  geom_point(aes(fill = fluctuation), pch = 21, size = 3, col = 'black',position = position_dodge2(width = .5))+
-  scale_fill_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
+CSi <- ggplot(subset(ratio, ratio == 'CSi') , aes( x = day, y = mean,color = fluctuation))+
+  geom_smooth(method = lm, se = F,formula =  y ~ x, size = 1)+  
+  geom_point(aes(color = fluctuation), pch = 21,  size = 3,position = position_dodge2(width = .5))+
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
   labs(x = 'Time [days]', y = 'C:Si ratio', color = 'Fluctuation frequency (in h)',fill = 'Fluctuation frequency (in h)')+
   theme( panel.background = element_rect(fill = NA), 
@@ -275,11 +257,9 @@ CSi <- ggplot(subset(ratio, ratio == 'CSi') , aes( x = day, y = mean))+
          text = element_text(size=18))
 CSi
 
-NP <- ggplot(subset(ratio, ratio == 'NP') , aes( x = day, y = mean))+
-  geom_line(linetype = 'dashed' , aes(col = fluctuation,  group = fluctuation))+
-  geom_errorbar(aes(ymin = lower.ci, ymax = upper.ci, col = fluctuation), width = .5,position = position_dodge2(width = .5))+
-  geom_point(aes(fill = fluctuation), pch = 21, size = 3, col = 'black',position = position_dodge2(width = .5))+
-  scale_fill_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
+NP <- ggplot(subset(ratio, ratio == 'NP') , aes( x = day, y = mean,color = fluctuation))+
+  geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
+  geom_point(aes(color = fluctuation), pch = 21,  size = 3,position = position_dodge2(width = .5))+
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
   labs(x = 'Time [days]', y = 'N:P ratio', color = 'Fluctuation frequency (in h)',fill = 'Fluctuation frequency (in h)')+
   theme( panel.background = element_rect(fill = NA), 
@@ -318,11 +298,9 @@ drop_na(mean_N)
   diss$fluctuation <- factor(as.factor(diss$fluctuation),levels=c("0", "48", "36", '24', '12', '6'))
 
 
-dissN <- ggplot(subset(diss, nutrient == 'diss_N') , aes( x = day, y = mean_N))+
-  geom_line(linetype = 'dashed' , aes(col = fluctuation,  group = fluctuation))+
-  geom_errorbar(aes(ymin = lower.ci, ymax = upper.ci, col = fluctuation), width = .5,position = position_dodge2(width = .5))+
-  geom_point(aes(fill = fluctuation), pch = 21, size = 3, col = 'black',position = position_dodge2(width = .5))+
-  scale_fill_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
+dissN <- ggplot(subset(diss, nutrient == 'diss_N') , aes( x = day, y = mean_N,color = fluctuation))+
+  geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
+  geom_point(aes(color = fluctuation), pch = 21,  size = 3,position = position_dodge2(width = .5))+
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
   labs(x = 'Time [days]', y = expression(dissolved~N~'['~mu*mol*~L^-1~']'), color = 'Fluctuation frequency (in h)',fill = 'Fluctuation frequency (in h)')+
   theme( panel.background = element_rect(fill = NA), 
@@ -335,11 +313,9 @@ dissN <- ggplot(subset(diss, nutrient == 'diss_N') , aes( x = day, y = mean_N))+
          text = element_text(size=18))
 dissN
 
-dissP <- ggplot(subset(diss, nutrient == 'diss_P') , aes( x = day, y = mean_N))+
-  geom_line(linetype = 'dashed' , aes(col = fluctuation,  group = fluctuation))+
-  geom_errorbar(aes(ymin = lower.ci, ymax = upper.ci, col = fluctuation), width = .5,position = position_dodge2(width = .5))+
-  geom_point(aes(fill = fluctuation), pch = 21, size = 3, col = 'black',position = position_dodge2(width = .5))+
-  scale_fill_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
+dissP <- ggplot(subset(diss, nutrient == 'diss_P') , aes( x = day, y = mean_N,color = fluctuation))+
+  geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
+  geom_point(aes(color = fluctuation), pch = 21,  size = 3,position = position_dodge2(width = .5))+
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
   labs(x = 'Time [days]', y = expression(dissolved~P~'['~mu*mol*~L^-1~']'), color = 'Fluctuation frequency (in h)',fill = 'Fluctuation frequency (in h)')+
   theme( panel.background = element_rect(fill = NA), 
@@ -352,11 +328,9 @@ dissP <- ggplot(subset(diss, nutrient == 'diss_P') , aes( x = day, y = mean_N))+
          text = element_text(size=18))
 dissP
 
-dissSi <- ggplot(subset(diss, nutrient == 'diss_Si') , aes( x = day, y = mean_N))+
-  geom_line(linetype = 'dashed' , aes(col = fluctuation,  group = fluctuation))+
-  geom_errorbar(aes(ymin = lower.ci, ymax = upper.ci, col = fluctuation), width = .5,position = position_dodge2(width = .5))+
-  geom_point(aes(fill = fluctuation), pch = 21, size = 3, col = 'black',position = position_dodge2(width = .5))+
-  scale_fill_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
+dissSi <- ggplot(subset(diss, nutrient == 'diss_Si') , aes( x = day, y = mean_N,color = fluctuation))+
+  geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
+  geom_point(aes(color = fluctuation), pch = 21,  size = 3,position = position_dodge2(width = .5))+
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
   labs(x = 'Time [days]', y = expression(dissolved~Si~'['~mu*mol*~L^-1~']'), color = 'Fluctuation frequency (in h)',fill = 'Fluctuation frequency (in h)')+
   theme( panel.background = element_rect(fill = NA), 
@@ -425,7 +399,7 @@ diversity_BV <- shannon_BV %>%
   select(MC, fluctuation, sampling, evenness, no, shan,simpson) 
 
 
-# Data Wrangling for LMM #
+# Data Wrangling  #
 diversity <- shannon_BV %>%
   ungroup() %>%
   select(MC, fluctuation, sampling, evenness, no, shan,simpson) %>%
@@ -633,9 +607,8 @@ ggplot(rel_BV, aes( x = day, y = rel_V))+
           legend.position  ='bottom',
           legend.key = element_blank(),
           text = element_text(size=12))
-ggsave(plot=last_plot(), file = 'rel_ab_perspecies.png', width = 11, height = 8)
-
-##############################################################################
+#ggsave(plot=last_plot(), file = 'rel_ab_perspecies.png', width = 11, height = 8)
+ ##############################################################################
 #### Table for phytoplankton and zooplankton biomass ####
 #data including mean and CI ####
 TableData<-Mastertable_fluctron %>%
