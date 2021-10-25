@@ -546,6 +546,88 @@ M1.lm<-lm(logSimpson~interval*day, data =diversity)
 anova(M1.lm) #no sign. effects
 R2.lik(M1.lm)
 
+#### ANOSIM AND SIMPER TEST ####
+#https://jkzorz.github.io/2019/06/11/ANOSIM-test.html
+
+# install packages
+library(tidyverse)
+library(vegan)
+
+### Start ####
+# first import your data and bring them in the correct format
+# to implement them in your anosim, we need a matrix with our values (species/pigment names) as headers
+# second we need a dataframe, which still contains all our explanatory variables such as sampling, treatment usw
+
+
+#### Step 1: import datasets####
+data <- read_delim("~/Desktop/MA/MA_Rcode/project_data/phyto_new.csv", 
+                   ";", escape_double = FALSE, col_types = cols(date = col_character()), 
+                   locale = locale(decimal_mark = ","), 
+                   trim_ws = TRUE) %>%
+  drop_na(MC)
+
+#check your importt:
+View(data)
+str(data)
+
+#change variable format to numeric 
+data$cells_ml <- as.numeric(gsub(",", ".", data$cells_ml))
+## merge with treatment information
+treatments <- read.csv2('~/Desktop/MA/MA_Rcode/project_data/treatments_units.csv')
+str(treatments)
+names(treatments) = c('MC', 'fluctuation', 'treatment')
+rich <- left_join(data, treatments, by = c('MC')) %>%
+  separate(species, into = c('genus', 'species'), ' ')
+
+
+##### Step 2: get data in the right format ####
+# create matrix and dataframe with necessary informations
+
+rel_BV <- rich%>%
+  #filter(sampling ==6)%>%
+  mutate(species_id = paste(genus, species, sep = '_'))%>% #create a species id column
+  group_by(treatment, fluctuation, sampling, MC)%>% #groups after MC, treatment, sampling etc
+  mutate(sum = sum(cells_ml, na.rm = T), #calculate sum and relative contribution of each species/pigment
+         rel_V = cells_ml/sum) %>%
+  ungroup()%>%
+  dplyr::select(sampling, fluctuation, MC, species_id,rel_V) %>% #select only important columns
+  drop_na(rel_V) %>% #remove NAs from the dataset
+  mutate(interval = 48/fluctuation, #interval and data columns as explanatory variables
+         day = sampling *2) %>% 
+  spread(key = species_id, value = rel_V) #wide format
+
+rel_BV[is.na(rel_BV)] <-0 #exchange NA with 0
+rel_BV$interval[is.infinite(rel_BV$interval)] <-0 #infinite values shall be 0 for interval
+
+#create my data Matrix
+Data <- dplyr::select(rel_BV, -sampling,-day, -fluctuation, -MC, -interval)#remove grouping variables
+Data <- as.matrix(Data) #create matrix
+
+####Step 3: ANOSIM####
+anosim(Data, rel_BV$day, permutations = 999, distance = "bray", strata = NULL,
+       parallel = getOption("mc.cores"))
+
+### interpretation: The divisor is chosen so that R will be in the interval -1 … +1, value 0 indicating completely random grouping.
+#An R value close to “1.0” suggests dissimilarity between groups while an R value close to “0” suggests an even distribution of high and low ranks within and between groups”
+## R signif greater than 0.05, means that there is no statistical difference between the microbial communities in your groups.
+
+# treatment as grouping
+anosim(Data, rel_BV$fluctuation, permutations = 999, distance = "bray", strata = NULL,
+       parallel = getOption("mc.cores"))
+
+# time as grouping
+anosim(Data, rel_BV$day, permutations = 999, distance = "bray", strata = NULL,
+       parallel = getOption("mc.cores"))
+
+#An R value close to  “0” suggests an even distribution of high and low ranks within and between groups”
+#My significance value is much lower than 0.05
+#Therefore, there is a statistically significant difference in my microbial communities based on the grouping “Time”.
+
+simper(Data, rel_BV$day, permutations = 0, trace = FALSE,
+       parallel = getOption("mc.cores"))
+# greater than 70% is required to say that groups are different from each other
+
+
 
 #### Phytoplankton POC GAMM ####
 ## Model formulation using GAMM
