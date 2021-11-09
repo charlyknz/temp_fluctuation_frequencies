@@ -22,6 +22,7 @@ str(Mastertable_fluctron)
 names(Mastertable_fluctron)
 
 
+
 ### subdataframe with nutrient informations only ####
 
 nutrients_master <- Mastertable_fluctron %>% 
@@ -31,13 +32,13 @@ nutrients_master <- Mastertable_fluctron %>%
          carbo = carbon_umol_l-C_Zoo_µmol_l)
 names(nutrients_master)
 
-#calculate how much percent zoo carbon weights of total c
+#calculate how much percent zoo carbon amounts of total c
 sum(nutrients_master$C_Zoo_µmol_l)/sum(nutrients_master$carbon_umol_l)
 
 #change fluctuation to factor to adjust coloring
 nutrients_master$fluctuation <- factor(as.factor(nutrients_master$fluctuation),levels=c("0", "48", "36", '24', '12', '6'))
 
-#### Phyto- & Zooplankton ####
+#### Phyto- & Zooplankton biomass ####
 # total C plot
 total <- ggplot(nutrients_master, aes(x = day, y = carbon_umol_l, color = as.factor(fluctuation), group = fluctuation))+
   geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
@@ -93,7 +94,7 @@ zoo
 #ggsave(plot= zoo, file = 'Zooplankton_growthrates_POC_lm.png', width = 6, height = 5)
 
 plot_grid(total, phyto, zoo,  labels=c("A","B", 'C'),ncol = 3, label_size = 18, hjust = 0, vjust = 0.95)
-ggsave(plot = last_plot(), file = 'Biomass.png', width = 17, height = 6)
+#ggsave(plot = last_plot(), file = 'Biomass.png', width = 17, height = 6)
 
 # correlation plot zoo and phyto c
 zoophytocorr<-nutrients_master %>%
@@ -109,6 +110,7 @@ ggscatter(., y = "C_Zoo_µmol_l", x = "carbo",
 
 #### Stoichiometry ####
 
+#subdataframe 
 nutrients <- dplyr::select(Mastertable_fluctron, fluctuation, sampling, planktotron, C_Zoo_µmol_l, carbon_umol_l,  nitrate_umol_l, 
                                   'diss_Nitrat+Nitrit_umol_l', 'diss_Nitrat+Nitrit_ug_l', diss_Silikat_umol_l, diss_Phosphat_umol_l,diss_Phosphat__ug_l,
                                   POP_micromol_l,  SiP_micromol_l, srp_micromol_l) %>%
@@ -134,14 +136,14 @@ ratio <- nutrients %>%
             se = sd/sqrt(n())) %>%
   drop_na(mean) %>%
   mutate(day = sampling *2) %>%
-  mutate(lower.ci = mean - 1.96*se/sqrt(n()),
+  mutate(lower.ci = mean - 1.96*se/sqrt(n()), #calculate CIs
          upper.ci = mean + 1.96*se/sqrt(n()),
          trans = 10^mean, 
          ci_l = 10^lower.ci,
          ci_u = 10^upper.ci) #create new column named trans_pred with transformed predictions.
 
 
-#### calculate RUE ####
+#### calculate RUE and Molar ratios ####
 # RUE = Biomass (micromol) / TP bzw. TN 
 
 # 1. calculate Total Phosphoros/ Nitrate
@@ -172,9 +174,8 @@ RUE12 <- nutrients %>%
 
 RUE12$fluctuation <- factor(as.factor(RUE12$fluctuation),levels=c("0", "48", "36", '24', '12', '6'))
 
+#### RUE plots ####
 
-
-##########################################################
 RUE_N <- ggplot(subset(RUE12, nutrient == 'N_RUE'), aes(x = day, y = mean_N, color = fluctuation))+
   geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
   geom_point(aes(color = fluctuation), pch=21,size = 3,position = position_dodge2(width = .5))+
@@ -208,8 +209,10 @@ RUE_P <- ggplot(subset(RUE12, nutrient == 'P_RUE'), aes(x = day, y = mean_N, col
 RUE_P
 
 plot_grid(RUE_N, RUE_P,labels=c("A","B", 'C', 'D'),ncol = 2, label_size = 17.5, hjust = 0, vjust = 1.2)
-ggsave(plot = last_plot(), file = 'RUE.png', width = 12, height = 4)
+#ggsave(plot = last_plot(), file = 'RUE.png', width = 12, height = 4)
 
+
+#### Molar ratio plots####
 ratio$fluctuation <- factor(as.factor(ratio$fluctuation),levels=c("0", "48", "36", '24', '12', '6'))
 
 CN <- ggplot(subset(ratio, ratio == 'CN') , aes( x = day, y = mean,color = fluctuation))+
@@ -295,7 +298,9 @@ diss <- Mastertable_fluctron %>%
          ci_l = 10^lower.ci,
          ci_u = 10^upper.ci) %>%#create new column named trans_pred with transformed predictions.
 drop_na(mean_N)
-  diss$fluctuation <- factor(as.factor(diss$fluctuation),levels=c("0", "48", "36", '24', '12', '6'))
+
+#check levels 
+diss$fluctuation <- factor(as.factor(diss$fluctuation),levels=c("0", "48", "36", '24', '12', '6'))
 
 
 dissN <- ggplot(subset(diss, nutrient == 'diss_N') , aes( x = day, y = mean_N,color = fluctuation))+
@@ -344,7 +349,7 @@ dissSi <- ggplot(subset(diss, nutrient == 'diss_Si') , aes( x = day, y = mean_N,
 dissSi
 
 plot_grid(dissN, dissP,dissSi, labels=c("A","B", 'C', 'D'),ncol = 3, label_size = 18, hjust = 0, vjust = 1)
-ggsave(plot = last_plot(), file = 'DissNutrients.png', width = 9, height = 4)
+#ggsave(plot = last_plot(), file = 'DissNutrients.png', width = 9, height = 4)
 
 #### Phytoplankton Diversity ####
 
@@ -383,38 +388,43 @@ shannon_BV <- all_data %>%
 shannon_BV$fluctuation[is.na(shannon_BV$fluctuation)] <- 0
 shannon_BV[is.na(shannon_BV)] <- 0
 
-##calculate shannon diversity index
+##calculate shannon and inverse simpson diversity index
 shannon_BV$shan = diversity(shannon_BV[, -c(1:4)], MARGIN = 1, index='shannon') #new column containing the calculated shannon index
 shannon_BV <- select(shannon_BV, treatment, sampling, fluctuation, MC, shan,everything() )
 shannon_BV$simpson = diversity(shannon_BV[, -c(1:5)], MARGIN = 1, index='invsimpson') #new column containing the calculated shannon index
 shannon_BV <- select(shannon_BV, treatment, sampling, fluctuation, MC, shan, simpson,everything() )
-## calculate species richness
+
+## calculate species richness and evenness
 absence_presence <- decostand(shannon_BV[, -c(1:6)], method= 'pa', na.rm=T) #df giving absence/presence data using decostand function
 shannon_BV$no = apply(absence_presence, MARGIN = 1, FUN = sum) #new column containing the sum of species present per side (by row = MARGIN = 1)
-
 shannon_BV$evenness = shannon_BV$shan/log(shannon_BV$no)
 
-diversity_BV <- shannon_BV %>%
-  ungroup() %>%
-  select(MC, fluctuation, sampling, evenness, no, shan,simpson) 
 
-
-# Data Wrangling  #
+# Data Wrangling - reduce dataset in complexity #
 diversity <- shannon_BV %>%
   ungroup() %>%
   select(MC, fluctuation, sampling, evenness, no, shan,simpson) %>%
   mutate(day = 2*sampling,
          dayname = as.factor(day)) %>%
   mutate(log = log(no))
+
+#change levels
 diversity$fluctuation <- factor(as.factor(diversity$fluctuation),levels=c("0", "48", "36", '24', '12', '6'))
 
-#plot for species richness or shannon
-specRich<-ggplot(diversity, aes(x = sampling, y = no, group = fluctuation)) +
+#richness plots with raw data
+ggplot(diversity, aes(x = sampling, y = no, group = fluctuation)) +
   geom_point(aes(color = fluctuation), pch =21, size=3)+
+  geom_smooth(aes(color = fluctuation),method = lm, se = F,formula =  y ~ x, size = 1)+  
+  scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))
+  
+
+#plot for species richness or shannon
+specRich<-ggplot(diversity, aes(x = sampling, y = log, group = fluctuation)) +
+  geom_point(aes(color = fluctuation), position = position_dodge(width = .5),pch =21, size=3)+
   geom_smooth(aes(color = fluctuation),method = lm, se = F,formula =  y ~ x, size = 1)+  
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
   labs(x = 'Time [days]', y = 'Ln species richness', color = 'Fluctuation frequency (in h)')+
-  scale_y_continuous(limits = c(8,20), breaks = seq(8,20,2))+
+  scale_y_continuous(limits = c(2,3), breaks = c(2,2.5,3))+
   theme( panel.background = element_rect(fill = NA), 
          panel.border= element_rect(colour = "black", fill=NA, size=0.5),
          strip.background = element_rect(color ='black', fill = 'white'),
@@ -444,7 +454,7 @@ specSimp
 #ggsave(plot = specSimp, width = 6, height = 4,file = 'SimpsonIndex_counting.png')
 
 
-#### compositional turnover ####
+#### compositional turnover - bray curtis ####
 ## import data ###
 counts <- read_delim("~/Desktop/MA/MA_Rcode/project_data/phyto_new.csv", 
                      ";", escape_double = FALSE, col_types = cols(date = col_character()), 
@@ -547,9 +557,9 @@ distance <- ggplot(data.dist1, aes(x = sampling2, y = mean.dist, group = Fluctua
          text = element_text(size=12))
 #save plots in grid
 plot_grid(specRich, specSimp, distance, labels=c("A","B", 'C'),ncol = 3, label_size = 18, hjust = 0, vjust = 0.95)
-ggsave(plot = last_plot(), file = 'specDiv.png', width = 14, height = 5)
+#ggsave(plot = last_plot(), file = 'specDiv.png', width = 14, height = 5)
 
-#### stacked barplot ####
+#### composition: stacked barplot ####
 #import  data 
 counts <- read_delim("~/Desktop/MA/MA_Rcode/project_data/phyto_new.csv", 
                      ";", escape_double = FALSE, col_types = cols(date = col_character()), 
@@ -591,7 +601,7 @@ label = c('0' = "constant",'48' = "Fluctuating 48", '36'= "Fluctuating 36", '24'
 
 
 #barplot
-ggplot(rel_BV, aes( x = day, y = rel_V))+
+species <- ggplot(rel_BV, aes( x = day, y = rel_V))+
   geom_col(aes(fill = species))+
   scale_color_brewer()+
   scale_x_continuous(limits = c(-5,40), breaks = c(0,12, 20, 28, 36))+
@@ -607,25 +617,86 @@ ggplot(rel_BV, aes( x = day, y = rel_V))+
           legend.position  ='bottom',
           legend.key = element_blank(),
           text = element_text(size=12))
-#ggsave(plot=last_plot(), file = 'rel_ab_perspecies.png', width = 11, height = 8)
- ##############################################################################
-#### Table for phytoplankton and zooplankton biomass ####
-#data including mean and CI ####
-TableData<-Mastertable_fluctron %>%
-dplyr::select(fluctuation, planktotron, sampling, C_Zoo_µmol_l, carbon_umol_l) %>%
-  mutate(carbon_phyto = carbon_umol_l-C_Zoo_µmol_l) %>%
-  drop_na(C_Zoo_µmol_l) %>%
-  select(-carbon_umol_l) %>%
-  gather(key = 'POC', value ='value', -planktotron, -sampling, -fluctuation)%>%
-  dplyr::group_by(fluctuation, sampling, POC) %>%
-  dplyr::summarise(mean = mean(value, na.rm = T),
-                   sd_N = sd(value, na.rm = T),
-                   n = dplyr::n(),
-                   se_N = sd_N/sqrt(n)) %>%
-  mutate(lower.ci = mean - 1.96*se_N/sqrt(n),
-         upper.ci = mean  + 1.96*se_N/sqrt(n)) %>%
-  mutate(day = sampling *2) %>%
-  select(day, sampling, n, POC,mean,lower.ci, upper.ci) %>%
-  arrange(POC, fluctuation,day) 
+species
+#ggsave(plot=species, file = 'rel_ab_perspecies.png', width = 11, height = 8)
+ 
+#new df for dominant groups
+groups <- all_data%>%
+  filter(species != 'Ciliate indet.')  %>%
+  group_by(treatment_id, sampling)%>%
+  mutate(sum = sum(cells_ml, na.rm = T)) %>%
+  ungroup()%>%
+  mutate(day = sampling*2,
+         treatment_ID = treatment_id) %>%
+  group_by(phylum) %>%
+  mutate(rel_V = cells_ml/sum *100) %>%
+  separate(treatment_ID, into = c('treatment', 'fluctuation'), sep = '_')
+groups$fluctuation[is.na(groups$fluctuation)] <-0
 
-#write.csv2(TableData, file = 'Mean.CI.ZooPhyto.csv')
+#adjust fluctuation type as factor for coloring
+groups$fluctuation <- factor(as.factor(groups$fluctuation),levels=c("0", "48", "36", '24', '12', '6'))
+label = c('0' = "constant",'48' = "Fluctuating 48", '36'= "Fluctuating 36", '24'='Fluctuating 24', '12'='Fluctuating 12', '6'='Fluctuating 6')
+
+
+#barplot
+group <- ggplot(groups, aes( x = day, y = rel_V))+
+  geom_col(aes(fill = phylum))+
+  scale_fill_brewer(palette = 'Set1')+
+  scale_x_continuous(limits = c(-5,40), breaks = c(0,12, 20, 28, 36))+
+  facet_wrap(~fluctuation, labeller= labeller(fluctuation = label))+
+  labs(x = 'Time [days]', y = 'Rel. abundance [%]', fill = 'Taxonomic group')+
+  theme(  panel.background = element_rect(fill = NA),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          strip.background = element_blank(),
+          panel.border= element_rect(colour = "black", fill=NA, size=0.5),
+          strip.text = element_text(face = 'bold'),
+          legend.background = element_blank(),
+          legend.position  ='bottom',
+          legend.key = element_blank(),
+          text = element_text(size=12))
+#ggsave(plot=group, file = 'rel_group.png', width = 10, height = 8)
+
+
+##############################################################################
+#### Zooplankton species ####
+Zoo_dominant_Groups_Jacuzzitron <- read_excel("project_data/Zoo_dominant_Groups_Jacuzzitron.xlsx", 
+                                              na = "NA")
+names(Zoo_dominant_Groups_Jacuzzitron)
+### subdataframe with zoo informations only ####
+
+Zoo_dominant_Groups <- Zoo_dominant_Groups_Jacuzzitron %>% 
+  drop_na(copepods_l) %>%
+  rename(sample = "...1" ) %>%
+  rename(euplotes_l = ciliateA_l,
+         strombidinopsis_l = ciliateB_l) %>%
+  dplyr::select(-eggA_l, -eggs_l, -eggC_l, -eggB_l, -fuzzyball_l, -IDK_A_l, -fuzzything_l, -wormlikething_l, ) %>%
+  tidyr::gather(key = 'group', value = 'abundance', -n_sampling,-fluct, -sample, -sampling,  -planktotron) %>%
+  group_by(fluct, n_sampling) %>%
+  mutate(sum = sum(abundance, na.rm = T)) %>%
+  ungroup()%>%
+  mutate(day = n_sampling*2) %>%
+  group_by(group) %>%
+  mutate(rel_ab = abundance/sum *100) %>%
+    mutate(fluctuation = paste(ifelse(fluct == 'Con', 'constant', ifelse(fluct == 'F48', 'Fluctuating 48', ifelse(fluct == 'F36', 'Fluctuating 36', ifelse(fluct == 'F24', 'Fluctuating 24', ifelse(fluct == 'F12', 'Fluctuating 12', 'Fluctuating 6')))))))
+
+str(Zoo_dominant_Groups)
+levels(as.factor(Zoo_dominant_Groups$fluctuation))
+Zoo_dominant_Groups$fluctuation <- factor(as.factor(Zoo_dominant_Groups$fluctuation),levels=c("constant", "Fluctuating 48", "Fluctuating 36", "Fluctuating 24", "Fluctuating 12" ,"Fluctuating 6" ))
+
+
+ggplot(Zoo_dominant_Groups, aes( x = day, y = rel_ab))+
+  geom_col(aes(fill = group))+
+ # scale_x_continuous(limits = c(-5,40), breaks = c(0,12, 20, 28, 36))+
+  facet_wrap(~fluctuation)+
+  labs(x = 'Time [days]', y = 'Rel. abundance [%]', fill = 'Zooplankton group')+
+  theme(  panel.background = element_rect(fill = NA),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          strip.background = element_blank(),
+          panel.border= element_rect(colour = "black", fill=NA, size=0.5),
+          strip.text = element_text(face = 'bold'),
+          legend.background = element_blank(),
+          legend.position  ='bottom',
+          legend.key = element_blank())#
+ggsave(plot = last_plot(),'zooplanktongroups-relab.png', width = 8, height = 4)          

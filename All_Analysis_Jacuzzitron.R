@@ -33,8 +33,9 @@ master <- Mastertable %>%
 master$interval[!is.finite(master$interval)] <- 0
 str(master)
 
+#first look at data
 ggplot(master,aes(day, log,colour = interval))+geom_point(size=1.5)
-str(master)
+str(master) # structure check
 
 ##### fixed and random effects ######
 # Response variable: Carbon mg (measured over time)
@@ -52,7 +53,6 @@ M3 = lme(log ~ interval*day, random = ~day|MC, method = 'REML',control= lmeContr
 #compare models
 anova(M1,M2, M3)
  
-#M1 wins AIC 197.82
 
 #save fitted values
 master$fit_InterceptOnly2 <- predict(M1)
@@ -60,7 +60,7 @@ master$fit_InterceptOnly2 <- predict(M1)
 
 # mixed model vs. model without random component: gls 
 M0=gls(log~interval*day, method="REML",data =master, na.action=na.omit)
-anova(M1, M0) #gls is better AIC 195.86
+anova(M1, M0) #gls is better
 
 #Autocorrelation test (data are not independent) - only if do not have nas
 plot(ACF(M0), alpha=0.05)
@@ -72,7 +72,7 @@ hist(resid(M0, type = "normalized"), ylab="frecuencia",xlab="residuales", main="
 plot(fitted(M0),resid(M0, type = "normalized"),ylab="residuales")
 qqnorm(resid(M0, type = "normalized"), main=""); qqline(resid(M0, type = "normalized"))
 
-
+#model with autocorrelation
 M5=lme(log ~ interval*day, random=~0+day|MC, method="REML",
          corr=corAR1(0.8,form=~day|MC),na.action=na.omit,data=master)
 anova(M5, M0) #model with random effect is better
@@ -187,15 +187,10 @@ data.dist1$interval = 48/data.dist1$Fluctuation
 data.dist1$interval[is.infinite(data.dist1$interval)] <-0
 str(data.dist1)
 
-data.plot <- data.dist1%>%
-  group_by(Fluctuation, sampling2, day) %>%
-  summarise(mean = mean(mean.dist), sd = sd(mean.dist), se = sd/sqrt(n())) %>%
-  mutate(lower.ci = mean - 1.96*se/sqrt(n()),
-         upper.ci = mean + 1.96*se/sqrt(n()))
-data.plot$Fluctuation <- factor(data.plot$Fluctuation, levels= c('0', '48', '36', '24', '12', '6'))
 data.dist1$Fluctuation <- factor(data.dist1$Fluctuation, levels= c('0', '48', '36', '24', '12', '6'))
-names(data.plot)
-distance <- ggplot(data.dist1, aes(x = sampling2, y = mean.dist, group = Fluctuation))+
+
+#overview plot 
+ggplot(data.dist1, aes(x = sampling2, y = mean.dist, group = Fluctuation))+
   #geom_errorbar(aes(ymin = mean-lower.ci, ymax = mean +upper.ci,color = Fluctuation), width = .5, position = position_dodge2(width = .5))+
   geom_point(aes(color = Fluctuation), pch =21, size=3)+
   geom_smooth(aes(color = Fluctuation),method = lm, se = F,formula =  y ~ x, size = 1)+  
@@ -213,7 +208,8 @@ distance <- ggplot(data.dist1, aes(x = sampling2, y = mean.dist, group = Fluctua
          legend.position  ='bottom',
          legend.key = element_blank(),
          text = element_text(size=12))
-ggsave(plot = last_plot(), file = 'BrayDistance_overTimePhytoCoutns.png', width = 7, height = 4)
+
+#ggsave(plot = last_plot(), file = 'BrayDistance_overTimePhytoCoutns.png', width = 7, height = 4)
 hist((data.dist1$log))
 qqnorm(data.dist1$log)
 qqline(data.dist1$log)
@@ -244,7 +240,6 @@ data.dist1$Fluctuation <- factor(data.dist1$Fluctuation, levels = c('0', '48','3
 ggplot(data.dist1, aes(x = day, color = Fluctuation, y=log ))+
   geom_point()+
   geom_line(aes(y = fit_InterceptOnly2), size = 1) +
-  #scale_x_continuous(limits = c(0,10), breaks = seq(0,10,2))+
   theme_classic()
 
 
@@ -252,7 +247,6 @@ ggplot(data.dist1, aes(x = day, color = Fluctuation, y=log ))+
 C_m0=gls(log~interval*day, method="REML",data =data.dist1, na.action=na.omit)
 anova(C_m2, C_m0) #gls is better
 
-anova(C_m2)
 #Autocorrelation test (data are not independent) - only if do not have nas
 plot(ACF(C_m0), alpha=0.05)
 
@@ -262,6 +256,13 @@ plot(resid(C_m0, type = "normalized"), ylab="residuales")
 hist(resid(C_m0, type = "normalized"), ylab="frecuencia",xlab="residuales", main="")
 plot(fitted(C_m0),resid(C_m2, type = "normalized"),ylab="residuales")
 qqnorm(resid(C_m0, type = "normalized"), main=""); qqline(resid(C_m0, type = "normalized"))
+
+
+#model with autocorrelation
+C_M5=lme(log ~ interval*day, random=~0+day|MC, method="REML",
+       corr=corAR1(0.8,form=~day|MC),na.action=na.omit,data=data.dist1)
+anova(C_M5, C_m0) #model without random effect and autocorrelation is better
+
 
 # gls with weighted variance 
 M1<-gls(log ~ interval*day, data = data.dist1)
@@ -294,6 +295,9 @@ M7<-gls(log ~ interval*day,  weights = vf7,data = data.dist1)
 #Different variances per stratum
 vf2 <- varIdent(form = ~ 1|day)
 M2<-gls(log ~ interval*day, data = data.dist1, weights = vf2)
+
+# here a lot of error occur because or models do not fit the data
+# compare possible ones:
 anova(M1, M2, M5) #compare models
 
 #final model:
@@ -302,15 +306,15 @@ anova(M.dist.lm) # indicated time * richness effect
 
 R2.lik(M.dist.lm)
 # plot
-op <- par(mfrow = c(2, 2), mar = c(4, 4, 2, 2))
-plot(M.dist.lm, which = c(1), col = 1, add.smooth = FALSE,caption = "")
-plot(diversity$day, resid(M.dist.lm), xlab = "Month",ylab = "Residuals")
-plot(diversity$interval, resid(M.dist.lm), xlab = "DML",ylab = "Residuals")
-par(op)
+par(mfrow = c(2, 2), mar = c(4, 4, 2, 2))
+plot(resid(M.dist.lm), ylab="residuales")
+plot(fitted(M.dist.lm),resid(M.dist.lm),ylab="residuales")
+hist(resid(M.dist.lm), ylab="frecuencia",xlab="residuales", main="")
+qqnorm(resid(M.dist.lm), main=""); qqline(resid(M.dist.lm))
 
 #find R2
 library(rr2)
-R2.lik(M.lm)
+R2.lik(M.dist.lm)
 
 #### #######################################################################
 
@@ -383,21 +387,22 @@ anova(C_m1,C_m2, C_m3)
 C_m0=gls(log~interval*day, method="REML",data =diversity, na.action=na.omit)
 anova(C_m2, C_m0) #model with random effect is better
 
+#model with autocorrelation
 C_m5=lme(log ~ interval*day, random=~0+day|MC, method="REML",
          corr=corAR1(0.6,form=~day|MC),na.action=na.omit,data=diversity)
-anova(C_m5, C_m0) #model with random effect is better
+anova(C_m5, C_m0) #model without random effect is better
+
 
 #Autocorrelation test (data are not independent) - only if do not have nas
 plot(ACF(C_m0), alpha=0.05)
 
 #Residuals
 par(mfrow=c(2,2),cex.axis=1.2, cex.lab=1.5)
-plot(resid(C_m5, type = "normalized"), ylab="residuales")
-hist(resid(C_m5, type = "normalized"), ylab="frecuencia",xlab="residuales", main="")
-plot(fitted(C_m5),resid(C_m2, type = "normalized"),ylab="residuales")
-qqnorm(resid(C_m5, type = "normalized"), main=""); qqline(resid(C_m5, type = "normalized"))
+plot(resid(C_m0, type = "normalized"), ylab="residuales")
+hist(resid(C_m0, type = "normalized"), ylab="frecuencia",xlab="residuales", main="")
+plot(fitted(C_m0),resid(C_m0, type = "normalized"),ylab="residuales")
+qqnorm(resid(C_m0, type = "normalized"), main=""); qqline(resid(C_m0, type = "normalized"))
 anova(C_m0)
-anova(C_m5)
 
 # gls with weighted variance 
 #Fixed variance
@@ -444,6 +449,8 @@ plot(diversity$day, resid(M.lm), xlab = "Month",
      ylab = "Residuals")
 plot(diversity$interval, resid(M.lm), xlab = "DML",
      ylab = "Residuals")
+plot(residuals(M.lm))
+
 par(op)
 #### inverse Simpson ####
 diversity$logSimpson = log(diversity$simpson)
@@ -536,10 +543,10 @@ anova(M1, M2, M5) #compare models
 #check residuals for other model
 #Residuals
 par(mfrow=c(2,2),cex.axis=1.2, cex.lab=1.5)
-plot(resid(M2, type = "normalized"), ylab="residuales")
-hist(resid(M2, type = "normalized"), ylab="frecuencia",xlab="residuales", main="")
-plot(fitted(M2),resid(C_m2, type = "normalized"),ylab="residuales")
-qqnorm(resid(M2, type = "normalized"), main=""); qqline(resid(M2, type = "normalized"))
+plot(resid(M1, type = "normalized"), ylab="residuales")
+hist(resid(M1, type = "normalized"), ylab="frecuencia",xlab="residuales", main="")
+plot(fitted(M1),resid(M1, type = "normalized"),ylab="residuales")
+qqnorm(resid(M1, type = "normalized"), main=""); qqline(resid(M1, type = "normalized"))
 
 #final model after AIC:
 M1.lm<-lm(logSimpson~interval*day, data =diversity)
@@ -553,7 +560,6 @@ R2.lik(M1.lm)
 library(tidyverse)
 library(vegan)
 
-### Start ####
 # first import your data and bring them in the correct format
 # to implement them in your anosim, we need a matrix with our values (species/pigment names) as headers
 # second we need a dataframe, which still contains all our explanatory variables such as sampling, treatment usw
