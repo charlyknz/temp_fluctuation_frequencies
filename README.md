@@ -1,5 +1,7 @@
 # temp_fluctuation_frequencies
-R script used for my Master thesis 
+R script used for the manuscript 'Phytoplankton community performance depends on the frequency of temperature fluctuations' 
+
+by Charlotte Kunze, Miriam Gerhard, Marrit Jacob, Niklas Alexander Franke, Matthias Schröder, Maren Striebel
 
 List of R scripts: 
 *PublicationPloets_loss.R* - script to create figures 
