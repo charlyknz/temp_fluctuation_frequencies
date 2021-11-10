@@ -94,7 +94,7 @@ zoo
 #ggsave(plot= zoo, file = 'Zooplankton_growthrates_POC_lm.png', width = 6, height = 5)
 
 plot_grid(total, phyto, zoo,  labels=c("A","B", 'C'),ncol = 3, label_size = 18, hjust = 0, vjust = 0.95)
-#ggsave(plot = last_plot(), file = 'Biomass.png', width = 17, height = 6)
+ggsave(plot = last_plot(), file = 'Biomass.tiff', width = 17, height = 6)
 
 # correlation plot zoo and phyto c
 zoophytocorr<-nutrients_master %>%
@@ -557,7 +557,7 @@ distance <- ggplot(data.dist1, aes(x = sampling2, y = mean.dist, group = Fluctua
          text = element_text(size=12))
 #save plots in grid
 plot_grid(specRich, specSimp, distance, labels=c("A","B", 'C'),ncol = 3, label_size = 18, hjust = 0, vjust = 0.95)
-#ggsave(plot = last_plot(), file = 'specDiv.png', width = 14, height = 5)
+#ggsave(plot = last_plot(), file = 'specDiv.tiff', width = 14, height = 5)
 
 #### composition: stacked barplot ####
 #import  data 
