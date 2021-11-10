@@ -1,0 +1,1237 @@
+﻿date;MC;sampling;volume;magnification;species;stripes/grids;counts;grid_length;cells_ml;phylum
+28.05.20;9;10;10;400;Alexandrium species;30;;250;0;Myzoza
+28.05.20;9;10;10;400;Amphidinium crassum;30;2;250;27,76620852;Myzoza
+28.05.20;9;10;10;400;Chaetocerus species;30;1;250;13,88310426;Bacillariophyta
+28.05.20;9;10;10;400;Ciliate indet.;30;13;250;180,4803554;Ciliophora
+28.05.20;9;10;10;400;Coscinodiscus indet.;30;5;250;69,41552131;Bacillariophyta
+28.05.20;9;10;10;400;Cryptomonas indet.;30;31;250;430,3762321;Cryptophyta
+28.05.20;9;10;10;400;Cylendrotheca closterium;30;13;250;180,4803554;Bacillariophyta
+28.05.20;9;10;10;400;Gymnodinium indet.;30;11;250;152,7141469;Myzoza
+28.05.20;9;10;10;400;Hemiselmis indet.;30;59;250;819,1031515;Cryptophyta
+28.05.20;9;10;10;400;Leptocylindricus danicus;30;49;250;680,2721088;Bacillariophyta
+28.05.20;9;10;10;400;Oblea rotunda;30;1;250;13,88310426;Myzoza
+28.05.20;9;10;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+28.05.20;9;10;10;400;Peridiniella danica;30;1;250;13,88310426;Myzoza
+28.05.20;9;10;10;400;Phaeocystis indet.;30;95;250;1318,894905;Haptophyta
+28.05.20;9;10;10;400;Pinnularia indet.;30;0;250;0;Bacillariophyta
+28.05.20;9;10;10;400;Prorocentrum micans;30;;250;0;Myzoza
+28.05.20;9;10;10;400;Prorocentrum minimum;30;6;250;83,29862557;Myzoza
+28.05.20;9;10;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+28.05.20;9;10;10;400;Rhizosolemia indet.;30;;250;0;Bacillariophyta
+28.05.20;9;10;10;400;Rhodomonas indet.;30;9;250;124,9479384;Cryptophyta
+28.05.20;9;10;10;400;Thalassiosira indet.;30;5;250;69,41552131;Bacillariophyta
+18.06.20;2;10;25;400;Alexandrium species;20;9;250;74,96876302;Myzoza
+18.06.20;2;10;25;400;Amphidinium crassum ;20;3;250;24,98958767;Myzoza
+18.06.20;2;10;25;400;Chaetocerus species;20;;250;0;Bacillariophyta
+18.06.20;2;10;25;400;Ciliate indet.;20;4;250;33,31945023;Ciliophora
+18.06.20;2;10;25;400;Coscinodiscus indet.;20;7;250;58,3090379;Bacillariophyta
+18.06.20;2;10;25;400;Cryptomonas indet.;20;55;250;458,1424406;Cryptophyta
+18.06.20;2;10;25;400;Cylendrotheca closterium;20;13;250;108,2882132;Bacillariophyta
+18.06.20;2;10;25;400;Gymnodinium indet.;20;28;250;233,2361516;Myzoza
+18.06.20;2;10;25;400;Hemiselmis indet.;20;28;250;233,2361516;Cryptophyta
+18.06.20;2;10;25;400;Leptocylindricus danicus;10;120;250;1999,167014;Bacillariophyta
+18.06.20;2;10;25;400;Oblea rotunda;20;2;250;16,65972511;Myzoza
+18.06.20;2;10;25;400;Odontella auritia;20;;250;0;Bacillariophyta
+18.06.20;2;10;25;400;Peridiniella danica;20;1;250;8,329862557;Myzoza
+18.06.20;2;10;25;400;Phaeocystis indet.;15;85;250;944,0510898;Haptophyta
+18.06.20;2;10;25;400;Pinnularia indet.;20;0;250;0;Bacillariophyta
+18.06.20;2;10;25;400;Prorocentrum micans;20;;250;0;Myzoza
+18.06.20;2;10;25;400;Prorocentrum minimum;20;11;250;91,62848813;Myzoza
+18.06.20;2;10;25;400;Prorocentrum triestinum;20;3;250;24,98958767;Myzoza
+18.06.20;2;10;25;400;Rhizosolemia indet.;20;;250;0;Bacillariophyta
+18.06.20;2;10;25;400;Rhodomonas indet.;20;12;250;99,95835069;Cryptophyta
+18.06.20;2;10;25;400;Thalassiosira indet.;20;;250;0;Bacillariophyta
+18.06.20;6;10;25;400;Alexandrium species;20;;250;0;Myzoza
+18.06.20;6;10;25;400;Amphidinium crassum ;20;3;250;24,98958767;Myzoza
+18.06.20;6;10;25;400;Chaetocerus species;20;;250;0;Bacillariophyta
+18.06.20;6;10;25;400;Ciliate indet.;20;3;250;24,98958767;Ciliophora
+18.06.20;6;10;25;400;Coscinodiscus indet.;20;7;250;58,3090379;Bacillariophyta
+18.06.20;6;10;25;400;Cryptomonas indet.;20;36;250;299,8750521;Cryptophyta
+18.06.20;6;10;25;400;Cylendrotheca closterium;20;6;250;49,97917534;Bacillariophyta
+18.06.20;6;10;25;400;Gymnodinium indet.;20;20;250;166,5972511;Myzoza
+18.06.20;6;10;25;400;Hemiselmis indet.;20;50;250;416,4931279;Cryptophyta
+18.06.20;6;10;25;400;Leptocylindricus danicus;20;31;250;258,2257393;Bacillariophyta
+18.06.20;6;10;25;400;Oblea rotunda;20;3;250;24,98958767;Myzoza
+18.06.20;6;10;25;400;Odontella auritia;20;;250;0;Bacillariophyta
+18.06.20;6;10;25;400;Peridiniella danica;20;2;250;16,65972511;Myzoza
+18.06.20;6;10;25;400;Phaeocystis indet.;20;100;250;832,9862557;Haptophyta
+18.06.20;6;10;25;400;Pinnularia indet.;20;0;250;0;Bacillariophyta
+18.06.20;6;10;25;400;Prorocentrum micans;20;;250;0;Myzoza
+18.06.20;6;10;25;400;Prorocentrum minimum;20;;250;0;Myzoza
+18.06.20;6;10;25;400;Prorocentrum triestinum;20;7;250;58,3090379;Myzoza
+18.06.20;6;10;25;400;Rhizosolemia indet.;20;;250;0;Bacillariophyta
+18.06.20;6;10;25;400;Rhodomonas indet.;20;35;250;291,5451895;Cryptophyta
+18.06.20;6;10;25;400;Thalassiosira indet.;20;3;250;24,98958767;Bacillariophyta
+22.06.20;4;10;10;400;Alexandrium species;20;;250;0;Myzoza
+22.06.20;4;10;10;400;Amphidinium crassum ;20;2;250;41,64931279;Myzoza
+22.06.20;4;10;10;400;Chaetocerus species;20;;250;0;Bacillariophyta
+22.06.20;4;10;10;400;Ciliate indet.;20;4;250;83,29862557;Ciliophora
+22.06.20;4;10;10;400;Coscinodiscus indet.;20;3;250;62,47396918;Bacillariophyta
+22.06.20;4;10;10;400;Cryptomonas indet.;20;60;250;1249,479384;Cryptophyta
+22.06.20;4;10;10;400;Cylendrotheca closterium;20;8;250;166,5972511;Bacillariophyta
+22.06.20;4;10;10;400;Gymnodinium indet.;20;3;250;62,47396918;Myzoza
+22.06.20;4;10;10;400;Hemiselmis indet.;20;24;250;499,7917534;Cryptophyta
+22.06.20;4;10;10;400;Leptocylindricus danicus;20;96;250;1999,167014;Bacillariophyta
+22.06.20;4;10;10;400;Oblea rotunda;20;3;250;62,47396918;Myzoza
+22.06.20;4;10;10;400;Odontella auritia;20;;250;0;Bacillariophyta
+22.06.20;4;10;10;400;Peridiniella danica;20;1;250;20,82465639;Myzoza
+22.06.20;4;10;10;400;Phaeocystis indet.;20;87;250;1811,745106;Haptophyta
+22.06.20;4;10;10;400;Pinnularia indet.;20;0;250;0;Bacillariophyta
+22.06.20;4;10;10;400;Prorocentrum micans;20;;250;0;Myzoza
+22.06.20;4;10;10;400;Prorocentrum minimum;20;4;250;83,29862557;Myzoza
+22.06.20;4;10;10;400;Prorocentrum triestinum;20;;250;0;Myzoza
+22.06.20;4;10;10;400;Rhizosolemia indet.;20;;250;0;Bacillariophyta
+22.06.20;4;10;10;400;Rhodomonas indet.;20;73;250;1520,199917;Cryptophyta
+22.06.20;4;10;10;400;Thalassiosira indet.;20;;250;0;Bacillariophyta
+22.06.20;8;10;25;400;Alexandrium species;20;1;250;8,329862557;Myzoza
+22.06.20;8;10;25;400;Amphidinium crassum ;20;1;250;8,329862557;Myzoza
+22.06.20;8;10;25;400;Chaetocerus species;20;;250;0;Bacillariophyta
+22.06.20;8;10;25;400;Ciliate indet.;20;10;250;83,29862557;Ciliophora
+22.06.20;8;10;25;400;Coscinodiscus indet.;20;12;250;99,95835069;Bacillariophyta
+22.06.20;8;10;25;400;Cryptomonas indet.;20;105;250;874,6355685;Cryptophyta
+22.06.20;8;10;25;400;Cylendrotheca closterium;20;5;250;41,64931279;Bacillariophyta
+22.06.20;8;10;25;400;Gymnodinium indet.;20;11;250;91,62848813;Myzoza
+22.06.20;8;10;25;400;Hemiselmis indet.;20;35;250;291,5451895;Cryptophyta
+22.06.20;8;10;25;400;Leptocylindricus danicus;10;150;250;2498,958767;Bacillariophyta
+22.06.20;8;10;25;400;Oblea rotunda;20;;250;0;Myzoza
+22.06.20;8;10;25;400;Odontella auritia;20;;250;0;Bacillariophyta
+22.06.20;8;10;25;400;Peridiniella danica;20;1;250;8,329862557;Myzoza
+22.06.20;8;10;25;400;Phaeocystis indet.;20;79;250;658,059142;Haptophyta
+22.06.20;8;10;25;400;Pinnularia indet.;20;0;250;0;Bacillariophyta
+22.06.20;8;10;25;400;Prorocentrum micans;20;;250;0;Myzoza
+22.06.20;8;10;25;400;Prorocentrum minimum;20;7;250;58,3090379;Myzoza
+22.06.20;8;10;25;400;Prorocentrum triestinum;20;1;250;8,329862557;Myzoza
+22.06.20;8;10;25;400;Rhizosolemia indet.;20;;250;0;Bacillariophyta
+22.06.20;8;10;25;400;Rhodomonas indet.;20;107;250;891,2952936;Cryptophyta
+22.06.20;8;10;25;400;Thalassiosira indet.;20;5;250;41,64931279;Bacillariophyta
+22.06.20;10;10;25;400;Alexandrium species;20;1;250;8,329862557;Myzoza
+22.06.20;10;10;25;400;Amphidinium crassum ;20;2;250;16,65972511;Myzoza
+22.06.20;10;10;25;400;Chaetocerus species;20;;250;0;Bacillariophyta
+22.06.20;10;10;25;400;Ciliate indet.;20;3;250;24,98958767;Ciliophora
+22.06.20;10;10;25;400;Coscinodiscus indet.;20;19;250;158,2673886;Bacillariophyta
+22.06.20;10;10;25;400;Cryptomonas indet.;20;106;250;882,9654311;Cryptophyta
+22.06.20;10;10;25;400;Cylendrotheca closterium;20;10;250;83,29862557;Bacillariophyta
+22.06.20;10;10;25;400;Gymnodinium indet.;20;38;250;316,5347772;Myzoza
+22.06.20;10;10;25;400;Hemiselmis indet.;20;49;250;408,1632653;Cryptophyta
+22.06.20;10;10;25;400;Leptocylindricus danicus;10;142;250;2365,680966;Bacillariophyta
+22.06.20;10;10;25;400;Oblea rotunda;20;9;250;74,96876302;Myzoza
+22.06.20;10;10;25;400;Odontella auritia;20;;250;0;Bacillariophyta
+22.06.20;10;10;25;400;Peridiniella danica;20;;250;0;Myzoza
+22.06.20;10;10;25;400;Phaeocystis indet.;10;145;250;2415,660142;Haptophyta
+22.06.20;10;10;25;400;Pinnularia indet.;20;0;250;0;Bacillariophyta
+22.06.20;10;10;25;400;Prorocentrum micans;20;;250;0;Myzoza
+22.06.20;10;10;25;400;Prorocentrum minimum;20;25;250;208,2465639;Myzoza
+22.06.20;10;10;25;400;Prorocentrum triestinum;20;1;250;8,329862557;Myzoza
+22.06.20;10;10;25;400;Rhizosolemia indet.;20;;250;0;Bacillariophyta
+22.06.20;10;10;25;400;Rhodomonas indet.;20;31;250;258,2257393;Cryptophyta
+22.06.20;10;10;25;400;Thalassiosira indet.;20;;250;0;Bacillariophyta
+22.06.20;12;10;10;400;Alexandrium species;20;1;250;20,82465639;Myzoza
+22.06.20;12;10;10;400;Amphidinium crassum ;20;10;250;208,2465639;Myzoza
+22.06.20;12;10;10;400;Chaetocerus species;20;;250;0;Bacillariophyta
+22.06.20;12;10;10;400;Ciliate indet.;20;1;250;20,82465639;Ciliophora
+22.06.20;12;10;10;400;Coscinodiscus indet.;20;2;250;41,64931279;Bacillariophyta
+22.06.20;12;10;10;400;Cryptomonas indet.;20;29;250;603,9150354;Cryptophyta
+22.06.20;12;10;10;400;Cylendrotheca closterium;20;5;250;104,123282;Bacillariophyta
+22.06.20;12;10;10;400;Gymnodinium indet.;20;2;250;41,64931279;Myzoza
+22.06.20;12;10;10;400;Hemiselmis indet.;20;26;250;541,4410662;Cryptophyta
+22.06.20;12;10;10;400;Leptocylindricus danicus;20;133;250;2769,6793;Bacillariophyta
+22.06.20;12;10;10;400;Oblea rotunda;20;;250;0;Myzoza
+22.06.20;12;10;10;400;Odontella auritia;20;;250;0;Bacillariophyta
+22.06.20;12;10;10;400;Peridiniella danica;20;1;250;20,82465639;Myzoza
+22.06.20;12;10;10;400;Phaeocystis indet.;20;101;250;2103,290296;Haptophyta
+22.06.20;12;10;10;400;Pinnularia indet.;20;0;250;0;Bacillariophyta
+22.06.20;12;10;10;400;Prorocentrum micans;20;;250;0;Myzoza
+22.06.20;12;10;10;400;Prorocentrum minimum;20;1;250;20,82465639;Myzoza
+22.06.20;12;10;10;400;Prorocentrum triestinum;20;;250;0;Myzoza
+22.06.20;12;10;10;400;Rhizosolemia indet.;20;;250;0;Bacillariophyta
+22.06.20;12;10;10;400;Rhodomonas indet.;20;40;250;832,9862557;Cryptophyta
+22.06.20;12;10;10;400;Thalassiosira indet.;20;2;250;41,64931279;Bacillariophyta
+23.06.20;1;14;10;400;Alexandrium species;30;3;250;41,64931279;Myzoza
+23.06.20;1;14;10;400;Amphidinium crassum ;30;15;250;208,2465639;Myzoza
+23.06.20;1;14;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+23.06.20;1;14;10;400;Ciliate indet.;30;5;250;69,41552131;Ciliophora
+23.06.20;1;14;10;400;Coscinodiscus indet.;30;5;250;69,41552131;Bacillariophyta
+23.06.20;1;14;10;400;Cryptomonas indet.;30;148;250;2054,699431;Cryptophyta
+23.06.20;1;14;10;400;Cylendrotheca closterium;30;17;250;236,0127725;Bacillariophyta
+23.06.20;1;14;10;400;Gymnodinium indet.;30;16;250;222,1296682;Myzoza
+23.06.20;1;14;10;400;Hemiselmis indet.;30;24;250;333,1945023;Cryptophyta
+23.06.20;1;14;10;400;Leptocylindricus danicus;30;14;250;194,3634597;Bacillariophyta
+23.06.20;1;14;10;400;Oblea rotunda;30;1;250;13,88310426;Myzoza
+23.06.20;1;14;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+23.06.20;1;14;10;400;Peridiniella danica;30;;250;0;Myzoza
+23.06.20;1;14;10;400;Phaeocystis indet.;25;181;250;3015,410246;Haptophyta
+23.06.20;1;14;10;400;Pinnularia indet.;30;0;250;0;Bacillariophyta
+23.06.20;1;14;10;400;Prorocentrum micans;30;;250;0;Myzoza
+23.06.20;1;14;10;400;Prorocentrum minimum;30;5;250;69,41552131;Myzoza
+23.06.20;1;14;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+23.06.20;1;14;10;400;Rhizosolemia indet.;30;;250;0;Bacillariophyta
+23.06.20;1;14;10;400;Rhodomonas indet.;30;34;250;472,0255449;Cryptophyta
+23.06.20;1;14;10;400;Thalassiosira indet.;30;1;250;13,88310426;Bacillariophyta
+23.06.20;5;14;10;400;Alexandrium species;30;;250;0;Myzoza
+23.06.20;5;14;10;400;Amphidinium crassum ;30;;250;0;Myzoza
+23.06.20;5;14;10;400;Chaetocerus species;30;1;250;13,88310426;Bacillariophyta
+23.06.20;5;14;10;400;Ciliate indet.;30;10;250;138,8310426;Ciliophora
+23.06.20;5;14;10;400;Coscinodiscus indet.;30;4;250;55,53241705;Bacillariophyta
+23.06.20;5;14;10;400;Cryptomonas indet.;30;71;250;985,7004026;Cryptophyta
+23.06.20;5;14;10;400;Cylendrotheca closterium;30;8;250;111,0648341;Bacillariophyta
+23.06.20;5;14;10;400;Gymnodinium indet.;30;2;250;27,76620852;Myzoza
+23.06.20;5;14;10;400;Hemiselmis indet.;30;18;250;249,8958767;Cryptophyta
+23.06.20;5;14;10;400;Leptocylindricus danicus;25;186;250;3098,708871;Bacillariophyta
+23.06.20;5;14;10;400;Oblea rotunda;30;;250;0;Myzoza
+23.06.20;5;14;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+23.06.20;5;14;10;400;Peridiniella danica;30;;250;0;Myzoza
+23.06.20;5;14;10;400;Phaeocystis indet.;30;87;250;1207,830071;Haptophyta
+23.06.20;5;14;10;400;Pinnularia indet.;30;0;250;0;Bacillariophyta
+23.06.20;5;14;10;400;Prorocentrum micans;30;;250;0;Myzoza
+23.06.20;5;14;10;400;Prorocentrum minimum;30;3;250;41,64931279;Myzoza
+23.06.20;5;14;10;400;Prorocentrum triestinum;30;1;250;13,88310426;Myzoza
+23.06.20;5;14;10;400;Rhizosolemia indet.;30;;250;0;Bacillariophyta
+23.06.20;5;14;10;400;Rhodomonas indet.;30;20;250;277,6620852;Cryptophyta
+23.06.20;5;14;10;400;Thalassiosira indet.;30;;250;0;Bacillariophyta
+23.06.20;9;14;10;400;Alexandrium species;35;;250;0;Myzoza
+23.06.20;9;14;10;400;Amphidinium crassum ;35;1;250;11,89980365;Myzoza
+23.06.20;9;14;10;400;Chaetocerus species;35;;250;0;Bacillariophyta
+23.06.20;9;14;10;400;Ciliate indet.;35;9;250;107,0982329;Ciliophora
+23.06.20;9;14;10;400;Coscinodiscus indet.;35;10;250;118,9980365;Bacillariophyta
+23.06.20;9;14;10;400;Cryptomonas indet.;35;50;250;594,9901827;Cryptophyta
+23.06.20;9;14;10;400;Cylendrotheca closterium;35;23;250;273,695484;Bacillariophyta
+23.06.20;9;14;10;400;Gymnodinium indet.;35;;250;0;Myzoza
+23.06.20;9;14;10;400;Hemiselmis indet.;35;20;250;237,9960731;Cryptophyta
+23.06.20;9;14;10;400;Leptocylindricus danicus;35;140;250;1665,972511;Bacillariophyta
+23.06.20;9;14;10;400;Oblea rotunda;35;;250;0;Myzoza
+23.06.20;9;14;10;400;Odontella auritia;35;;250;0;Bacillariophyta
+23.06.20;9;14;10;400;Peridiniella danica;35;;250;0;Myzoza
+23.06.20;9;14;10;400;Phaeocystis indet.;35;26;250;309,394895;Haptophyta
+23.06.20;9;14;10;400;Pinnularia indet.;35;3;250;35,69941096;Bacillariophyta
+23.06.20;9;14;10;400;Prorocentrum micans;35;;250;0;Myzoza
+23.06.20;9;14;10;400;Prorocentrum minimum;35;2;250;23,79960731;Myzoza
+23.06.20;9;14;10;400;Prorocentrum triestinum;35;;250;0;Myzoza
+23.06.20;9;14;10;400;Rhizosolemia indet.;35;;250;0;Bacillariophyta
+23.06.20;9;14;10;400;Rhodomonas indet.;35;34;250;404,5933242;Cryptophyta
+23.06.20;9;14;10;400;Thalassiosira indet.;35;;250;0;Bacillariophyta
+23.06.20;11;14;10;400;Alexandrium species;31;;250;0;Myzoza
+23.06.20;11;14;10;400;Amphidinium crassum ;31;;250;0;Myzoza
+23.06.20;11;14;10;400;Chaetocerus species;31;;250;0;Bacillariophyta
+23.06.20;11;14;10;400;Ciliate indet.;31;4;250;53,74104876;Ciliophora
+23.06.20;11;14;10;400;Coscinodiscus indet.;31;3;250;40,30578657;Bacillariophyta
+23.06.20;11;14;10;400;Cryptomonas indet.;31;141;250;1894,371969;Cryptophyta
+23.06.20;11;14;10;400;Cylendrotheca closterium;31;11;250;147,7878841;Bacillariophyta
+23.06.20;11;14;10;400;Gymnodinium indet.;31;2;250;26,87052438;Myzoza
+23.06.20;11;14;10;400;Hemiselmis indet.;31;13;250;174,6584085;Cryptophyta
+23.06.20;11;14;10;400;Leptocylindricus danicus;31;111;250;1491,314103;Bacillariophyta
+23.06.20;11;14;10;400;Oblea rotunda;31;;250;0;Myzoza
+23.06.20;11;14;10;400;Odontella auritia;31;1;250;13,43526219;Bacillariophyta
+23.06.20;11;14;10;400;Peridiniella danica;31;;250;0;Myzoza
+23.06.20;11;14;10;400;Phaeocystis indet.;31;91;250;1222,608859;Haptophyta
+23.06.20;11;14;10;400;Prorocentrum micans;31;;250;0;Myzoza
+23.06.20;11;14;10;400;Prorocentrum minimum;31;;250;0;Myzoza
+23.06.20;11;14;10;400;Prorocentrum triestinum;31;2;250;26,87052438;Myzoza
+23.06.20;11;14;10;400;Rhizosolemia indet.;31;;250;0;Bacillariophyta
+23.06.20;11;14;10;400;Rhodomonas indet.;31;46;250;618,0220607;Cryptophyta
+23.06.20;11;14;10;400;Thalassiosira indet.;31;;250;0;Bacillariophyta
+25.06.20;3;14;10;400;Alexandrium species;30;2;250;27,76620852;Myzoza
+25.06.20;3;14;10;400;Amphidinium crassum ;30;3;250;41,64931279;Myzoza
+25.06.20;3;14;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+25.06.20;3;14;10;400;Ciliate indet.;30;2;250;27,76620852;Ciliophora
+25.06.20;3;14;10;400;Coscinodiscus indet.;30;6;250;83,29862557;Bacillariophyta
+25.06.20;3;14;10;400;Cryptomonas indet.;30;62;250;860,7524643;Cryptophyta
+25.06.20;3;14;10;400;Cylendrotheca closterium;30;3;250;41,64931279;Bacillariophyta
+25.06.20;3;14;10;400;Gymnodinium indet.;30;29;250;402,6100236;Myzoza
+25.06.20;3;14;10;400;Hemiselmis indet.;30;39;250;541,4410662;Cryptophyta
+25.06.20;3;14;10;400;Leptocylindricus danicus;20;185;250;3852,561433;Bacillariophyta
+25.06.20;3;14;10;400;Oblea rotunda;30;;250;0;Myzoza
+25.06.20;3;14;10;400;Odontella auritia;30;1;250;13,88310426;Bacillariophyta
+25.06.20;3;14;10;400;Peridiniella danica;30;1;250;13,88310426;Myzoza
+25.06.20;3;14;10;400;Phaeocystis indet.;30;87;250;1207,830071;Haptophyta
+25.06.20;3;14;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+25.06.20;3;14;10;400;Prorocentrum micans;30;;250;0;Myzoza
+25.06.20;3;14;10;400;Prorocentrum minimum;30;3;250;41,64931279;Myzoza
+25.06.20;3;14;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+25.06.20;3;14;10;400;Rhizosolemia indet.;30;;250;0;Bacillariophyta
+25.06.20;3;14;10;400;Rhodomonas indet.;30;51;250;708,0383174;Cryptophyta
+25.06.20;3;14;10;400;Thalassiosira indet.;30;1;250;13,88310426;Bacillariophyta
+25.06.20;4;14;10;400;Alexandrium species;20;2;250;41,64931279;Myzoza
+25.06.20;4;14;10;400;Amphidinium crassum ;20;;250;0;Myzoza
+25.06.20;4;14;10;400;Chaetocerus species;20;;250;0;Bacillariophyta
+25.06.20;4;14;10;400;Ciliate indet.;20;11;250;229,0712203;Ciliophora
+25.06.20;4;14;10;400;Coscinodiscus indet.;20;6;250;124,9479384;Bacillariophyta
+25.06.20;4;14;10;400;Cryptomonas indet.;20;83;250;1728,446481;Cryptophyta
+25.06.20;4;14;10;400;Cylendrotheca closterium;20;13;250;270,7205331;Bacillariophyta
+25.06.20;4;14;10;400;Gymnodinium indet.;20;6;250;124,9479384;Myzoza
+25.06.20;4;14;10;400;Hemiselmis indet.;20;4;250;83,29862557;Cryptophyta
+25.06.20;4;14;10;400;Leptocylindricus danicus;20;154;250;3206,997085;Bacillariophyta
+25.06.20;4;14;10;400;Oblea rotunda;20;1;250;20,82465639;Myzoza
+25.06.20;4;14;10;400;Odontella auritia;20;;250;0;Bacillariophyta
+25.06.20;4;14;10;400;Peridiniella danica;20;;250;0;Myzoza
+25.06.20;4;14;10;400;Phaeocystis indet.;20;56;250;1166,180758;Haptophyta
+25.06.20;4;14;10;400;Pinnularia indet.;20;;250;0;Bacillariophyta
+25.06.20;4;14;10;400;Prorocentrum micans;20;;250;0;Myzoza
+25.06.20;4;14;10;400;Prorocentrum minimum;20;9;250;187,4219075;Myzoza
+25.06.20;4;14;10;400;Prorocentrum triestinum;20;;250;0;Myzoza
+25.06.20;4;14;10;400;Rhizosolemia indet.;20;;250;0;Bacillariophyta
+25.06.20;4;14;10;400;Rhodomonas indet.;20;34;250;708,0383174;Cryptophyta
+25.06.20;4;14;10;400;Thalassiosira indet.;20;;250;0;Bacillariophyta
+25.06.20;7;14;10;400;Alexandrium species;30;1;250;13,88310426;Myzoza
+25.06.20;7;14;10;400;Amphidinium crassum ;30;9;250;124,9479384;Myzoza
+25.06.20;7;14;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+25.06.20;7;14;10;400;Ciliate indet.;30;4;250;55,53241705;Ciliophora
+25.06.20;7;14;10;400;Coscinodiscus indet.;30;5;250;69,41552131;Bacillariophyta
+25.06.20;7;14;10;400;Cryptomonas indet.;30;96;250;1332,778009;Cryptophyta
+25.06.20;7;14;10;400;Cylendrotheca closterium;30;7;250;97,18172983;Bacillariophyta
+25.06.20;7;14;10;400;Gymnodinium indet.;30;;250;0;Myzoza
+25.06.20;7;14;10;400;Hemiselmis indet.;30;15;250;208,2465639;Cryptophyta
+25.06.20;7;14;10;400;Leptocylindricus danicus;30;97;250;1346,661113;Bacillariophyta
+25.06.20;7;14;10;400;Oblea rotunda;30;;250;0;Myzoza
+25.06.20;7;14;10;400;Odontella auritia;30;4;250;55,53241705;Bacillariophyta
+25.06.20;7;14;10;400;Peridiniella danica;30;;250;0;Myzoza
+25.06.20;7;14;10;400;Phaeocystis indet.;30;63;250;874,6355685;Haptophyta
+25.06.20;7;14;10;400;Prorocentrum micans;30;;250;0;Myzoza
+25.06.20;7;14;10;400;Prorocentrum minimum;30;1;250;13,88310426;Myzoza
+25.06.20;7;14;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+25.06.20;7;14;10;400;Rhizosolemia indet.;30;;250;0;Bacillariophyta
+25.06.20;7;14;10;400;Rhodomonas indet.;30;50;250;694,1552131;Cryptophyta
+25.06.20;7;14;10;400;Thalassiosira indet.;30;1;250;13,88310426;Bacillariophyta
+25.06.20;10;14;10;400;Alexandrium species;30;;250;0;Myzoza
+25.06.20;10;14;10;400;Amphidinium crassum ;30;2;250;27,76620852;Myzoza
+25.06.20;10;14;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+25.06.20;10;14;10;400;Ciliate indet.;30;8;250;111,0648341;Ciliophora
+25.06.20;10;14;10;400;Coscinodiscus indet.;30;15;250;208,2465639;Bacillariophyta
+25.06.20;10;14;10;400;Cryptomonas indet.;30;148;250;2054,699431;Cryptophyta
+25.06.20;10;14;10;400;Cylendrotheca closterium;30;5;250;69,41552131;Bacillariophyta
+25.06.20;10;14;10;400;Gymnodinium indet.;30;8;250;111,0648341;Myzoza
+25.06.20;10;14;10;400;Hemiselmis indet.;30;11;250;152,7141469;Cryptophyta
+25.06.20;10;14;10;400;Leptocylindricus danicus;30;50;250;694,1552131;Bacillariophyta
+25.06.20;10;14;10;400;Oblea rotunda;30;1;250;13,88310426;Myzoza
+25.06.20;10;14;10;400;Odontella auritia;30;1;250;13,88310426;Bacillariophyta
+25.06.20;10;14;10;400;Peridiniella danica;30;;250;0;Myzoza
+25.06.20;10;14;10;400;Phaeocystis indet.;30;20;250;277,6620852;Haptophyta
+25.06.20;10;14;10;400;Prorocentrum micans;30;1;250;13,88310426;Myzoza
+25.06.20;10;14;10;400;Prorocentrum minimum;30;8;250;111,0648341;Myzoza
+25.06.20;10;14;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+25.06.20;10;14;10;400;Rhizosolemia indet.;30;;250;0;Bacillariophyta
+25.06.20;10;14;10;400;Rhodomonas indet.;30;105;250;1457,725948;Cryptophyta
+25.06.20;10;14;10;400;Thalassiosira indet.;30;2;250;27,76620852;Bacillariophyta
+29.06.20;2;14;10;400;Alexandrium species;30;2;250;27,76620852;Myzoza
+29.06.20;2;14;10;400;Amphidinium crassum ;30;2;250;27,76620852;Myzoza
+29.06.20;2;14;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+29.06.20;2;14;10;400;Ciliate indet.;30;5;250;69,41552131;Ciliophora
+29.06.20;2;14;10;400;Coscinodiscus indet.;30;5;250;69,41552131;Bacillariophyta
+29.06.20;2;14;10;400;Cryptomonas indet.;30;104;250;1443,842843;Cryptophyta
+29.06.20;2;14;10;400;Cylendrotheca closterium;30;17;250;236,0127725;Bacillariophyta
+29.06.20;2;14;10;400;Gymnodinium indet.;30;11;250;152,7141469;Myzoza
+29.06.20;2;14;10;400;Hemiselmis indet.;30;10;250;138,8310426;Cryptophyta
+29.06.20;2;14;10;400;Leptocylindricus danicus;30;156;250;2165,764265;Bacillariophyta
+29.06.20;2;14;10;400;Oblea rotunda;30;3;250;41,64931279;Myzoza
+29.06.20;2;14;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+29.06.20;2;14;10;400;Peridiniella danica;30;;250;0;Myzoza
+29.06.20;2;14;10;400;Phaeocystis indet.;30;27;250;374,8438151;Haptophyta
+29.06.20;2;14;10;400;Pinnularia indet.;30;1;250;13,88310426;Bacillariophyta
+29.06.20;2;14;10;400;Prorocentrum micans;30;;250;0;Myzoza
+29.06.20;2;14;10;400;Prorocentrum minimum;30;5;250;69,41552131;Myzoza
+29.06.20;2;14;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+29.06.20;2;14;10;400;Rhizosolemia indet.;30;;250;0;Bacillariophyta
+29.06.20;2;14;10;400;Rhodomonas indet.;30;64;250;888,5186728;Cryptophyta
+29.06.20;2;14;10;400;Thalassiosira indet.;30;2;250;27,76620852;Bacillariophyta
+29.06.20;6;14;10;400;Alexandrium species;30;2;250;27,76620852;Myzoza
+29.06.20;6;14;10;400;Amphidinium crassum ;30;3;250;41,64931279;Myzoza
+29.06.20;6;14;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+29.06.20;6;14;10;400;Ciliate indet.;30;9;250;124,9479384;Ciliophora
+29.06.20;6;14;10;400;Coscinodiscus indet.;30;3;250;41,64931279;Bacillariophyta
+29.06.20;6;14;10;400;Cryptomonas indet.;30;65;250;902,401777;Cryptophyta
+29.06.20;6;14;10;400;Cylendrotheca closterium;30;17;250;236,0127725;Bacillariophyta
+29.06.20;6;14;10;400;Gymnodinium indet.;30;9;250;124,9479384;Myzoza
+29.06.20;6;14;10;400;Hemiselmis indet.;30;23;250;319,311398;Cryptophyta
+29.06.20;6;14;10;400;Leptocylindricus danicus;25;153;250;2548,937943;Bacillariophyta
+29.06.20;6;14;10;400;Oblea rotunda;30;;250;0;Myzoza
+29.06.20;6;14;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+29.06.20;6;14;10;400;Peridiniella danica;30;1;250;13,88310426;Myzoza
+29.06.20;6;14;10;400;Phaeocystis indet.;30;37;250;513,6748577;Haptophyta
+29.06.20;6;14;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+29.06.20;6;14;10;400;Prorocentrum micans;30;;250;0;Myzoza
+29.06.20;6;14;10;400;Prorocentrum minimum;30;1;250;13,88310426;Myzoza
+29.06.20;6;14;10;400;Prorocentrum triestinum;30;1;250;13,88310426;Myzoza
+29.06.20;6;14;10;400;Rhizosolemia indet.;30;;250;0;Bacillariophyta
+29.06.20;6;14;10;400;Rhodomonas indet.;30;55;250;763,5707344;Cryptophyta
+29.06.20;6;14;10;400;Thalassiosira indet.;30;1;250;13,88310426;Bacillariophyta
+29.06.20;8;14;10;400;Alexandrium species;30;;250;0;Myzoza
+29.06.20;8;14;10;400;Amphidinium crassum ;30;;250;0;Myzoza
+29.06.20;8;14;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+29.06.20;8;14;10;400;Ciliate indet.;30;8;250;111,0648341;Ciliophora
+29.06.20;8;14;10;400;Coscinodiscus indet.;30;10;250;138,8310426;Bacillariophyta
+29.06.20;8;14;10;400;Cryptomonas indet.;30;56;250;777,4538387;Cryptophyta
+29.06.20;8;14;10;400;Cylendrotheca closterium;30;8;250;111,0648341;Bacillariophyta
+29.06.20;8;14;10;400;Gymnodinium indet.;30;;250;0;Myzoza
+29.06.20;8;14;10;400;Hemiselmis indet.;30;8;250;111,0648341;Cryptophyta
+29.06.20;8;14;10;400;Leptocylindricus danicus;30;91;250;1263,362488;Bacillariophyta
+29.06.20;8;14;10;400;Oblea rotunda;30;;250;0;Myzoza
+29.06.20;8;14;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+29.06.20;8;14;10;400;Peridiniella danica;30;;250;0;Myzoza
+29.06.20;8;14;10;400;Phaeocystis indet.;30;140;250;1943,634597;Haptophyta
+29.06.20;8;14;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+29.06.20;8;14;10;400;Prorocentrum micans;30;;250;0;Myzoza
+29.06.20;8;14;10;400;Prorocentrum minimum;30;2;250;27,76620852;Myzoza
+29.06.20;8;14;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+29.06.20;8;14;10;400;Rhizosolemia indet.;30;;250;0;Bacillariophyta
+29.06.20;8;14;10;400;Rhodomonas indet.;30;27;250;374,8438151;Cryptophyta
+29.06.20;8;14;10;400;Thalassiosira indet.;30;3;250;41,64931279;Bacillariophyta
+29.06.20;12;14;10;400;Alexandrium species;30;3;250;41,64931279;Myzoza
+29.06.20;12;14;10;400;Amphidinium crassum ;30;2;250;27,76620852;Myzoza
+29.06.20;12;14;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+29.06.20;12;14;10;400;Ciliate indet.;30;11;250;152,7141469;Ciliophora
+29.06.20;12;14;10;400;Coscinodiscus indet.;30;5;250;69,41552131;Bacillariophyta
+29.06.20;12;14;10;400;Cryptomonas indet.;30;70;250;971,8172983;Cryptophyta
+29.06.20;12;14;10;400;Cylendrotheca closterium;30;15;250;208,2465639;Bacillariophyta
+29.06.20;12;14;10;400;Gymnodinium indet.;30;11;250;152,7141469;Myzoza
+29.06.20;12;14;10;400;Hemiselmis indet.;30;47;250;652,5059003;Cryptophyta
+29.06.20;12;14;10;400;Leptocylindricus danicus;30;97;250;1346,661113;Bacillariophyta
+29.06.20;12;14;10;400;Oblea rotunda;30;;250;0;Myzoza
+29.06.20;12;14;10;400;Odontella auritia;30;2;250;27,76620852;Bacillariophyta
+29.06.20;12;14;10;400;Peridiniella danica;30;;250;0;Myzoza
+29.06.20;12;14;10;400;Phaeocystis indet.;30;115;250;1596,55699;Haptophyta
+29.06.20;12;14;10;400;Pinnularia indet.;30;2;250;27,76620852;Bacillariophyta
+29.06.20;12;14;10;400;Prorocentrum micans;30;;250;0;Myzoza
+29.06.20;12;14;10;400;Prorocentrum minimum;30;1;250;13,88310426;Myzoza
+29.06.20;12;14;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+29.06.20;12;14;10;400;Rhizosolemia indet.;30;;250;0;Bacillariophyta
+29.06.20;12;14;10;400;Rhodomonas indet.;30;35;250;485,9086492;Cryptophyta
+29.06.20;12;14;10;400;Thalassiosira indet.;30;1;250;13,88310426;Bacillariophyta
+30.06.20;4;0;10;400;Alexandrium species;30;17;250;236,0127725;Myzoza
+30.06.20;4;0;10;400;Amphidinium crassum ;30;7;250;97,18172983;Myzoza
+30.06.20;4;0;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+30.06.20;4;0;10;400;Ciliate indet.;30;2;250;27,76620852;Ciliophora
+30.06.20;4;0;10;400;Coscinodiscus indet.;30;11;250;152,7141469;Bacillariophyta
+30.06.20;4;0;10;400;Cryptomonas indet.;30;43;250;596,9734833;Cryptophyta
+30.06.20;4;0;10;400;Cylendrotheca closterium;30;1;250;13,88310426;Bacillariophyta
+30.06.20;4;0;10;400;Gymnodinium indet.;30;36;250;499,7917534;Myzoza
+30.06.20;4;0;10;400;Hemiselmis indet.;30;5;250;69,41552131;Cryptophyta
+30.06.20;4;0;10;400;Heterocapsa rotunda;30;5;250;69,41552131;Myzoza
+30.06.20;4;0;10;400;Leptocylindricus danicus;30;134;250;1860,335971;Bacillariophyta
+30.06.20;4;0;10;400;Oblea rotunda;30;;250;0;Myzoza
+30.06.20;4;0;10;400;Odontella auritia;30;1;250;13,88310426;Bacillariophyta
+30.06.20;4;0;10;400;Peridiniella danica;30;;250;0;Myzoza
+30.06.20;4;0;10;400;Phaeocystis indet.;30;6;250;83,29862557;Haptophyta
+30.06.20;4;0;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+30.06.20;4;0;10;400;Prorocentrum micans;30;2;250;27,76620852;Myzoza
+30.06.20;4;0;10;400;Prorocentrum minimum;30;7;250;97,18172983;Myzoza
+30.06.20;4;0;10;400;Prorocentrum triestinum;30;2;250;27,76620852;Myzoza
+30.06.20;4;0;10;400;Rhodomonas indet.;30;21;250;291,5451895;Cryptophyta
+30.06.20;4;0;10;400;Thalassiosira indet.;30;3;250;41,64931279;Bacillariophyta
+30.06.20;8;0;10;400;Alexandrium species;30;20;250;277,6620852;Myzoza
+30.06.20;8;0;10;400;Amphidinium crassum ;30;4;250;55,53241705;Myzoza
+30.06.20;8;0;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+30.06.20;8;0;10;400;Ciliate indet.;30;1;250;13,88310426;Ciliophora
+30.06.20;8;0;10;400;Coscinodiscus indet.;30;6;250;83,29862557;Bacillariophyta
+30.06.20;8;0;10;400;Cryptomonas indet.;30;35;250;485,9086492;Cryptophyta
+30.06.20;8;0;10;400;Cylendrotheca closterium;30;;250;0;Bacillariophyta
+30.06.20;8;0;10;400;Gymnodinium indet.;30;61;250;846,86936;Myzoza
+30.06.20;8;0;10;400;Hemiselmis indet.;30;9;250;124,9479384;Cryptophyta
+30.06.20;8;0;10;400;Heterocapsa rotunda;30;5;250;69,41552131;Myzoza
+30.06.20;8;0;10;400;Leptocylindricus danicus;30;123;250;1707,621824;Bacillariophyta
+30.06.20;8;0;10;400;Oblea rotunda;30;;250;0;Myzoza
+30.06.20;8;0;10;400;Odontella auritia;30;1;250;13,88310426;Bacillariophyta
+30.06.20;8;0;10;400;Peridiniella danica;30;;250;0;Myzoza
+30.06.20;8;0;10;400;Phaeocystis indet.;30;;250;0;Haptophyta
+30.06.20;8;0;10;400;Pinnularia indet.;30;1;250;13,88310426;Bacillariophyta
+30.06.20;8;0;10;400;Prorocentrum micans;30;;250;0;Myzoza
+30.06.20;8;0;10;400;Prorocentrum minimum;30;8;250;111,0648341;Myzoza
+30.06.20;8;0;10;400;Prorocentrum triestinum;30;1;250;13,88310426;Myzoza
+30.06.20;8;0;10;400;Rhodomonas indet.;30;24;250;333,1945023;Cryptophyta
+30.06.20;8;0;10;400;Thalassiosira indet.;30;1;250;13,88310426;Bacillariophyta
+30.06.20;11;0;10;400;Alexandrium species;30;18;250;249,8958767;Myzoza
+30.06.20;11;0;10;400;Amphidinium crassum ;30;1;250;13,88310426;Myzoza
+30.06.20;11;0;10;400;Chaetocerus species;30;3;250;41,64931279;Bacillariophyta
+30.06.20;11;0;10;400;Ciliate indet.;30;4;250;55,53241705;Ciliophora
+30.06.20;11;0;10;400;Coscinodiscus indet.;30;10;250;138,8310426;Bacillariophyta
+30.06.20;11;0;10;400;Cryptomonas indet.;30;15;250;208,2465639;Cryptophyta
+30.06.20;11;0;10;400;Cylendrotheca closterium;30;1;250;13,88310426;Bacillariophyta
+30.06.20;11;0;10;400;Gymnodinium indet.;30;91;250;1263,362488;Myzoza
+30.06.20;11;0;10;400;Hemiselmis indet.;30;6;250;83,29862557;Cryptophyta
+30.06.20;11;0;10;400;Heterocapsa rotunda;30;9;250;124,9479384;Myzoza
+30.06.20;11;0;10;400;Leptocylindricus danicus;30;181;250;2512,841871;Bacillariophyta
+30.06.20;11;0;10;400;Oblea rotunda;30;1;250;13,88310426;Myzoza
+30.06.20;11;0;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+30.06.20;11;0;10;400;Peridiniella danica;30;;250;0;Myzoza
+30.06.20;11;0;10;400;Phaeocystis indet.;30;15;250;208,2465639;Haptophyta
+30.06.20;11;0;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+30.06.20;11;0;10;400;Prorocentrum micans;30;;250;0;Myzoza
+30.06.20;11;0;10;400;Prorocentrum minimum;30;10;250;138,8310426;Myzoza
+30.06.20;11;0;10;400;Prorocentrum triestinum;30;1;250;13,88310426;Myzoza
+30.06.20;11;0;10;400;Rhodomonas indet.;30;8;250;111,0648341;Cryptophyta
+30.06.20;11;0;10;400;Thalassiosira indet.;30;3;250;41,64931279;Bacillariophyta
+02.07.20;1;6;10;400;Alexandrium species;30;2;250;27,76620852;Myzoza
+02.07.20;1;6;10;400;Amphidinium crassum ;30;;250;0;Myzoza
+02.07.20;1;6;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+02.07.20;1;6;10;400;Ciliate indet.;30;;250;0;Ciliophora
+02.07.20;1;6;10;400;Coscinodiscus indet.;30;6;250;83,29862557;Bacillariophyta
+02.07.20;1;6;10;400;Cryptomonas indet.;30;35;250;485,9086492;Cryptophyta
+02.07.20;1;6;10;400;Cylendrotheca closterium;30;8;250;111,0648341;Bacillariophyta
+02.07.20;1;6;10;400;Gymnodinium indet.;30;17;250;236,0127725;Myzoza
+02.07.20;1;6;10;400;Hemiselmis indet.;30;28;250;388,7269193;Cryptophyta
+02.07.20;1;6;10;400;Heterocapsa rotunda;30;1;250;13,88310426;Myzoza
+02.07.20;1;6;10;400;Leptocylindricus danicus;25;165;250;2748,854644;Bacillariophyta
+02.07.20;1;6;10;400;Oblea rotunda;30;2;250;27,76620852;Myzoza
+02.07.20;1;6;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+02.07.20;1;6;10;400;Peridiniella danica;30;3;250;41,64931279;Myzoza
+02.07.20;1;6;10;400;Phaeocystis indet.;25;133;250;2215,74344;Haptophyta
+02.07.20;1;6;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+02.07.20;1;6;10;400;Prorocentrum micans;30;1;250;13,88310426;Myzoza
+02.07.20;1;6;10;400;Prorocentrum minimum;30;15;250;208,2465639;Myzoza
+02.07.20;1;6;10;400;Prorocentrum triestinum;30;1;250;13,88310426;Myzoza
+02.07.20;1;6;10;400;Rhodomonas indet.;30;15;250;208,2465639;Cryptophyta
+02.07.20;1;6;10;400;Thalassiosira indet.;30;1;250;13,88310426;Bacillariophyta
+02.07.20;5;6;10;400;Alexandrium species;30;1;250;13,88310426;Myzoza
+02.07.20;5;6;10;400;Amphidinium crassum ;30;;250;0;Myzoza
+02.07.20;5;6;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+02.07.20;5;6;10;400;Ciliate indet.;30;1;250;13,88310426;Ciliophora
+02.07.20;5;6;10;400;Coscinodiscus indet.;30;1;250;13,88310426;Bacillariophyta
+02.07.20;5;6;10;400;Cryptomonas indet.;30;19;250;263,778981;Cryptophyta
+02.07.20;5;6;10;400;Cylendrotheca closterium;30;4;250;55,53241705;Bacillariophyta
+02.07.20;5;6;10;400;Gymnodinium indet.;30;29;250;402,6100236;Myzoza
+02.07.20;5;6;10;400;Hemiselmis indet.;30;40;250;555,3241705;Cryptophyta
+02.07.20;5;6;10;400;Leptocylindricus danicus;30;45;250;624,7396918;Bacillariophyta
+02.07.20;5;6;10;400;Oblea rotunda;30;1;250;13,88310426;Myzoza
+02.07.20;5;6;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+02.07.20;5;6;10;400;Peridiniella danica;30;1;250;13,88310426;Myzoza
+02.07.20;5;6;10;400;Phaeocystis indet.;30;150;250;2082,465639;Haptophyta
+02.07.20;5;6;10;400;Pinnularia indet.;30;;s;#WERT!;Bacillariophyta
+02.07.20;5;6;10;400;Prorocentrum micans;30;1;250;13,88310426;Myzoza
+02.07.20;5;6;10;400;Prorocentrum minimum;30;14;250;194,3634597;Myzoza
+02.07.20;5;6;10;400;Prorocentrum triestinum;30;2;250;27,76620852;Myzoza
+02.07.20;5;6;10;400;Rhizosolemia indet.;30;;250;0;Bacillariophyta
+02.07.20;5;6;10;400;Rhodomonas indet.;30;26;250;360,9607108;Cryptophyta
+02.07.20;5;6;10;400;Thalassiosira indet.;30;2;250;27,76620852;Bacillariophyta
+02.07.20;9;6;10;400;Alexandrium species;30;4;250;55,53241705;Myzoza
+02.07.20;9;6;10;400;Amphidinium crassum ;30;;250;0;Myzoza
+02.07.20;9;6;10;400;Chaetocerus species;30;4;250;55,53241705;Bacillariophyta
+02.07.20;9;6;10;400;Ciliate indet.;30;2;250;27,76620852;Ciliophora
+02.07.20;9;6;10;400;Coscinodiscus indet.;30;6;250;83,29862557;Bacillariophyta
+02.07.20;9;6;10;400;Cryptomonas indet.;30;20;250;277,6620852;Cryptophyta
+02.07.20;9;6;10;400;Cylendrotheca closterium;30;17;250;236,0127725;Bacillariophyta
+02.07.20;9;6;10;400;Gymnodinium indet.;30;20;250;277,6620852;Myzoza
+02.07.20;9;6;10;400;Hemiselmis indet.;30;39;250;541,4410662;Cryptophyta
+02.07.20;9;6;10;400;Leptocylindricus danicus;30;115;250;1596,55699;Bacillariophyta
+02.07.20;9;6;10;400;Oblea rotunda;30;;250;0;Myzoza
+02.07.20;9;6;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+02.07.20;9;6;10;400;Peridiniella danica;30;;250;0;Myzoza
+02.07.20;9;6;10;400;Phaeocystis indet.;30;99;250;1374,427322;Haptophyta
+02.07.20;9;6;10;400;Pinnularia indet.;30;1;250;13,88310426;Bacillariophyta
+02.07.20;9;6;10;400;Prorocentrum micans;30;;250;0;Myzoza
+02.07.20;9;6;10;400;Prorocentrum minimum;30;10;250;138,8310426;Myzoza
+02.07.20;9;6;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+02.07.20;9;6;10;400;Rhizosolemia indet.;30;;250;0;Bacillariophyta
+02.07.20;9;6;10;400;Rhodomonas indet.;30;21;250;291,5451895;Cryptophyta
+02.07.20;9;6;10;400;Thalassiosira indet.;30;2;250;27,76620852;Bacillariophyta
+02.07.20;11;6;10;400;Alexandrium species;30;;250;0;Myzoza
+02.07.20;11;6;10;400;Amphidinium crassum ;30;1;250;13,88310426;Myzoza
+02.07.20;11;6;10;400;Chaetocerus species;30;1;250;13,88310426;Bacillariophyta
+02.07.20;11;6;10;400;Ciliate indet.;30;3;250;41,64931279;Ciliophora
+02.07.20;11;6;10;400;Coscinodiscus indet.;30;6;250;83,29862557;Bacillariophyta
+02.07.20;11;6;10;400;Cryptomonas indet.;30;34;250;472,0255449;Cryptophyta
+02.07.20;11;6;10;400;Cylendrotheca closterium;30;1;250;13,88310426;Bacillariophyta
+02.07.20;11;6;10;400;Gymnodinium indet.;30;17;250;236,0127725;Myzoza
+02.07.20;11;6;10;400;Hemiselmis indet.;30;35;250;485,9086492;Cryptophyta
+02.07.20;11;6;10;400;Leptocylindricus danicus;30;150;250;2082,465639;Bacillariophyta
+02.07.20;11;6;10;400;Oblea rotunda;30;2;250;27,76620852;Myzoza
+02.07.20;11;6;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+02.07.20;11;6;10;400;Peridiniella danica;30;;250;0;Myzoza
+02.07.20;11;6;10;400;Phaeocystis indet.;30;171;250;2374,010829;Haptophyta
+02.07.20;11;6;10;400;Pinnularia indet.;30;1;250;13,88310426;Bacillariophyta
+02.07.20;11;6;10;400;Prorocentrum micans;30;;250;0;Myzoza
+02.07.20;11;6;10;400;Prorocentrum minimum;30;16;250;222,1296682;Myzoza
+02.07.20;11;6;10;400;Prorocentrum triestinum;30;1;250;13,88310426;Myzoza
+02.07.20;11;6;10;400;Rhizosolemia indet.;30;;250;0;Bacillariophyta
+02.07.20;11;6;10;400;Rhodomonas indet.;30;20;250;277,6620852;Cryptophyta
+02.07.20;11;6;10;400;Thalassiosira indet.;30;3;250;41,64931279;Bacillariophyta
+06.07.20;3;6;10;400;Alexandrium species;30;1;250;13,88310426;Myzoza
+06.07.20;3;6;10;400;Amphidinium crassum ;30;2;250;27,76620852;Myzoza
+06.07.20;3;6;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+06.07.20;3;6;10;400;Ciliate indet.;30;1;250;13,88310426;Ciliophora
+06.07.20;3;6;10;400;Coscinodiscus indet.;30;8;250;111,0648341;Bacillariophyta
+06.07.20;3;6;10;400;Cryptomonas indet.;30;25;250;347,0776066;Cryptophyta
+06.07.20;3;6;10;400;Cylendrotheca closterium;30;1;250;13,88310426;Bacillariophyta
+06.07.20;3;6;10;400;Gymnodinium indet.;30;13;250;180,4803554;Myzoza
+06.07.20;3;6;10;400;Hemiselmis indet.;30;59;250;819,1031515;Cryptophyta
+06.07.20;3;6;10;400;Leptocylindricus danicus;20;150;250;3123,698459;Bacillariophyta
+06.07.20;3;6;10;400;Oblea rotunda;30;1;250;13,88310426;Myzoza
+06.07.20;3;6;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+06.07.20;3;6;10;400;Peridiniella danica;30;1;250;13,88310426;Myzoza
+06.07.20;3;6;10;400;Phaeocystis indet.;30;159;250;2207,413578;Haptophyta
+06.07.20;3;6;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+06.07.20;3;6;10;400;Prorocentrum micans;30;1;250;13,88310426;Myzoza
+06.07.20;3;6;10;400;Prorocentrum minimum;30;10;250;138,8310426;Myzoza
+06.07.20;3;6;10;400;Prorocentrum triestinum;30;1;250;13,88310426;Myzoza
+06.07.20;3;6;10;400;Rhizosolemia indet.;30;;250;0;Bacillariophyta
+06.07.20;3;6;10;400;Rhodomonas indet.;30;38;250;527,557962;Cryptophyta
+06.07.20;3;6;10;400;Thalassiosira indet.;30;2;250;27,76620852;Bacillariophyta
+06.07.20;7;6;10;400;Alexandrium species;30;1;250;13,88310426;Myzoza
+06.07.20;7;6;10;400;Amphidinium crassum ;30;2;250;27,76620852;Myzoza
+06.07.20;7;6;10;400;Chaetocerus species;30;1;250;13,88310426;Bacillariophyta
+06.07.20;7;6;10;400;Ciliate indet.;30;;250;0;Ciliophora
+06.07.20;7;6;10;400;Coscinodiscus indet.;30;11;250;152,7141469;Bacillariophyta
+06.07.20;7;6;10;400;Cryptomonas indet.;30;29;250;402,6100236;Cryptophyta
+06.07.20;7;6;10;400;Cylendrotheca closterium;30;15;250;208,2465639;Bacillariophyta
+06.07.20;7;6;10;400;Gymnodinium indet.;30;42;250;583,090379;Myzoza
+06.07.20;7;6;10;400;Hemiselmis indet.;30;25;250;347,0776066;Cryptophyta
+06.07.20;7;6;10;400;Heterocapsa rotunda;30;1;250;13,88310426;Myzoza
+06.07.20;7;6;10;400;Leptocylindricus danicus;30;112;250;1554,907677;Bacillariophyta
+06.07.20;7;6;10;400;Oblea rotunda;30;2;250;27,76620852;Myzoza
+06.07.20;7;6;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+06.07.20;7;6;10;400;Peridiniella danica;30;4;250;55,53241705;Myzoza
+06.07.20;7;6;10;400;Phaeocystis indet.;30;123;250;1707,621824;Haptophyta
+06.07.20;7;6;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+06.07.20;7;6;10;400;Prorocentrum micans;30;;250;0;Myzoza
+06.07.20;7;6;10;400;Prorocentrum minimum;30;7;250;97,18172983;Myzoza
+06.07.20;7;6;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+06.07.20;7;6;10;400;Rhodomonas indet.;30;25;250;347,0776066;Cryptophyta
+06.07.20;7;6;10;400;Thalassiosira indet.;30;;250;0;Bacillariophyta
+06.07.20;10;6;10;400;Alexandrium species;30;6;250;83,29862557;Myzoza
+06.07.20;10;6;10;400;Amphidinium crassum ;30;3;250;41,64931279;Myzoza
+06.07.20;10;6;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+06.07.20;10;6;10;400;Ciliate indet.;30;;250;0;Ciliophora
+06.07.20;10;6;10;400;Coscinodiscus indet.;30;16;250;222,1296682;Bacillariophyta
+06.07.20;10;6;10;400;Cryptomonas indet.;30;48;250;666,3890046;Cryptophyta
+06.07.20;10;6;10;400;Cylendrotheca closterium;30;4;250;55,53241705;Bacillariophyta
+06.07.20;10;6;10;400;Gymnodinium indet.;30;6;250;83,29862557;Myzoza
+06.07.20;10;6;10;400;Hemiselmis indet.;30;25;250;347,0776066;Cryptophyta
+06.07.20;10;6;10;400;Leptocylindricus danicus;20;177;250;3685,964182;Bacillariophyta
+06.07.20;10;6;10;400;Oblea rotunda;30;2;250;27,76620852;Myzoza
+06.07.20;10;6;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+06.07.20;10;6;10;400;Peridiniella danica;30;;250;0;Myzoza
+06.07.20;10;6;10;400;Phaeocystis indet.;30;30;250;416,4931279;Haptophyta
+06.07.20;10;6;10;400;Pinnularia indet.;30;1;250;13,88310426;Bacillariophyta
+06.07.20;10;6;10;400;Prorocentrum micans;30;4;250;55,53241705;Myzoza
+06.07.20;10;6;10;400;Prorocentrum minimum;30;16;250;222,1296682;Myzoza
+06.07.20;10;6;10;400;Prorocentrum triestinum;30;2;250;27,76620852;Myzoza
+06.07.20;10;6;10;400;Rhizosolemia indet.;30;;250;0;Bacillariophyta
+06.07.20;10;6;10;400;Rhodomonas indet.;30;59;250;819,1031515;Cryptophyta
+06.07.20;10;6;10;400;Thalassiosira indet.;30;2;250;27,76620852;Bacillariophyta
+06.07.20;12;6;10;400;Alexandrium species;30;2;250;27,76620852;Myzoza
+06.07.20;12;6;10;400;Amphidinium crassum ;30;3;250;41,64931279;Myzoza
+06.07.20;12;6;10;400;Chaetocerus species;30;1;250;13,88310426;Bacillariophyta
+06.07.20;12;6;10;400;Ciliate indet.;30;1;250;13,88310426;Ciliophora
+06.07.20;12;6;10;400;Coscinodiscus indet.;30;17;250;236,0127725;Bacillariophyta
+06.07.20;12;6;10;400;Cryptomonas indet.;30;37;250;513,6748577;Cryptophyta
+06.07.20;12;6;10;400;Cylendrotheca closterium;30;9;250;124,9479384;Bacillariophyta
+06.07.20;12;6;10;400;Gymnodinium indet.;30;32;250;444,2593364;Myzoza
+06.07.20;12;6;10;400;Hemiselmis indet.;30;41;250;569,2072747;Cryptophyta
+06.07.20;12;6;10;400;Heterocapsa rotunda;30;1;250;13,88310426;Myzoza
+06.07.20;12;6;10;400;Leptocylindricus danicus;20;139;250;2894,627239;Bacillariophyta
+06.07.20;12;6;10;400;Oblea rotunda;30;1;250;13,88310426;Myzoza
+06.07.20;12;6;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+06.07.20;12;6;10;400;Peridiniella danica;30;;250;0;Myzoza
+06.07.20;12;6;10;400;Phaeocystis indet.;30;160;250;2221,296682;Haptophyta
+06.07.20;12;6;10;400;Pinnularia indet.;30;2;250;27,76620852;Bacillariophyta
+06.07.20;12;6;10;400;Prorocentrum micans;30;1;250;13,88310426;Myzoza
+06.07.20;12;6;10;400;Prorocentrum minimum;30;15;250;208,2465639;Myzoza
+06.07.20;12;6;10;400;Prorocentrum triestinum;30;1;250;13,88310426;Myzoza
+06.07.20;12;6;10;400;Rhodomonas indet.;30;36;250;499,7917534;Cryptophyta
+06.07.20;12;6;10;400;Thalassiosira indet.;30;4;250;55,53241705;Bacillariophyta
+07.07.20;2;6;10;400;Alexandrium species;30;;250;0;Myzoza
+07.07.20;2;6;10;400;Amphidinium crassum ;30;1;250;13,88310426;Myzoza
+07.07.20;2;6;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+07.07.20;2;6;10;400;Ciliate indet.;30;1;250;13,88310426;Ciliophora
+07.07.20;2;6;10;400;Coscinodiscus indet.;30;14;250;194,3634597;Bacillariophyta
+07.07.20;2;6;10;400;Cryptomonas indet.;30;53;250;735,8045259;Cryptophyta
+07.07.20;2;6;10;400;Cylendrotheca closterium;30;10;250;138,8310426;Bacillariophyta
+07.07.20;2;6;10;400;Gymnodinium indet.;30;24;250;333,1945023;Myzoza
+07.07.20;2;6;10;400;Hemiselmis indet.;30;25;250;347,0776066;Cryptophyta
+07.07.20;2;6;10;400;Heterocapsa rotunda;30;;250;0;Myzoza
+07.07.20;2;6;10;400;Leptocylindricus danicus;20;208;250;4331,52853;Bacillariophyta
+07.07.20;2;6;10;400;Oblea rotunda;30;;250;0;Myzoza
+07.07.20;2;6;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+07.07.20;2;6;10;400;Peridiniella danica;30;;250;0;Myzoza
+07.07.20;2;6;10;400;Phaeocystis indet.;30;94;250;1305,011801;Haptophyta
+07.07.20;2;6;10;400;Pinnularia indet.;30;1;250;13,88310426;Bacillariophyta
+07.07.20;2;6;10;400;Prorocentrum micans;30;1;250;13,88310426;Myzoza
+07.07.20;2;6;10;400;Prorocentrum minimum;30;12;250;166,5972511;Myzoza
+07.07.20;2;6;10;400;Prorocentrum triestinum;30;1;250;13,88310426;Myzoza
+07.07.20;2;6;10;400;Rhodomonas indet.;30;30;250;416,4931279;Cryptophyta
+07.07.20;2;6;10;400;Thalassiosira indet.;30;2;250;27,76620852;Bacillariophyta
+07.07.20;4;6;10;400;Alexandrium species;30;4;250;55,53241705;Myzoza
+07.07.20;4;6;10;400;Amphidinium crassum ;30;3;250;41,64931279;Myzoza
+07.07.20;4;6;10;400;Chaetocerus species;30;1;250;13,88310426;Bacillariophyta
+07.07.20;4;6;10;400;Ciliate indet.;30;;250;0;Ciliophora
+07.07.20;4;6;10;400;Coscinodiscus indet.;30;12;250;166,5972511;Bacillariophyta
+07.07.20;4;6;10;400;Cryptomonas indet.;30;35;250;485,9086492;Cryptophyta
+07.07.20;4;6;10;400;Cylendrotheca closterium;30;10;250;138,8310426;Bacillariophyta
+07.07.20;4;6;10;400;Gymnodinium indet.;30;15;250;208,2465639;Myzoza
+07.07.20;4;6;10;400;Hemiselmis indet.;30;25;250;347,0776066;Cryptophyta
+07.07.20;4;6;10;400;Heterocapsa rotunda;30;1;250;13,88310426;Myzoza
+07.07.20;4;6;10;400;Leptocylindricus danicus;30;143;250;1985,283909;Bacillariophyta
+07.07.20;4;6;10;400;Oblea rotunda;30;;250;0;Myzoza
+07.07.20;4;6;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+07.07.20;4;6;10;400;Peridiniella danica;30;1;250;13,88310426;Myzoza
+07.07.20;4;6;10;400;Phaeocystis indet.;30;130;250;1804,803554;Haptophyta
+07.07.20;4;6;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+07.07.20;4;6;10;400;Prorocentrum micans;30;1;250;13,88310426;Myzoza
+07.07.20;4;6;10;400;Prorocentrum minimum;30;9;250;124,9479384;Myzoza
+07.07.20;4;6;10;400;Prorocentrum triestinum;30;1;250;13,88310426;Myzoza
+07.07.20;4;6;10;400;Rhodomonas indet.;30;35;250;485,9086492;Cryptophyta
+07.07.20;4;6;10;400;Thalassiosira indet.;30;2;250;27,76620852;Bacillariophyta
+07.07.20;6;6;10;400;Alexandrium species;30;1;250;13,88310426;Myzoza
+07.07.20;6;6;10;400;Amphidinium crassum ;30;2;250;27,76620852;Myzoza
+07.07.20;6;6;10;400;Chaetocerus species;30;1;250;13,88310426;Bacillariophyta
+07.07.20;6;6;10;400;Ciliate indet.;30;4;250;55,53241705;Ciliophora
+07.07.20;6;6;10;400;Coscinodiscus indet.;30;8;250;111,0648341;Bacillariophyta
+07.07.20;6;6;10;400;Cryptomonas indet.;30;27;250;374,8438151;Cryptophyta
+07.07.20;6;6;10;400;Cylendrotheca closterium;30;3;250;41,64931279;Bacillariophyta
+07.07.20;6;6;10;400;Gymnodinium indet.;30;37;250;513,6748577;Myzoza
+07.07.20;6;6;10;400;Hemiselmis indet.;30;26;250;360,9607108;Cryptophyta
+07.07.20;6;6;10;400;Heterocapsa rotunda;30;;250;0;Myzoza
+07.07.20;6;6;10;400;Leptocylindricus danicus;30;145;250;2013,050118;Bacillariophyta
+07.07.20;6;6;10;400;Oblea rotunda;30;1;250;13,88310426;Myzoza
+07.07.20;6;6;10;400;Odontella auritia;30;3;250;41,64931279;Bacillariophyta
+07.07.20;6;6;10;400;Peridiniella danica;30;3;250;41,64931279;Myzoza
+07.07.20;6;6;10;400;Phaeocystis indet.;30;85;250;1180,063862;Haptophyta
+07.07.20;6;6;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+07.07.20;6;6;10;400;Prorocentrum micans;30;1;250;13,88310426;Myzoza
+07.07.20;6;6;10;400;Prorocentrum minimum;30;17;250;236,0127725;Myzoza
+07.07.20;6;6;10;400;Prorocentrum triestinum;30;2;250;27,76620852;Myzoza
+07.07.20;6;6;10;400;Rhodomonas indet.;30;24;250;333,1945023;Cryptophyta
+07.07.20;6;6;10;400;Thalassiosira indet.;30;1;250;13,88310426;Bacillariophyta
+07.07.20;8;6;10;400;Alexandrium species;30;5;250;69,41552131;Myzoza
+07.07.20;8;6;10;400;Amphidinium crassum ;30;2;250;27,76620852;Myzoza
+07.07.20;8;6;10;400;Chaetocerus species;30;1;250;13,88310426;Bacillariophyta
+07.07.20;8;6;10;400;Ciliate indet.;30;;250;0;Ciliophora
+07.07.20;8;6;10;400;Coscinodiscus indet.;30;12;250;166,5972511;Bacillariophyta
+07.07.20;8;6;10;400;Cryptomonas indet.;30;19;250;263,778981;Cryptophyta
+07.07.20;8;6;10;400;Cylendrotheca closterium;30;11;250;152,7141469;Bacillariophyta
+07.07.20;8;6;10;400;Gymnodinium indet.;30;34;250;472,0255449;Myzoza
+07.07.20;8;6;10;400;Hemiselmis indet.;30;23;250;319,311398;Cryptophyta
+07.07.20;8;6;10;400;Heterocapsa rotunda;30;2;250;27,76620852;Myzoza
+07.07.20;8;6;10;400;Leptocylindricus danicus;25;145;250;2415,660142;Bacillariophyta
+07.07.20;8;6;10;400;Oblea rotunda;30;1;250;13,88310426;Myzoza
+07.07.20;8;6;10;400;Odontella auritia;30;1;250;13,88310426;Bacillariophyta
+07.07.20;8;6;10;400;Peridiniella danica;30;1;250;13,88310426;Myzoza
+07.07.20;8;6;10;400;Phaeocystis indet.;20;185;250;3852,561433;Haptophyta
+07.07.20;8;6;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+07.07.20;8;6;10;400;Prorocentrum micans;30;;250;0;Myzoza
+07.07.20;8;6;10;400;Prorocentrum minimum;30;21;250;291,5451895;Myzoza
+07.07.20;8;6;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+07.07.20;8;6;10;400;Rhodomonas indet.;30;12;250;166,5972511;Cryptophyta
+07.07.20;8;6;10;400;Thalassiosira indet.;30;5;250;69,41552131;Bacillariophyta
+09.07.20;1;18;10;400;Alexandrium species;30;2;250;27,76620852;Myzoza
+09.07.20;1;18;10;400;Amphidinium crassum ;30;8;250;111,0648341;Myzoza
+09.07.20;1;18;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+09.07.20;1;18;10;400;Ciliate indet.;30;13;250;180,4803554;Ciliophora
+09.07.20;1;18;10;400;Coscinodiscus indet.;30;33;250;458,1424406;Bacillariophyta
+09.07.20;1;18;10;400;Cryptomonas indet.;30;47;250;652,5059003;Cryptophyta
+09.07.20;1;18;10;400;Cylendrotheca closterium;30;40;250;555,3241705;Bacillariophyta
+09.07.20;1;18;10;400;Gymnodinium indet.;30;47;250;652,5059003;Myzoza
+09.07.20;1;18;10;400;Hemiselmis indet.;30;8;250;111,0648341;Cryptophyta
+09.07.20;1;18;10;400;Heterocapsa rotunda;30;;250;0;Myzoza
+09.07.20;1;18;10;400;Leptocylindricus danicus;30;15;250;208,2465639;Bacillariophyta
+09.07.20;1;18;10;400;Oblea rotunda;30;5;250;69,41552131;Myzoza
+09.07.20;1;18;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+09.07.20;1;18;10;400;Peridiniella danica;30;;250;0;Myzoza
+09.07.20;1;18;10;400;Phaeocystis indet.;30;10;250;138,8310426;Haptophyta
+09.07.20;1;18;10;400;Pinnularia indet.;30;3;250;41,64931279;Bacillariophyta
+09.07.20;1;18;10;400;Prorocentrum micans;30;3;250;41,64931279;Myzoza
+09.07.20;1;18;10;400;Prorocentrum minimum;30;9;250;124,9479384;Myzoza
+09.07.20;1;18;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+09.07.20;1;18;10;400;Rhodomonas indet.;30;16;250;222,1296682;Cryptophyta
+09.07.20;1;18;10;400;Thalassiosira indet.;30;2;250;27,76620852;Bacillariophyta
+09.07.20;3;18;10;400;Alexandrium species;30;8;250;111,0648341;Myzoza
+09.07.20;3;18;10;400;Amphidinium crassum ;30;4;250;55,53241705;Myzoza
+09.07.20;3;18;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+09.07.20;3;18;10;400;Ciliate indet.;30;17;250;236,0127725;Ciliophora
+09.07.20;3;18;10;400;Coscinodiscus indet.;30;23;250;319,311398;Bacillariophyta
+09.07.20;3;18;10;400;Cryptomonas indet.;30;57;250;791,3369429;Cryptophyta
+09.07.20;3;18;10;400;Cylendrotheca closterium;30;5;250;69,41552131;Bacillariophyta
+09.07.20;3;18;10;400;Gymnodinium indet.;30;11;250;152,7141469;Myzoza
+09.07.20;3;18;10;400;Hemiselmis indet.;30;19;250;263,778981;Cryptophyta
+09.07.20;3;18;10;400;Heterocapsa rotunda;30;;250;0;Myzoza
+09.07.20;3;18;10;400;Leptocylindricus danicus;30;5;250;69,41552131;Bacillariophyta
+09.07.20;3;18;10;400;Oblea rotunda;30;;250;0;Myzoza
+09.07.20;3;18;10;400;Odontella auritia;30;2;250;27,76620852;Bacillariophyta
+09.07.20;3;18;10;400;Peridiniella danica;30;;250;0;Myzoza
+09.07.20;3;18;10;400;Phaeocystis indet.;30;135;250;1874,219075;Haptophyta
+09.07.20;3;18;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+09.07.20;3;18;10;400;Prorocentrum micans;30;;250;0;Myzoza
+09.07.20;3;18;10;400;Prorocentrum minimum;30;4;250;55,53241705;Myzoza
+09.07.20;3;18;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+09.07.20;3;18;10;400;Rhodomonas indet.;30;33;250;458,1424406;Cryptophyta
+09.07.20;3;18;10;400;Thalassiosira indet.;30;1;250;13,88310426;Bacillariophyta
+09.07.20;5;18;10;400;Alexandrium species;30;16;250;222,1296682;Myzoza
+09.07.20;5;18;10;400;Amphidinium crassum ;30;6;250;83,29862557;Myzoza
+09.07.20;5;18;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+09.07.20;5;18;10;400;Ciliate indet.;30;11;250;152,7141469;Ciliophora
+09.07.20;5;18;10;400;Coscinodiscus indet.;30;10;250;138,8310426;Bacillariophyta
+09.07.20;5;18;10;400;Cryptomonas indet.;30;31;250;430,3762321;Cryptophyta
+09.07.20;5;18;10;400;Cylendrotheca closterium;30;16;250;222,1296682;Bacillariophyta
+09.07.20;5;18;10;400;Gymnodinium indet.;30;10;250;138,8310426;Myzoza
+09.07.20;5;18;10;400;Hemiselmis indet.;30;10;250;138,8310426;Cryptophyta
+09.07.20;5;18;10;400;Heterocapsa rotunda;30;;250;0;Myzoza
+09.07.20;5;18;10;400;Leptocylindricus danicus;25;169;250;2815,493544;Bacillariophyta
+09.07.20;5;18;10;400;Oblea rotunda;30;;250;0;Myzoza
+09.07.20;5;18;10;400;Odontella auritia;30;1;250;13,88310426;Bacillariophyta
+09.07.20;5;18;10;400;Peridiniella danica;30;;250;0;Myzoza
+09.07.20;5;18;10;400;Phaeocystis indet.;30;43;250;596,9734833;Haptophyta
+09.07.20;5;18;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+09.07.20;5;18;10;400;Prorocentrum micans;30;;250;0;Myzoza
+09.07.20;5;18;10;400;Prorocentrum minimum;30;3;250;41,64931279;Myzoza
+09.07.20;5;18;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+09.07.20;5;18;10;400;Rhodomonas indet.;30;34;250;472,0255449;Cryptophyta
+09.07.20;5;18;10;400;Thalassiosira indet.;30;1;250;13,88310426;Bacillariophyta
+09.07.20;9;18;10;400;Alexandrium species;30;5;250;69,41552131;Myzoza
+09.07.20;9;18;10;400;Amphidinium crassum ;30;4;250;55,53241705;Myzoza
+09.07.20;9;18;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+09.07.20;9;18;10;400;Ciliate indet.;30;10;250;138,8310426;Ciliophora
+09.07.20;9;18;10;400;Coscinodiscus indet.;30;55;250;763,5707344;Bacillariophyta
+09.07.20;9;18;10;400;Cryptomonas indet.;30;33;250;458,1424406;Cryptophyta
+09.07.20;9;18;10;400;Cylendrotheca closterium;30;51;250;708,0383174;Bacillariophyta
+09.07.20;9;18;10;400;Gymnodinium indet.;30;8;250;111,0648341;Myzoza
+09.07.20;9;18;10;400;Hemiselmis indet.;30;8;250;111,0648341;Cryptophyta
+09.07.20;9;18;10;400;Heterocapsa rotunda;30;;250;0;Myzoza
+09.07.20;9;18;10;400;Leptocylindricus danicus;15;245;250;6802,721088;Bacillariophyta
+09.07.20;9;18;10;400;Oblea rotunda;30;1;250;13,88310426;Myzoza
+09.07.20;9;18;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+09.07.20;9;18;10;400;Peridiniella danica;30;;250;0;Myzoza
+09.07.20;9;18;10;400;Phaeocystis indet.;30;10;250;138,8310426;Haptophyta
+09.07.20;9;18;10;400;Pinnularia indet.;30;6;250;83,29862557;Bacillariophyta
+09.07.20;9;18;10;400;Prorocentrum micans;30;1;250;13,88310426;Myzoza
+09.07.20;9;18;10;400;Prorocentrum minimum;30;2;250;27,76620852;Myzoza
+09.07.20;9;18;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+09.07.20;9;18;10;400;Rhodomonas indet.;30;20;250;277,6620852;Cryptophyta
+09.07.20;9;18;10;400;Thalassiosira indet.;30;1;250;13,88310426;Bacillariophyta
+09.07.20;11;18;10;400;Alexandrium species;30;6;250;83,29862557;Myzoza
+09.07.20;11;18;10;400;Amphidinium crassum ;30;2;250;27,76620852;Myzoza
+09.07.20;11;18;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+09.07.20;11;18;10;400;Ciliate indet.;30;13;250;180,4803554;Ciliophora
+09.07.20;11;18;10;400;Coscinodiscus indet.;30;8;250;111,0648341;Bacillariophyta
+09.07.20;11;18;10;400;Cryptomonas indet.;30;67;250;930,1679856;Cryptophyta
+09.07.20;11;18;10;400;Cylendrotheca closterium;30;1;250;13,88310426;Bacillariophyta
+09.07.20;11;18;10;400;Gymnodinium indet.;30;10;250;138,8310426;Myzoza
+09.07.20;11;18;10;400;Hemiselmis indet.;30;5;250;69,41552131;Cryptophyta
+09.07.20;11;18;10;400;Heterocapsa rotunda;30;;250;0;Myzoza
+09.07.20;11;18;10;400;Leptocylindricus danicus;30;150;250;2082,465639;Bacillariophyta
+09.07.20;11;18;10;400;Oblea rotunda;30;;250;0;Myzoza
+09.07.20;11;18;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+09.07.20;11;18;10;400;Peridiniella danica;30;;250;0;Myzoza
+09.07.20;11;18;10;400;Phaeocystis indet.;30;50;250;694,1552131;Haptophyta
+09.07.20;11;18;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+09.07.20;11;18;10;400;Prorocentrum micans;30;2;250;27,76620852;Myzoza
+09.07.20;11;18;10;400;Prorocentrum minimum;30;6;250;83,29862557;Myzoza
+09.07.20;11;18;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+09.07.20;11;18;10;400;Rhodomonas indet.;30;53;250;735,8045259;Cryptophyta
+09.07.20;11;18;10;400;Thalassiosira indet.;30;6;250;83,29862557;Bacillariophyta
+13.07.20;4;18;10;400;Alexandrium species;30;2;250;27,76620852;Myzoza
+13.07.20;4;18;10;400;Amphidinium crassum ;30;1;250;13,88310426;Myzoza
+13.07.20;4;18;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+13.07.20;4;18;10;400;Ciliate indet.;30;15;250;208,2465639;Ciliophora
+13.07.20;4;18;10;400;Coscinodiscus indet.;30;2;250;27,76620852;Bacillariophyta
+13.07.20;4;18;10;400;Cryptomonas indet.;30;76;250;1055,115924;Cryptophyta
+13.07.20;4;18;10;400;Cylendrotheca closterium;30;19;250;263,778981;Bacillariophyta
+13.07.20;4;18;10;400;Gymnodinium indet.;30;5;250;69,41552131;Myzoza
+13.07.20;4;18;10;400;Hemiselmis indet.;30;5;250;69,41552131;Cryptophyta
+13.07.20;4;18;10;400;Heterocapsa rotunda;30;1;250;13,88310426;Myzoza
+13.07.20;4;18;10;400;Leptocylindricus danicus;30;153;250;2124,114952;Bacillariophyta
+13.07.20;4;18;10;400;Oblea rotunda;30;;250;0;Myzoza
+13.07.20;4;18;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+13.07.20;4;18;10;400;Peridiniella danica;30;2;250;27,76620852;Myzoza
+13.07.20;4;18;10;400;Phaeocystis indet.;30;30;250;416,4931279;Haptophyta
+13.07.20;4;18;10;400;Pinnularia indet.;30;2;250;27,76620852;Bacillariophyta
+13.07.20;4;18;10;400;Prorocentrum micans;30;;250;0;Myzoza
+13.07.20;4;18;10;400;Prorocentrum minimum;30;6;250;83,29862557;Myzoza
+13.07.20;4;18;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+13.07.20;4;18;10;400;Rhodomonas indet.;30;75;250;1041,23282;Cryptophyta
+13.07.20;4;18;10;400;Thalassiosira indet.;30;2;250;27,76620852;Bacillariophyta
+13.07.20;6;18;10;400;Alexandrium species;30;;250;0;Myzoza
+13.07.20;6;18;10;400;Amphidinium crassum ;30;3;250;41,64931279;Myzoza
+13.07.20;6;18;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+13.07.20;6;18;10;400;Ciliate indet.;30;12;250;166,5972511;Ciliophora
+13.07.20;6;18;10;400;Coscinodiscus indet.;30;17;250;236,0127725;Bacillariophyta
+13.07.20;6;18;10;400;Cryptomonas indet.;30;105;250;1457,725948;Cryptophyta
+13.07.20;6;18;10;400;Cylendrotheca closterium;30;17;250;236,0127725;Bacillariophyta
+13.07.20;6;18;10;400;Gymnodinium indet.;30;;250;0;Myzoza
+13.07.20;6;18;10;400;Hemiselmis indet.;30;9;250;124,9479384;Cryptophyta
+13.07.20;6;18;10;400;Heterocapsa rotunda;30;;250;0;Myzoza
+13.07.20;6;18;10;400;Leptocylindricus danicus;30;98;250;1360,544218;Bacillariophyta
+13.07.20;6;18;10;400;Oblea rotunda;30;;250;0;Myzoza
+13.07.20;6;18;10;400;Odontella auritia;30;1;250;13,88310426;Bacillariophyta
+13.07.20;6;18;10;400;Peridiniella danica;30;;250;0;Myzoza
+13.07.20;6;18;10;400;Phaeocystis indet.;30;50;250;694,1552131;Haptophyta
+13.07.20;6;18;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+13.07.20;6;18;10;400;Prorocentrum micans;30;;250;0;Myzoza
+13.07.20;6;18;10;400;Prorocentrum minimum;30;3;250;41,64931279;Myzoza
+13.07.20;6;18;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+13.07.20;6;18;10;400;Rhodomonas indet.;30;95;250;1318,894905;Cryptophyta
+13.07.20;6;18;10;400;Thalassiosira indet.;30;1;250;13,88310426;Bacillariophyta
+13.07.20;8;18;10;400;Alexandrium species;30;1;250;13,88310426;Myzoza
+13.07.20;8;18;10;400;Amphidinium crassum ;30;2;250;27,76620852;Myzoza
+13.07.20;8;18;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+13.07.20;8;18;10;400;Ciliate indet.;30;11;250;152,7141469;Ciliophora
+13.07.20;8;18;10;400;Coscinodiscus indet.;30;85;250;1180,063862;Bacillariophyta
+13.07.20;8;18;10;400;Cryptomonas indet.;30;135;250;1874,219075;Cryptophyta
+13.07.20;8;18;10;400;Cylendrotheca closterium;30;45;250;624,7396918;Bacillariophyta
+13.07.20;8;18;10;400;Gymnodinium indet.;30;;250;0;Myzoza
+13.07.20;8;18;10;400;Hemiselmis indet.;30;11;250;152,7141469;Cryptophyta
+13.07.20;8;18;10;400;Heterocapsa rotunda;30;3;250;41,64931279;Myzoza
+13.07.20;8;18;10;400;Leptocylindricus danicus;30;12;250;166,5972511;Bacillariophyta
+13.07.20;8;18;10;400;Oblea rotunda;30;;250;0;Myzoza
+13.07.20;8;18;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+13.07.20;8;18;10;400;Peridiniella danica;30;;250;0;Myzoza
+13.07.20;8;18;10;400;Phaeocystis indet.;30;73;250;1013,466611;Haptophyta
+13.07.20;8;18;10;400;Pinnularia indet.;30;2;250;27,76620852;Bacillariophyta
+13.07.20;8;18;10;400;Prorocentrum micans;30;;250;0;Myzoza
+13.07.20;8;18;10;400;Prorocentrum minimum;30;;250;0;Myzoza
+13.07.20;8;18;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+13.07.20;8;18;10;400;Rhodomonas indet.;30;148;250;2054,699431;Cryptophyta
+13.07.20;8;18;10;400;Thalassiosira indet.;30;2;250;27,76620852;Bacillariophyta
+13.07.20;10;18;10;400;Alexandrium species;30;3;250;41,64931279;Myzoza
+13.07.20;10;18;10;400;Amphidinium crassum ;30;2;250;27,76620852;Myzoza
+13.07.20;10;18;10;400;Chaetocerus species;30;1;250;13,88310426;Bacillariophyta
+13.07.20;10;18;10;400;Ciliate indet.;30;11;250;152,7141469;Ciliophora
+13.07.20;10;18;10;400;Coscinodiscus indet.;30;49;250;680,2721088;Bacillariophyta
+13.07.20;10;18;10;400;Cryptomonas indet.;30;86;250;1193,946967;Cryptophyta
+13.07.20;10;18;10;400;Cylendrotheca closterium;30;34;250;472,0255449;Bacillariophyta
+13.07.20;10;18;10;400;Gymnodinium indet.;30;13;250;180,4803554;Myzoza
+13.07.20;10;18;10;400;Hemiselmis indet.;30;4;250;55,53241705;Cryptophyta
+13.07.20;10;18;10;400;Heterocapsa rotunda;30;;250;0;Myzoza
+13.07.20;10;18;10;400;Leptocylindricus danicus;20;151;250;3144,523115;Bacillariophyta
+13.07.20;10;18;10;400;Oblea rotunda;30;1;250;13,88310426;Myzoza
+13.07.20;10;18;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+13.07.20;10;18;10;400;Peridiniella danica;30;;250;0;Myzoza
+13.07.20;10;18;10;400;Phaeocystis indet.;30;28;250;388,7269193;Haptophyta
+13.07.20;10;18;10;400;Pinnularia indet.;30;4;250;55,53241705;Bacillariophyta
+13.07.20;10;18;10;400;Prorocentrum micans;30;2;250;27,76620852;Myzoza
+13.07.20;10;18;10;400;Prorocentrum minimum;30;15;250;208,2465639;Myzoza
+13.07.20;10;18;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+13.07.20;10;18;10;400;Rhodomonas indet.;30;56;250;777,4538387;Cryptophyta
+13.07.20;10;18;10;400;Thalassiosira indet.;30;;250;0;Bacillariophyta
+14.07.20;1;10;10;400;Alexandrium species;30;;250;0;Myzoza
+14.07.20;1;10;10;400;Amphidinium crassum ;30;;250;0;Myzoza
+14.07.20;1;10;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+14.07.20;1;10;10;400;Ciliate indet.;30;4;250;55,53241705;Ciliophora
+14.07.20;1;10;10;400;Coscinodiscus indet.;30;10;250;138,8310426;Bacillariophyta
+14.07.20;1;10;10;400;Cryptomonas indet.;30;107;250;1485,492156;Cryptophyta
+14.07.20;1;10;10;400;Cylendrotheca closterium;30;15;250;208,2465639;Bacillariophyta
+14.07.20;1;10;10;400;Gymnodinium indet.;30;25;250;347,0776066;Myzoza
+14.07.20;1;10;10;400;Hemiselmis indet.;30;26;250;360,9607108;Cryptophyta
+14.07.20;1;10;10;400;Heterocapsa rotunda;30;4;250;55,53241705;Myzoza
+14.07.20;1;10;10;400;Leptocylindricus danicus;30;140;250;1943,634597;Bacillariophyta
+14.07.20;1;10;10;400;Oblea rotunda;30;4;250;55,53241705;Myzoza
+14.07.20;1;10;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+14.07.20;1;10;10;400;Peridiniella danica;30;9;250;124,9479384;Myzoza
+14.07.20;1;10;10;400;Phaeocystis indet.;30;13;250;180,4803554;Haptophyta
+14.07.20;1;10;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+14.07.20;1;10;10;400;Prorocentrum micans;30;1;250;13,88310426;Myzoza
+14.07.20;1;10;10;400;Prorocentrum minimum;30;19;250;263,778981;Myzoza
+14.07.20;1;10;10;400;Prorocentrum triestinum;30;1;250;13,88310426;Myzoza
+14.07.20;1;10;10;400;Rhodomonas indet.;30;81;250;1124,531445;Cryptophyta
+14.07.20;1;10;10;400;Thalassiosira indet.;30;2;250;27,76620852;Bacillariophyta
+14.07.20;7;10;10;400;Alexandrium species;30;2;250;27,76620852;Myzoza
+14.07.20;7;10;10;400;Amphidinium crassum ;30;4;250;55,53241705;Myzoza
+14.07.20;7;10;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+14.07.20;7;10;10;400;Ciliate indet.;30;8;250;111,0648341;Ciliophora
+14.07.20;7;10;10;400;Coscinodiscus indet.;30;6;250;83,29862557;Bacillariophyta
+14.07.20;7;10;10;400;Cryptomonas indet.;30;87;250;1207,830071;Cryptophyta
+14.07.20;7;10;10;400;Cylendrotheca closterium;30;15;250;208,2465639;Bacillariophyta
+14.07.20;7;10;10;400;Gymnodinium indet.;30;32;250;444,2593364;Myzoza
+14.07.20;7;10;10;400;Hemiselmis indet.;30;13;250;180,4803554;Cryptophyta
+14.07.20;7;10;10;400;Heterocapsa rotunda;30;;250;0;Myzoza
+14.07.20;7;10;10;400;Leptocylindricus danicus;30;81;250;1124,531445;Bacillariophyta
+14.07.20;7;10;10;400;Oblea rotunda;30;2;250;27,76620852;Myzoza
+14.07.20;7;10;10;400;Odontella auritia;30;3;250;41,64931279;Bacillariophyta
+14.07.20;7;10;10;400;Peridiniella danica;30;7;250;97,18172983;Myzoza
+14.07.20;7;10;10;400;Phaeocystis indet.;30;26;250;360,9607108;Haptophyta
+14.07.20;7;10;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+14.07.20;7;10;10;400;Prorocentrum micans;30;;250;0;Myzoza
+14.07.20;7;10;10;400;Prorocentrum minimum;30;5;250;69,41552131;Myzoza
+14.07.20;7;10;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+14.07.20;7;10;10;400;Rhodomonas indet.;30;83;250;1152,297654;Cryptophyta
+14.07.20;7;10;10;400;Thalassiosira indet.;30;1;250;13,88310426;Bacillariophyta
+14.07.20;2;18;10;400;Alexandrium species;30;4;250;55,53241705;Myzoza
+14.07.20;2;18;10;400;Amphidinium crassum ;30;2;250;27,76620852;Myzoza
+14.07.20;2;18;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+14.07.20;2;18;10;400;Ciliate indet.;30;9;250;124,9479384;Ciliophora
+14.07.20;2;18;10;400;Coscinodiscus indet.;30;3;250;41,64931279;Bacillariophyta
+14.07.20;2;18;10;400;Cryptomonas indet.;30;73;250;1013,466611;Cryptophyta
+14.07.20;2;18;10;400;Cylendrotheca closterium;30;5;250;69,41552131;Bacillariophyta
+14.07.20;2;18;10;400;Gymnodinium indet.;30;5;250;69,41552131;Myzoza
+14.07.20;2;18;10;400;Hemiselmis indet.;30;3;250;41,64931279;Cryptophyta
+14.07.20;2;18;10;400;Heterocapsa rotunda;30;1;250;13,88310426;Myzoza
+14.07.20;2;18;10;400;Leptocylindricus danicus;30;138;250;1915,868388;Bacillariophyta
+14.07.20;2;18;10;400;Oblea rotunda;30;;250;0;Myzoza
+14.07.20;2;18;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+14.07.20;2;18;10;400;Peridiniella danica;30;2;250;27,76620852;Myzoza
+14.07.20;2;18;10;400;Phaeocystis indet.;30;42;250;583,090379;Haptophyta
+14.07.20;2;18;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+14.07.20;2;18;10;400;Prorocentrum micans;30;;250;0;Myzoza
+14.07.20;2;18;10;400;Prorocentrum minimum;30;7;250;97,18172983;Myzoza
+14.07.20;2;18;10;400;Prorocentrum triestinum;30;1;250;13,88310426;Myzoza
+14.07.20;2;18;10;400;Rhodomonas indet.;30;74;250;1027,349715;Cryptophyta
+14.07.20;2;18;10;400;Thalassiosira indet.;30;5;250;69,41552131;Bacillariophyta
+14.07.20;7;18;10;400;Alexandrium species;30;;250;0;Myzoza
+14.07.20;7;18;10;400;Amphidinium crassum ;30;3;250;41,64931279;Myzoza
+14.07.20;7;18;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+14.07.20;7;18;10;400;Ciliate indet.;30;13;250;180,4803554;Ciliophora
+14.07.20;7;18;10;400;Coscinodiscus indet.;30;70;250;971,8172983;Bacillariophyta
+14.07.20;7;18;10;400;Cryptomonas indet.;30;95;250;1318,894905;Cryptophyta
+14.07.20;7;18;10;400;Cylendrotheca closterium;30;12;250;166,5972511;Bacillariophyta
+14.07.20;7;18;10;400;Gymnodinium indet.;30;1;250;13,88310426;Myzoza
+14.07.20;7;18;10;400;Hemiselmis indet.;30;9;250;124,9479384;Cryptophyta
+14.07.20;7;18;10;400;Heterocapsa rotunda;30;;250;0;Myzoza
+14.07.20;7;18;10;400;Leptocylindricus danicus;30;7;250;97,18172983;Bacillariophyta
+14.07.20;7;18;10;400;Oblea rotunda;30;;250;0;Myzoza
+14.07.20;7;18;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+14.07.20;7;18;10;400;Peridiniella danica;30;;250;0;Myzoza
+14.07.20;7;18;10;400;Phaeocystis indet.;30;38;250;527,557962;Haptophyta
+14.07.20;7;18;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+14.07.20;7;18;10;400;Prorocentrum micans;30;;250;0;Myzoza
+14.07.20;7;18;10;400;Prorocentrum minimum;30;1;250;13,88310426;Myzoza
+14.07.20;7;18;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+14.07.20;7;18;10;400;Rhodomonas indet.;30;93;250;1291,128696;Cryptophyta
+14.07.20;7;18;10;400;Thalassiosira indet.;30;;250;0;Bacillariophyta
+14.07.20;12;18;10;400;Alexandrium species;30;4;250;55,53241705;Myzoza
+14.07.20;12;18;10;400;Amphidinium crassum ;30;2;250;27,76620852;Myzoza
+14.07.20;12;18;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+14.07.20;12;18;10;400;Ciliate indet.;30;12;250;166,5972511;Ciliophora
+14.07.20;12;18;10;400;Coscinodiscus indet.;30;7;250;97,18172983;Bacillariophyta
+14.07.20;12;18;10;400;Cryptomonas indet.;30;98;250;1360,544218;Cryptophyta
+14.07.20;12;18;10;400;Cylendrotheca closterium;30;20;250;277,6620852;Bacillariophyta
+14.07.20;12;18;10;400;Gymnodinium indet.;30;10;250;138,8310426;Myzoza
+14.07.20;12;18;10;400;Hemiselmis indet.;30;6;250;83,29862557;Cryptophyta
+14.07.20;12;18;10;400;Heterocapsa rotunda;30;3;250;41,64931279;Myzoza
+14.07.20;12;18;10;400;Leptocylindricus danicus;30;182;250;2526,724976;Bacillariophyta
+14.07.20;12;18;10;400;Oblea rotunda;30;;250;0;Myzoza
+14.07.20;12;18;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+14.07.20;12;18;10;400;Peridiniella danica;30;;250;0;Myzoza
+14.07.20;12;18;10;400;Phaeocystis indet.;30;16;250;222,1296682;Haptophyta
+14.07.20;12;18;10;400;Pinnularia indet.;30;1;250;13,88310426;Bacillariophyta
+14.07.20;12;18;10;400;Prorocentrum micans;30;;250;0;Myzoza
+14.07.20;12;18;10;400;Prorocentrum minimum;30;2;250;27,76620852;Myzoza
+14.07.20;12;18;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+14.07.20;12;18;10;400;Rhodomonas indet.;30;62;250;860,7524643;Cryptophyta
+14.07.20;12;18;10;400;Thalassiosira indet.;30;1;250;13,88310426;Bacillariophyta
+16.07.20;3;0;10;400;Alexandrium species;30;19;250;263,778981;Myzoza
+16.07.20;3;0;10;400;Amphidinium crassum ;30;4;250;55,53241705;Myzoza
+16.07.20;3;0;10;400;Chaetocerus species;30;2;250;27,76620852;Bacillariophyta
+16.07.20;3;0;10;400;Ciliate indet.;30;5;250;69,41552131;Ciliophora
+16.07.20;3;0;10;400;Coscinodiscus indet.;30;31;250;430,3762321;Bacillariophyta
+16.07.20;3;0;10;400;Cryptomonas indet.;30;51;250;708,0383174;Bacillariophyta
+16.07.20;3;0;10;400;Cylendrotheca closterium;30;2;250;27,76620852;Bacillariophyta
+16.07.20;3;0;10;400;Gymnodinium indet.;30;72;250;999,5835069;Myzoza
+16.07.20;3;0;10;400;Hemiselmis indet.;30;4;250;55,53241705;Cryptophyta
+16.07.20;3;0;10;400;Heterocapsa rotunda;30;18;250;249,8958767;Myzoza
+16.07.20;3;0;10;400;Leptocylindricus danicus;20;175;250;3644,314869;Bacillariophyta
+16.07.20;3;0;10;400;Oblea rotunda;30;1;250;13,88310426;Myzoza
+16.07.20;3;0;10;400;Odontella auritia;30;3;250;41,64931279;Bacillariophyta
+16.07.20;3;0;10;400;Peridiniella danica;30;;250;0;Myzoza
+16.07.20;3;0;10;400;Phaeocystis indet.;30;3;250;41,64931279;Haptophyta
+16.07.20;3;0;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+16.07.20;3;0;10;400;Prorocentrum micans;30;;250;0;Myzoza
+16.07.20;3;0;10;400;Prorocentrum minimum;30;13;250;180,4803554;Myzoza
+16.07.20;3;0;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+16.07.20;3;0;10;400;Rhodomonas indet.;30;27;250;374,8438151;Cryptophyta
+16.07.20;3;0;10;400;Thalassiosira indet.;30;2;250;27,76620852;Bacillariophyta
+16.07.20;10;0;10;400;Alexandrium species;30;9;250;124,9479384;Myzoza
+16.07.20;10;0;10;400;Amphidinium crassum ;30;8;250;111,0648341;Myzoza
+16.07.20;10;0;10;400;Chaetocerus species;30;2;250;27,76620852;Bacillariophyta
+16.07.20;10;0;10;400;Ciliate indet.;30;;250;0;Ciliophora
+16.07.20;10;0;10;400;Coscinodiscus indet.;30;38;250;527,557962;Bacillariophyta
+16.07.20;10;0;10;400;Cryptomonas indet.;30;56;250;777,4538387;Cryptophyta
+16.07.20;10;0;10;400;Cylendrotheca closterium;30;1;250;13,88310426;Bacillariophyta
+16.07.20;10;0;10;400;Gymnodinium indet.;30;63;250;874,6355685;Myzoza
+16.07.20;10;0;10;400;Hemiselmis indet.;30;9;250;124,9479384;Cryptophyta
+16.07.20;10;0;10;400;Heterocapsa rotunda;30;18;250;249,8958767;Myzoza
+16.07.20;10;0;10;400;Leptocylindricus danicus;20;147;250;3061,22449;Bacillariophyta
+16.07.20;10;0;10;400;Oblea rotunda;30;1;250;13,88310426;Myzoza
+16.07.20;10;0;10;400;Odontella auritia;30;1;250;13,88310426;Bacillariophyta
+16.07.20;10;0;10;400;Peridiniella danica;30;;250;0;Myzoza
+16.07.20;10;0;10;400;Phaeocystis indet.;30;5;250;69,41552131;Haptophyta
+16.07.20;10;0;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+16.07.20;10;0;10;400;Prorocentrum micans;30;;250;0;Myzoza
+16.07.20;10;0;10;400;Prorocentrum minimum;30;13;250;180,4803554;Myzoza
+16.07.20;10;0;10;400;Prorocentrum triestinum;30;5;250;69,41552131;Myzoza
+16.07.20;10;0;10;400;Rhodomonas indet.;30;24;250;333,1945023;Cryptophyta
+16.07.20;10;0;10;400;Thalassiosira indet.;30;3;250;41,64931279;Bacillariophyta
+16.07.20;3;10;10;400;Alexandrium species;30;5;250;69,41552131;Myzoza
+16.07.20;3;10;10;400;Amphidinium crassum ;30;3;250;41,64931279;Myzoza
+16.07.20;3;10;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+16.07.20;3;10;10;400;Ciliate indet.;30;9;250;124,9479384;Ciliophora
+16.07.20;3;10;10;400;Coscinodiscus indet.;30;10;250;138,8310426;Bacillariophyta
+16.07.20;3;10;10;400;Cryptomonas indet.;20;162;250;3373,594336;Cryptophyta
+16.07.20;3;10;10;400;Cylendrotheca closterium;30;5;250;69,41552131;Bacillariophyta
+16.07.20;3;10;10;400;Gymnodinium indet.;30;76;250;1055,115924;Myzoza
+16.07.20;3;10;10;400;Hemiselmis indet.;30;65;250;902,401777;Cryptophyta
+16.07.20;3;10;10;400;Heterocapsa rotunda;30;2;250;27,76620852;Myzoza
+16.07.20;3;10;10;400;Leptocylindricus danicus;25;178;250;2965,43107;Bacillariophyta
+16.07.20;3;10;10;400;Oblea rotunda;30;4;250;55,53241705;Myzoza
+16.07.20;3;10;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+16.07.20;3;10;10;400;Peridiniella danica;30;2;250;27,76620852;Myzoza
+16.07.20;3;10;10;400;Phaeocystis indet.;30;10;250;138,8310426;Haptophyta
+16.07.20;3;10;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+16.07.20;3;10;10;400;Prorocentrum micans;30;2;250;27,76620852;Myzoza
+16.07.20;3;10;10;400;Prorocentrum minimum;30;18;250;249,8958767;Myzoza
+16.07.20;3;10;10;400;Prorocentrum triestinum;30;1;250;13,88310426;Myzoza
+16.07.20;3;10;10;400;Rhodomonas indet.;30;54;250;749,6876302;Cryptophyta
+16.07.20;3;10;10;400;Thalassiosira indet.;30;2;250;27,76620852;Bacillariophyta
+16.07.20;5;10;10;400;Alexandrium species;30;4;250;55,53241705;Myzoza
+16.07.20;5;10;10;400;Amphidinium crassum ;30;2;250;27,76620852;Myzoza
+16.07.20;5;10;10;400;Chaetocerus species;30;2;250;27,76620852;Bacillariophyta
+16.07.20;5;10;10;400;Ciliate indet.;30;17;250;236,0127725;Ciliophora
+16.07.20;5;10;10;400;Coscinodiscus indet.;30;8;250;111,0648341;Bacillariophyta
+16.07.20;5;10;10;400;Cryptomonas indet.;30;105;250;1457,725948;Cryptophyta
+16.07.20;5;10;10;400;Cylendrotheca closterium;30;14;250;194,3634597;Bacillariophyta
+16.07.20;5;10;10;400;Gymnodinium indet.;30;9;250;124,9479384;Myzoza
+16.07.20;5;10;10;400;Hemiselmis indet.;30;53;250;735,8045259;Cryptophyta
+16.07.20;5;10;10;400;Heterocapsa rotunda;30;1;250;13,88310426;Myzoza
+16.07.20;5;10;10;400;Leptocylindricus danicus;30;119;250;1652,089407;Bacillariophyta
+16.07.20;5;10;10;400;Oblea rotunda;30;2;250;27,76620852;Myzoza
+16.07.20;5;10;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+16.07.20;5;10;10;400;Peridiniella danica;30;1;250;13,88310426;Myzoza
+16.07.20;5;10;10;400;Phaeocystis indet.;30;39;250;541,4410662;Haptophyta
+16.07.20;5;10;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+16.07.20;5;10;10;400;Prorocentrum micans;30;1;250;13,88310426;Myzoza
+16.07.20;5;10;10;400;Prorocentrum minimum;30;13;250;180,4803554;Myzoza
+16.07.20;5;10;10;400;Prorocentrum triestinum;30;1;250;13,88310426;Myzoza
+16.07.20;5;10;10;400;Rhodomonas indet.;30;58;250;805,2200472;Cryptophyta
+16.07.20;5;10;10;400;Thalassiosira indet.;30;;250;0;Bacillariophyta
+16.07.20;11;10;10;400;Alexandrium species;30;4;250;55,53241705;Myzoza
+16.07.20;11;10;10;400;Amphidinium crassum ;30;;250;0;Myzoza
+16.07.20;11;10;10;400;Chaetocerus species;30;;250;0;Bacillariophyta
+16.07.20;11;10;10;400;Ciliate indet.;30;15;250;208,2465639;Ciliophora
+16.07.20;11;10;10;400;Coscinodiscus indet.;30;13;250;180,4803554;Bacillariophyta
+16.07.20;11;10;10;400;Cryptomonas indet.;30;161;250;2235,179786;Cryptophyta
+16.07.20;11;10;10;400;Cylendrotheca closterium;30;18;250;249,8958767;Bacillariophyta
+16.07.20;11;10;10;400;Gymnodinium indet.;30;33;250;458,1424406;Myzoza
+16.07.20;11;10;10;400;Hemiselmis indet.;30;46;250;638,6227961;Cryptophyta
+16.07.20;11;10;10;400;Heterocapsa rotunda;30;;250;0;Myzoza
+16.07.20;11;10;10;400;Leptocylindricus danicus;30;160;250;2221,296682;Bacillariophyta
+16.07.20;11;10;10;400;Oblea rotunda;30;2;250;27,76620852;Myzoza
+16.07.20;11;10;10;400;Odontella auritia;30;;250;0;Bacillariophyta
+16.07.20;11;10;10;400;Peridiniella danica;30;1;250;13,88310426;Myzoza
+16.07.20;11;10;10;400;Phaeocystis indet.;30;13;250;180,4803554;Haptophyta
+16.07.20;11;10;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+16.07.20;11;10;10;400;Prorocentrum micans;30;;250;0;Myzoza
+16.07.20;11;10;10;400;Prorocentrum minimum;30;15;250;208,2465639;Myzoza
+16.07.20;11;10;10;400;Prorocentrum triestinum;30;;250;0;Myzoza
+16.07.20;11;10;10;400;Rhodomonas indet.;30;81;250;1124,531445;Cryptophyta
+16.07.20;11;10;10;400;Thalassiosira indet.;30;4;250;55,53241705;Bacillariophyta
+21.07.20;6;0;10;400;Alexandrium species;30;16;250;222,1296682;Myzoza
+21.07.20;6;0;10;400;Amphidinium crassum ;30;4;250;55,53241705;Myzoza
+21.07.20;6;0;10;400;Chaetocerus species;30;1;250;13,88310426;Bacillariophyta
+21.07.20;6;0;10;400;Ciliate indet.;30;3;250;41,64931279;Ciliophora
+21.07.20;6;0;10;400;Coscinodiscus indet.;30;55;250;763,5707344;Bacillariophyta
+21.07.20;6;0;10;400;Cryptomonas indet.;30;55;250;763,5707344;Bacillariophyta
+21.07.20;6;0;10;400;Cylendrotheca closterium;30;1;250;13,88310426;Bacillariophyta
+21.07.20;6;0;10;400;Gymnodinium indet.;30;90;250;1249,479384;Myzoza
+21.07.20;6;0;10;400;Hemiselmis indet.;30;11;250;152,7141469;Cryptophyta
+21.07.20;6;0;10;400;Heterocapsa rotunda;30;2;250;27,76620852;Myzoza
+21.07.20;6;0;10;400;Leptocylindricus danicus;25;196;250;3265,306122;Bacillariophyta
+21.07.20;6;0;10;400;Oblea rotunda;30;1;250;13,88310426;Myzoza
+21.07.20;6;0;10;400;Odontella auritia;30;4;250;55,53241705;Bacillariophyta
+21.07.20;6;0;10;400;Peridiniella danica;30;;250;0;Myzoza
+21.07.20;6;0;10;400;Phaeocystis indet.;30;3;250;41,64931279;Haptophyta
+21.07.20;6;0;10;400;Pinnularia indet.;30;;250;0;Bacillariophyta
+21.07.20;6;0;10;400;Prorocentrum micans;30;;250;0;Myzoza
+21.07.20;6;0;10;400;Prorocentrum minimum;30;18;250;249,8958767;Myzoza
+21.07.20;6;0;10;400;Prorocentrum triestinum;30;6;250;83,29862557;Myzoza
+21.07.20;6;0;10;400;Rhodomonas indet.;30;48;250;666,3890046;Cryptophyta
+21.07.20;6;0;10;400;Thalassiosira indet.;30;3;250;41,64931279;Bacillariophyta
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
