@@ -744,3 +744,59 @@ ggplot(data1, aes(x = day, y = carbo, color = interval, group = interval))+
   theme_bw()
 
 
+#### Phytoplankton RUE GAMM ####
+str(Mastertable)
+
+RUE_data <-   dplyr::select(Mastertable,
+                  fluctuation, planktotron, sampling, srp_micromol_l, carbon_umol_l, nitrate_umol_l, POP_micromol_l, 'diss_Nitrat+Nitrit_umol_l', 'diss_Phosphat_umol_l') %>%
+  mutate(POP_micromol_l = as.numeric(POP_micromol_l)) %>%
+  dplyr::rename(diss_P = 'diss_Phosphat_umol_l',
+                diss_N = 'diss_Nitrat+Nitrit_umol_l',
+                MC = planktotron) %>%
+  mutate(TP = diss_P + POP_micromol_l,
+         TN = diss_N + nitrate_umol_l) %>%
+  drop_na(carbon_umol_l) %>%
+  mutate(P_RUE = carbon_umol_l/ TP,
+         N_RUE = carbon_umol_l/ TN) %>%
+  mutate(day = 2* sampling, 
+         dayname = as.factor(day),
+         MC = as.character(MC)) %>%
+  mutate(interval = 48/fluctuation)
+
+RUE_data$interval[!is.finite(RUE_data$interval)] <- 0 
+str(RUE_data)
+
+## RUE of N ##
+#Additive mixed model 
+M_rueN <- gamm(N_RUE ~ interval + s(day), random = list(MC =~ 1), na.action=na.omit, method = "REML", data = RUE_data)
+
+summary(M_rueN $gam) #This gives detailed output on the smoother and parametric
+#terms in the models.
+
+anova(M_rueN $gam) #This command gives a more compact presentation of the
+#results. The anova table is not doing sequential testing!
+plot(M_rueN $gam) #This command plots the smoothers.
+plot(M_rueN $lme) #This command plots the normalised residuals versus fitted
+#values and can be used to assess homogeneity.
+summary(M_rueN $lme) #Detailed output on the estimated variances. 
+
+
+#plot residuals
+par(mfrow = c(1, 1), mar = c(4, 4, 2, 2))
+plot(M_rueN $lme)
+
+#show residuals
+RUE_data$res.M_rueN <- residuals(M_rueN $lme, type = "pearson")
+RUE_data$fit.M_rueN  <- predict(M_rueN $gam, type = "link")
+RUE_data$fit2.M_rueN <- predict(M_rueN $gam, type = "response")
+plot(RUE_data$fit.M_rueN , RUE_data$res.M_rueN)
+
+#autocorrelation
+plot(Variogram(M_total$lme, robust = TRUE, data = RUE_data, form = ~day | MC))
+
+#plot model and data
+ggplot(RUE_data, aes(x = day, y = N_RUE, color = interval, group = interval))+
+  geom_point()+
+  geom_line(aes(x = day, y = fit.M_rueN, color = interval), linetype = 'dashed')+
+  theme_bw()
+

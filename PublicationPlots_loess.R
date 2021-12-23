@@ -38,6 +38,8 @@ sum(nutrients_master$C_Zoo_µmol_l)/sum(nutrients_master$carbon_umol_l)
 #change fluctuation to factor to adjust coloring
 nutrients_master$fluctuation <- factor(as.factor(nutrients_master$fluctuation),levels=c("0", "48", "36", '24', '12', '6'))
 
+rate = (mean(nutrients_master$carbo[nutrients_master$day == 4]) - mean(nutrients_master$carbo[nutrients_master$day == 0]))/4
+
 #### Phyto- & Zooplankton biomass ####
 # total C plot
 total <- ggplot(nutrients_master, aes(x = day, y = carbon_umol_l, color = as.factor(fluctuation), group = fluctuation))+
@@ -50,9 +52,9 @@ total <- ggplot(nutrients_master, aes(x = day, y = carbon_umol_l, color = as.fac
          strip.background = element_rect(color ='black', fill = 'white'),
          strip.text = element_text(face = 'bold'),
          legend.background = element_blank(),
-         legend.position  ='bottom',
+         legend.position  ='none',
          legend.key = element_blank(),
-         text = element_text(size=16))
+         text = element_text(size=26))
 total
 
 #phytoplankton plot
@@ -66,9 +68,9 @@ phyto <- ggplot(nutrients_master, aes(x = day, y = carbo, color = as.factor(fluc
          strip.background = element_rect(color ='black', fill = 'white'),
          strip.text = element_text(face = 'bold'),
          legend.background = element_blank(),
-         legend.position  ='bottom',
+         legend.position  ='none',
          legend.key = element_blank(),
-         text = element_text(size=16))
+         text = element_text(size=26))
 phyto
 #ggsave(plot= phyto, width = 6, height = 4, file = here('images',  'growthrates_POC_loess.png'))
 
@@ -87,14 +89,12 @@ zoo<-ggplot(nutrients_master, aes(x = day, y = log(C_Zoo_µmol_l), color = as.fa
          strip.background = element_rect(color ='black', fill = 'white'),
          strip.text = element_text(face = 'bold'),
          legend.background = element_blank(),
-         legend.position  ='bottom',
+         legend.position  ='none',
          legend.key = element_blank(),
-         text = element_text(size=16))
+         text = element_text(size=26))
 zoo
 #ggsave(plot= zoo, file = 'Zooplankton_growthrates_POC_lm.png', width = 6, height = 5)
 
-plot_grid(total, phyto, zoo,  labels=c("A","B", 'C'),ncol = 3, label_size = 18, hjust = 0, vjust = 0.95)
-ggsave(plot = last_plot(), file = 'Biomass.tiff', width = 17, height = 6)
 
 # correlation plot zoo and phyto c
 zoophytocorr<-nutrients_master %>%
@@ -129,20 +129,7 @@ ratio <- nutrients %>%
          SiP = SiP_micromol_l/POP_micromol_l) %>%
   dplyr::select(fluctuation, sampling, planktotron,CN, NP, CP, CSi, NSi, NSi, SiP)%>%
   gather(key = 'ratio', value = 'value', -fluctuation, -sampling, -planktotron) %>%
-  # mutate(log = log10(value))%>%
-  group_by(ratio, sampling, fluctuation) %>%
-  summarise(mean = mean(value, na.rm = T),
-            sd = sd(value, na.rm = T),
-            se = sd/sqrt(n())) %>%
-  drop_na(mean) %>%
-  mutate(day = sampling *2) %>%
-  mutate(lower.ci = mean - 1.96*se/sqrt(n()), #calculate CIs
-         upper.ci = mean + 1.96*se/sqrt(n()),
-         trans = 10^mean, 
-         ci_l = 10^lower.ci,
-         ci_u = 10^upper.ci) #create new column named trans_pred with transformed predictions.
-
-
+  mutate(day = sampling *2) 
 #### calculate RUE and Molar ratios ####
 # RUE = Biomass (micromol) / TP bzw. TN 
 
@@ -161,22 +148,33 @@ RUE12 <- nutrients %>%
   drop_na(carbon_umol_l) %>%
   mutate(P_RUE = carbon_umol_l/ TP,
          N_RUE = carbon_umol_l/ TN) %>%
-  gather(key = 'nutrient', value = 'value', -fluctuation, -sampling, -planktotron) %>%
-  dplyr::group_by(fluctuation, sampling, nutrient) %>%
-  dplyr::summarise(mean_N = mean(value, na.rm = T),
-                   sd_N = sd(value, na.rm = T),
-                   n = dplyr::n(),
-                   se_N = sd_N/sqrt(n)) %>%
-  mutate(lower.ci = mean_N - 1.96*se_N/sqrt(n),
-         upper.ci = mean_N + 1.96*se_N/sqrt(n)) %>%
-  filter(mean_N > 0)%>%
+  mutate(dissNP = diss_N/diss_P) %>%
+  gather(key = 'nutrient', value = 'value',-dissNP, -fluctuation, -sampling, -planktotron) %>%
   mutate(day = sampling *2)
 
 RUE12$fluctuation <- factor(as.factor(RUE12$fluctuation),levels=c("0", "48", "36", '24', '12', '6'))
 
+dissNP <- ggplot(RUE12, aes(x = day, y = dissNP, color = fluctuation))+
+  geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
+  geom_point(aes(color = fluctuation), pch=21,size = 3,position = position_dodge2(width = .5))+
+  # scale_fill_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
+  scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
+  labs(x = 'Time [days]', y = 'N:P (dissolved nutrients)', color = 'Fluctuation frequency (in h)' )+
+  theme( panel.background = element_rect(fill = NA), 
+         panel.border= element_rect(colour = "black", fill=NA, size=1),
+         strip.background = element_rect(color ='black', fill = 'white'),
+         strip.text = element_text(face = 'bold'),
+         legend.background = element_blank(),
+         legend.position  ='none',
+         legend.key = element_blank(),
+         text = element_text(size=26))
+dissNP
+
+
+
 #### RUE plots ####
 
-RUE_N <- ggplot(subset(RUE12, nutrient == 'N_RUE'), aes(x = day, y = mean_N, color = fluctuation))+
+RUE_N <- ggplot(subset(RUE12, nutrient == 'N_RUE'), aes(x = day, y = value, color = fluctuation))+
   geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
   geom_point(aes(color = fluctuation), pch=21,size = 3,position = position_dodge2(width = .5))+
  # scale_fill_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
@@ -187,17 +185,19 @@ RUE_N <- ggplot(subset(RUE12, nutrient == 'N_RUE'), aes(x = day, y = mean_N, col
          strip.background = element_rect(color ='black', fill = 'white'),
          strip.text = element_text(face = 'bold'),
          legend.background = element_blank(),
-         legend.position  ='bottom',
+         legend.position  ='none',
          legend.key = element_blank(),
-         text = element_text(size=18))
+         text = element_text(size=26))
 RUE_N
+plot_grid(total, phyto, RUE_N,zoo,  label_size = 20, labels = c('A','B','C','D'), hjust= c(-3),ncol = 2, rel_heights = c(1,1,1,1), rel_widths = c(1,1,1,1))
+ggsave(plot = last_plot(), file = 'Biomass.jpeg', width = 13, height = 11)
 
 
-RUE_P <- ggplot(subset(RUE12, nutrient == 'P_RUE'), aes(x = day, y = mean_N, color = fluctuation))+
+RUE_P <- ggplot(subset(RUE12, nutrient == 'P_RUE'), aes(x = day, y = value, color = fluctuation))+
   geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
   geom_point(aes(color = fluctuation), pch = 21,  size = 3,position = position_dodge2(width = .5))+
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
-  labs(x = 'Time [days]', y = expression(RUE[P]), color = 'Fluctuation frequency (in h)')+
+  labs(x = 'Time [days]', y = expression(RUE[P]), color = 'Frequency (in h)')+
   theme( panel.background = element_rect(fill = NA), 
          panel.border= element_rect(colour = "black", fill=NA, size=1),
          strip.background = element_rect(color ='black', fill = 'white'),
@@ -205,17 +205,20 @@ RUE_P <- ggplot(subset(RUE12, nutrient == 'P_RUE'), aes(x = day, y = mean_N, col
          legend.background = element_blank(),
          legend.position  ='bottom',
          legend.key = element_blank(),
-         text = element_text(size=18))
+         text = element_text(size=26))
 RUE_P
+ggsave(plot = last_plot(), file = 'legendi.jpeg', width = 9, height = 5)
 
-plot_grid(RUE_N, RUE_P,labels=c("A","B", 'C', 'D'),ncol = 2, label_size = 17.5, hjust = 0, vjust = 1.2)
-#ggsave(plot = last_plot(), file = 'RUE.png', width = 12, height = 4)
+plot_grid(dissNP,RUE_P,  label_size = 20, labels = c('A','B'),  hjust = -3, vjust = 1,ncol = 2, rel_heights = c(1,1,1,1), rel_widths = c(1,1,1,1))
+ggsave(plot = last_plot(), file = 'Fig3S.jpeg', width = 10, height = 5)
+
+#plot_grid(RUE_N, RUE_P,labels=c("A","B", 'C', 'D'),ncol = 2, label_size = 17.5, hjust = 0, vjust = 1.2)
 
 
 #### Molar ratio plots####
 ratio$fluctuation <- factor(as.factor(ratio$fluctuation),levels=c("0", "48", "36", '24', '12', '6'))
 
-CN <- ggplot(subset(ratio, ratio == 'CN') , aes( x = day, y = mean,color = fluctuation))+
+CN <- ggplot(subset(ratio, ratio == 'CN') , aes( x = day, y = value,color = fluctuation))+
   geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
   geom_point(aes(color = fluctuation), pch = 21,  size = 3,position = position_dodge2(width = .5))+
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
@@ -227,10 +230,10 @@ CN <- ggplot(subset(ratio, ratio == 'CN') , aes( x = day, y = mean,color = fluct
          legend.background = element_blank(),
          legend.position  ='none',
          legend.key = element_blank(),
-         text = element_text(size=18))
+         text = element_text(size=26))
 CN
 
-CP <- ggplot(subset(ratio, ratio == 'CP') , aes( x = day, y = mean,color = fluctuation))+
+CP <- ggplot(subset(ratio, ratio == 'CP') , aes( x = day, y = value,color = fluctuation))+
   geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
   geom_point(aes(color = fluctuation), pch = 21,  size = 3,position = position_dodge2(width = .5))+
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
@@ -242,10 +245,10 @@ CP <- ggplot(subset(ratio, ratio == 'CP') , aes( x = day, y = mean,color = fluct
          legend.background = element_blank(),
          legend.position  ='none',
          legend.key = element_blank(),
-         text = element_text(size=18))
+         text = element_text(size=26))
 CP
 
-CSi <- ggplot(subset(ratio, ratio == 'CSi') , aes( x = day, y = mean,color = fluctuation))+
+CSi <- ggplot(subset(ratio, ratio == 'CSi') , aes( x = day, y = value,color = fluctuation))+
   geom_smooth(method = lm, se = F,formula =  y ~ x, size = 1)+  
   geom_point(aes(color = fluctuation), pch = 21,  size = 3,position = position_dodge2(width = .5))+
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
@@ -257,10 +260,10 @@ CSi <- ggplot(subset(ratio, ratio == 'CSi') , aes( x = day, y = mean,color = flu
          legend.background = element_blank(),
          legend.position  ='none',
          legend.key = element_blank(),
-         text = element_text(size=18))
+         text = element_text(size=26))
 CSi
 
-NP <- ggplot(subset(ratio, ratio == 'NP') , aes( x = day, y = mean,color = fluctuation))+
+NP <- ggplot(subset(ratio, ratio == 'NP') , aes( x = day, y = value,color = fluctuation))+
   geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
   geom_point(aes(color = fluctuation), pch = 21,  size = 3,position = position_dodge2(width = .5))+
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
@@ -272,12 +275,12 @@ NP <- ggplot(subset(ratio, ratio == 'NP') , aes( x = day, y = mean,color = fluct
          legend.background = element_blank(),
          legend.position  ='none',
          legend.key = element_blank(),
-         text = element_text(size=18))
+         text = element_text(size=26))
 NP
 
 
-plot_grid(CN, CP,CSi,NP, labels=c("A","B", 'C', 'D'),ncol = 2, label_size = 18, hjust = 0, vjust = 1)
-ggsave(plot = last_plot(), file = 'MolarRatio.png', width = 9, height = 7)
+plot_grid(CN, CP,CSi,NP, labels=c("A","B", 'C', 'D'),ncol = 2, label_size = 20, hjust = 0, vjust = 1)
+ggsave(plot = last_plot(), file = 'MolarRatio.png', width = 11, height = 9)
 
 ## dissolved nutrients ####
 diss <- Mastertable_fluctron %>%
@@ -286,24 +289,13 @@ diss <- Mastertable_fluctron %>%
                 diss_N = 'diss_Nitrat+Nitrit_umol_l',
                 diss_Si = "diss_Silikat_umol_l" ) %>%
     gather(key = 'nutrient', value = 'value', -fluctuation, -sampling, -planktotron) %>%
-  dplyr::group_by(fluctuation, sampling, nutrient) %>%
-  dplyr::summarise(mean_N = mean(value, na.rm = T),
-                   sd_N = sd(value, na.rm = T),
-                   n = dplyr::n(),
-                   se_N = sd_N/sqrt(n)) %>%
-  mutate(day = sampling *2) %>%
-  mutate(lower.ci = mean_N - 1.96*se_N/sqrt(n()),
-         upper.ci = mean_N + 1.96*se_N/sqrt(n()),
-         trans = 10^mean_N, 
-         ci_l = 10^lower.ci,
-         ci_u = 10^upper.ci) %>%#create new column named trans_pred with transformed predictions.
-drop_na(mean_N)
+  mutate(day = sampling *2) 
 
 #check levels 
 diss$fluctuation <- factor(as.factor(diss$fluctuation),levels=c("0", "48", "36", '24', '12', '6'))
 
 
-dissN <- ggplot(subset(diss, nutrient == 'diss_N') , aes( x = day, y = mean_N,color = fluctuation))+
+dissN <- ggplot(subset(diss, nutrient == 'diss_N') , aes( x = day, y = value,color = fluctuation))+
   geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
   geom_point(aes(color = fluctuation), pch = 21,  size = 3,position = position_dodge2(width = .5))+
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
@@ -315,10 +307,10 @@ dissN <- ggplot(subset(diss, nutrient == 'diss_N') , aes( x = day, y = mean_N,co
          legend.background = element_blank(),
          legend.position  ='none',
          legend.key = element_blank(),
-         text = element_text(size=18))
+         text = element_text(size=26))
 dissN
 
-dissP <- ggplot(subset(diss, nutrient == 'diss_P') , aes( x = day, y = mean_N,color = fluctuation))+
+dissP <- ggplot(subset(diss, nutrient == 'diss_P') , aes( x = day, y = value,color = fluctuation))+
   geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
   geom_point(aes(color = fluctuation), pch = 21,  size = 3,position = position_dodge2(width = .5))+
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
@@ -330,10 +322,10 @@ dissP <- ggplot(subset(diss, nutrient == 'diss_P') , aes( x = day, y = mean_N,co
          legend.background = element_blank(),
          legend.position  ='none',
          legend.key = element_blank(),
-         text = element_text(size=18))
+         text = element_text(size=26))
 dissP
 
-dissSi <- ggplot(subset(diss, nutrient == 'diss_Si') , aes( x = day, y = mean_N,color = fluctuation))+
+dissSi <- ggplot(subset(diss, nutrient == 'diss_Si') , aes( x = day, y = value,color = fluctuation))+
   geom_smooth(method = lm, se = F,formula =  y ~ splines::bs(x, 3), size = 1)+  
   geom_point(aes(color = fluctuation), pch = 21,  size = 3,position = position_dodge2(width = .5))+
   scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))+
@@ -345,11 +337,11 @@ dissSi <- ggplot(subset(diss, nutrient == 'diss_Si') , aes( x = day, y = mean_N,
          legend.background = element_blank(),
          legend.position  ='none',
          legend.key = element_blank(),
-         text = element_text(size=18))
+         text = element_text(size=26))
 dissSi
 
 plot_grid(dissN, dissP,dissSi, labels=c("A","B", 'C', 'D'),ncol = 3, label_size = 18, hjust = 0, vjust = 1)
-#ggsave(plot = last_plot(), file = 'DissNutrients.png', width = 9, height = 4)
+ggsave(plot = last_plot(), file = 'DissNutrients.png', width = 13, height = 5)
 
 #### Phytoplankton Diversity ####
 
@@ -430,9 +422,9 @@ specRich<-ggplot(diversity, aes(x = sampling, y = log, group = fluctuation)) +
          strip.background = element_rect(color ='black', fill = 'white'),
          strip.text = element_text(face = 'italic'),
          legend.background = element_blank(),
-         legend.position  ='bottom',
+         legend.position  ='none',
          legend.key = element_blank(),
-         text = element_text(size=12))
+         text = element_text(size=26))
 specRich
 #ggsave(plot = specRich, width = 6, height = 4,file =  'species_richness_counting.png')
 
@@ -447,9 +439,9 @@ specSimp<-ggplot(diversity, aes(x = sampling, y = simpson, group = fluctuation))
          strip.background = element_rect(color ='black', fill = 'white'),
          strip.text = element_text(face = 'italic'),
          legend.background = element_blank(),
-         legend.position  ='bottom',
+         legend.position  ='none',
          legend.key = element_blank(),
-         text = element_text(size=12))
+         text = element_text(size=26))
 specSimp
 #ggsave(plot = specSimp, width = 6, height = 4,file = 'SimpsonIndex_counting.png')
 
@@ -530,7 +522,7 @@ data.dist1$interval[is.infinite(data.dist1$interval)] <-0
 str(data.dist1)
 
 data.plot <- data.dist1%>%
-  group_by(Fluctuation, sampling2, day) %>%
+  group_by(MC,Fluctuation, sampling2, day) %>%
   summarise(mean = mean(mean.dist), sd = sd(mean.dist), se = sd/sqrt(n())) %>%
   mutate(lower.ci = mean - 1.96*se/sqrt(n()),
          upper.ci = mean + 1.96*se/sqrt(n()))
@@ -552,12 +544,12 @@ distance <- ggplot(data.dist1, aes(x = sampling2, y = mean.dist, group = Fluctua
          strip.background = element_rect(color ='black', fill = 'white'),
          strip.text = element_text(face = 'italic'),
          legend.background = element_blank(),
-         legend.position  ='bottom',
+         legend.position  ='none',
          legend.key = element_blank(),
-         text = element_text(size=12))
+         text = element_text(size=26))
 #save plots in grid
-plot_grid(specRich, specSimp, distance, labels=c("A","B", 'C'),ncol = 3, label_size = 18, hjust = 0, vjust = 0.95)
-#ggsave(plot = last_plot(), file = 'specDiv.tiff', width = 14, height = 5)
+plot_grid(specRich, specSimp, distance, labels=c("A","B", 'C'),ncol = 3, label_size = 18, hjust = -0.5, vjust = 1.1)
+ggsave(plot = last_plot(), file = 'specDiv.jpeg', width = 11, height = 5)
 
 #### composition: stacked barplot ####
 #import  data 
@@ -616,9 +608,9 @@ species <- ggplot(rel_BV, aes( x = day, y = rel_V))+
           legend.background = element_blank(),
           legend.position  ='bottom',
           legend.key = element_blank(),
-          text = element_text(size=12))
+          text = element_text(size=20))
 species
-#ggsave(plot=species, file = 'rel_ab_perspecies.png', width = 11, height = 8)
+ggsave(plot=species, file = 'rel_ab_perspecies.png', width = 15, height = 9)
  
 #new df for dominant groups
 groups <- all_data%>%
@@ -654,8 +646,8 @@ group <- ggplot(groups, aes( x = day, y = rel_V))+
           legend.background = element_blank(),
           legend.position  ='bottom',
           legend.key = element_blank(),
-          text = element_text(size=12))
-#ggsave(plot=group, file = 'rel_group.png', width = 10, height = 8)
+          text = element_text(size=20))
+ggsave(plot=group, file = 'rel_group.png', width = 15, height = 9)
 
 
 ##############################################################################
