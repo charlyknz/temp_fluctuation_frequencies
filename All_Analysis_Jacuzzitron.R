@@ -1,7 +1,6 @@
-## Model formulation for thesis analysis
+## Model formulation for Frontiers analysis
 rm(list=ls()) #Empty the environment
 
-# scatter plot with bray-curits diss and LRR of function (carbon)
 # By Charlotte Kunze 06.08.2020
 
 #### Load packages & import data ####
@@ -11,9 +10,9 @@ library(lme4)
 library(nlme)
 library(tidyverse)
 library(readxl)
-library(rr2)
+library(rr2) #find R2
 
-#### Zooplankton data ####
+#### Zooplankton Meta data ####
 Mastertable <- read_excel("~/Desktop/MA/MA_Rcode/project_data/Mastertable_fluctron.xlsx")
 str(Mastertable)
 
@@ -38,7 +37,7 @@ ggplot(master,aes(day, log,colour = interval))+geom_point(size=1.5)
 str(master) # structure check
 
 ##### fixed and random effects ######
-# Response variable: Carbon mg (measured over time)
+# Response variable: ln of zooplankton Carbon mg (measured over time)
 # Explanatory variables: treatments (fluctuation hours) + time
 # Random: MC number
 
@@ -47,8 +46,6 @@ M1 = lme(log ~ interval*day, random = ~1|MC, method = 'REML', data = master)
 M2 = lme(log ~ interval*day, random = ~0+day|MC, method = 'REML', data = master)
 M3 = lme(log ~ interval*day, random = ~day|MC, method = 'REML',control= lmeControl(niterEM =5000, msMaxIter =5000, msMaxEval =5000), data = master)
 
-
-##model using dayname and MC as random effects
 
 #compare models
 anova(M1,M2, M3)
@@ -62,7 +59,7 @@ master$fit_InterceptOnly2 <- predict(M1)
 M0=gls(log~interval*day, method="REML",data =master, na.action=na.omit)
 anova(M1, M0) #gls is better
 
-#Autocorrelation test (data are not independent) - only if do not have nas
+#Autocorrelation test 
 plot(ACF(M0), alpha=0.05)
 
 #Residuals
@@ -95,19 +92,21 @@ M8=lme(log ~ interval*day, random=~0+day|MC, method="REML", control = ctrl,
        corr=corAR1(0.8,form=~day|MC),weights = vf4, na.action=na.omit,data=master)
 str(master)
 anova(M6, M8, M7, M5)
+
+# M7 is best model according to AIC: 
 summary(M7)
 anova(M7)
 
+#check explanatory power of fixed effects
 R2.lik(M0)
 
-#Autocorrelation test (data are not independent) - only if do not have nas
+#Residuals
 par(mfrow=c(2,2),cex.axis=1.2, cex.lab=1.5)
 plot(resid(M7, type = "normalized"), ylab="residuales")
 plot(fitted(M7),resid(M6, type = "normalized"),ylab="residuales")
 hist(resid(M7, type = "normalized"), ylab="frecuencia",xlab="residuales", main="")
 qqnorm(resid(M7, type = "normalized"), main=""); qqline(resid(M7, type = "normalized"))
-summary(M7)
-anova(M7)
+
 
 
 #### Phytoplankton Diversity data ####
@@ -145,7 +144,7 @@ data0$MC[data0$MC == 3] <-5
 data0$MC[data0$MC == 6] <-7
 data0$MC[data0$MC == 10] <-2
 
-#new df to calculate mean abundance and data wrangling
+#new df to bring data in the right format for distance analysis
 pca_B <- all_data%>%
   bind_rows(., data0) %>%
   group_by(sampling, treatment_id, MC) %>%
@@ -181,12 +180,14 @@ data.dist1 <- data.dist %>%
          day = 2* sampling2,
          log = log(mean.dist)) 
 
+# substitute NA with 0
 data.dist1$Fluctuation[is.na(data.dist1$Fluctuation)] <-0
 data.dist1$Fluctuation=as.numeric(data.dist1$Fluctuation)
 data.dist1$interval = 48/data.dist1$Fluctuation
 data.dist1$interval[is.infinite(data.dist1$interval)] <-0
 str(data.dist1)
 
+#order factors
 data.dist1$Fluctuation <- factor(data.dist1$Fluctuation, levels= c('0', '48', '36', '24', '12', '6'))
 
 #overview plot 
@@ -210,23 +211,24 @@ ggplot(data.dist1, aes(x = sampling2, y = mean.dist, group = Fluctuation))+
          text = element_text(size=12))
 
 #ggsave(plot = last_plot(), file = 'BrayDistance_overTimePhytoCoutns.png', width = 7, height = 4)
-hist((data.dist1$log))
-qqnorm(data.dist1$log)
-qqline(data.dist1$log)
+
+
 
 
 ##### fixed and random effects ######
-# Response variable: Carbon mg (measured over time)
+# Response variable: ln of bray-curtis distance of composition
 # Explanatory variables: treatments (fluctuation hours) + time
 # Random: MC number
+
+#check distribution:
+hist((data.dist1$log))
+qqnorm(data.dist1$log)
+qqline(data.dist1$log)
 
 #Step 1. Test possible cases:Fit models using REML (use ML in simplifications)
 C_m1 = lme(log ~ interval*day, random = ~1|MC, method = 'REML', data = data.dist1)
 C_m2 = lme(log ~ interval*day, random = ~0+day|MC, method = 'REML', data = data.dist1)
 C_m3 = lme(log ~ interval*day, random = ~day|MC, method = 'REML',control= lmeControl(niterEM =5000, msMaxIter =5000, msMaxEval =5000), data = data.dist1)
-
-
-##model using dayname and MC as random effects
 
 #compare models
 anova(C_m1,C_m2, C_m3)
@@ -247,7 +249,7 @@ ggplot(data.dist1, aes(x = day, color = Fluctuation, y=log ))+
 C_m0=gls(log~interval*day, method="REML",data =data.dist1, na.action=na.omit)
 anova(C_m2, C_m0) #gls is better
 
-#Autocorrelation test (data are not independent) - only if do not have nas
+#Autocorrelation test 
 plot(ACF(C_m0), alpha=0.05)
 
 #Residuals
@@ -264,59 +266,38 @@ C_M5=lme(log ~ interval*day, random=~0+day|MC, method="REML",
 anova(C_M5, C_m0) #model without random effect and autocorrelation is better
 
 
-# gls with weighted variance 
+# gls null model
 M1<-gls(log ~ interval*day, data = data.dist1)
 
-#Fixed variance
-vf1Fixed <- varFixed(~interval)
-M1.1<-gls(log ~ interval*day, data = data.dist1, weights = vf1Fixed)
-
-#note: propably the VarIdent would be a good choice, however here we see the lm is the better choice
-#Power of the variance covariate
-vf3 <- varPower(form = ~interval)
-M3<-gls(log ~ interval*day, data = data.dist1, weights = vf3)
-
-vf4 <- varPower(form = ~ interval | day)
-M4<-gls(log ~ interval*day, data = data.dist1, weights = vf4)
+#Different variances per stratum
+vf2 <- varIdent(form = ~ 1|day)
+M2<-gls(log ~ interval*day, data = data.dist1, weights = vf2)
 
 #If the variance covariate can take the value of zero
 ## the exponential variance structure:
 vf5 <- varExp(form = ~interval)
 M5<-gls(log ~ interval*day, data = data.dist1, weights = vf5)
 
-#The varConstPower Variance Structure
-#The varPower should not be used if the variance covariate takes the value of zero.
-vf6 <- varConstPower(form = ~interval)
-M6<-gls(log ~ interval*day,  weights = vf6,data = data.dist1)
 
-vf7 <- varConstPower(form = ~interval| day)
-M7<-gls(log ~ interval*day,  weights = vf7,data = data.dist1)
-
-#Different variances per stratum
-vf2 <- varIdent(form = ~ 1|day)
-M2<-gls(log ~ interval*day, data = data.dist1, weights = vf2)
-
-# here a lot of error occur because or models do not fit the data
-# compare possible ones:
-anova(M1, M2, M5) #compare models
+# compare possible models:
+anova(M1, M2, M5) 
 
 #final model:
 M.dist.lm<-lm(log ~ interval*day, data = data.dist1)
-anova(M.dist.lm) # indicated time * richness effect 
+anova(M.dist.lm) 
 
+#explainatory power:
 R2.lik(M.dist.lm)
-# plot
+
+# Residual plot
 par(mfrow = c(2, 2), mar = c(4, 4, 2, 2))
 plot(resid(M.dist.lm), ylab="residuales")
 plot(fitted(M.dist.lm),resid(M.dist.lm),ylab="residuales")
 hist(resid(M.dist.lm), ylab="frecuencia",xlab="residuales", main="")
 qqnorm(resid(M.dist.lm), main=""); qqline(resid(M.dist.lm))
 
-#find R2
-library(rr2)
-R2.lik(M.dist.lm)
 
-#### #######################################################################
+###########################################################################
 
 #### Diversity indices calculation ####
 
@@ -340,15 +321,16 @@ shannon_BV <- select(shannon_BV, treatment, sampling, fluctuation, MC, shan, sim
 absence_presence <- decostand(shannon_BV[, -c(1:6)], method= 'pa', na.rm=T) #df giving absence/presence data using decostand function
 shannon_BV$no = apply(absence_presence, MARGIN = 1, FUN = sum) #new column containing the sum of species present per side (by row = MARGIN = 1)
 
+#evenness
 shannon_BV$evenness = shannon_BV$shan/log(shannon_BV$no)
 
+#new df
 diversity_BV <- shannon_BV %>%
   ungroup() %>%
   select(MC, fluctuation, sampling, evenness, no, shan,simpson) 
 
 
 # Data Wrangling for LMM #
-
 diversity <- shannon_BV %>%
   ungroup() %>%
   select(MC, fluctuation, sampling, evenness, no, shan,simpson) %>%
@@ -367,7 +349,7 @@ qqline(diversity$no)
 
 
 ##### fixed and random effects ######
-# Response variable: Carbon mg (measured over time)
+# Response variable: ln of species richness
 # Explanatory variables: treatments (fluctuation hours) + time
 # Random: MC number
 
@@ -376,8 +358,6 @@ C_m1 = lme(log ~ interval*day, random = ~1|MC, method = 'REML', data = diversity
 C_m2 = lme(log ~ interval*day, random = ~0+day|MC, method = 'REML', data = diversity)
 C_m3 = lme(log ~ interval*day, random = ~day|MC, method = 'REML',control= lmeControl(niterEM =5000, msMaxIter =5000, msMaxEval =5000), data = diversity)
 
-
-##model using dayname and MC as random effects
 
 #compare models
 anova(C_m1,C_m2, C_m3)
@@ -393,7 +373,7 @@ C_m5=lme(log ~ interval*day, random=~0+day|MC, method="REML",
 anova(C_m5, C_m0) #model without random effect is better
 
 
-#Autocorrelation test (data are not independent) - only if do not have nas
+#Autocorrelation test
 plot(ACF(C_m0), alpha=0.05)
 
 #Residuals
@@ -404,45 +384,25 @@ plot(fitted(C_m0),resid(C_m0, type = "normalized"),ylab="residuales")
 qqnorm(resid(C_m0, type = "normalized"), main=""); qqline(resid(C_m0, type = "normalized"))
 anova(C_m0)
 
-# gls with weighted variance 
-#Fixed variance
-vf1Fixed <- varFixed(~interval)
-M1.1<-gls(no ~ interval*day, data = diversity, weights = vf1Fixed)
 
-#note: propably the VarIdent would be a good choice, however here we see the lm is the better choice
-#Power of the variance covariate
-vf3 <- varPower(form = ~interval)
-M3<-gls(no ~ interval*day, data = diversity, weights = vf3)
+## gls with weighted variance ##
 
-vf4 <- varPower(form = ~ interval | day)
-M4<-gls(no ~ interval*day, data = diversity, weights = vf4)
-
-#If the variance covariate can take the value of zero
-## the exponential variance structure:
-vf5 <- varExp(form = ~interval)
-M5<-gls(no ~ interval*day, data = diversity, weights = vf5)
-
-#The varConstPower Variance Structure
-#The varPower should not be used if the variance covariate takes the value of zero.
-vf6 <- varConstPower(form = ~interval)
-M6<-gls(no ~ interval*day,  weights = vf6,data = diversity)
-
-vf7 <- varConstPower(form = ~interval| day)
-M7<-gls(no ~ interval*day,  weights = vf7,data = diversity)
+M0 <- M2<-gls(no ~ interval*day, data = diversity)
 
 #Different variances per stratum
 vf2 <- varIdent(form = ~ 1|interval)
 M2<-gls(no ~ interval*day, data = diversity, weights = vf2)
-anova(C_m0, M2) #compare models
+
+anova(M0, M2) #compare models
 
 #final model:
 M.lm<-lm(log ~ interval*day, data = diversity)
 anova(M.lm) # significant time effect of species richness
 
 #find R2
-library(rr2)
 R2.lik(M.lm)
 
+#Residuals
 op <- par(mfrow = c(2, 2), mar = c(4, 4, 2, 2))
 plot(M.lm, which = c(1), col = 1, add.smooth = FALSE,caption = "")
 plot(diversity$day, resid(M.lm), xlab = "Month",
@@ -452,6 +412,8 @@ plot(diversity$interval, resid(M.lm), xlab = "DML",
 plot(residuals(M.lm))
 
 par(op)
+
+
 #### inverse Simpson ####
 diversity$logSimpson = log(diversity$simpson)
 hist(log(diversity$logSimpson))
@@ -460,7 +422,7 @@ qqline(diversity$logSimpson)
 
 
 ##### fixed and random effects ######
-# Response variable: Carbon mg (measured over time)
+# Response variable: ln of simpson diversity
 # Explanatory variables: treatments (fluctuation hours) + time
 # Random: MC number
 
@@ -470,36 +432,35 @@ C_m2 = lme(logSimpson ~ interval*day, random = ~0+day|MC, method = 'REML', data 
 C_m3 = lme(logSimpson ~ interval*day, random = ~day|MC, method = 'REML',control= lmeControl(niterEM =5000, msMaxIter =5000, msMaxEval =5000), data = diversity)
 
 
-##model using dayname and MC as random effects
-
 #compare models
 anova(C_m1,C_m2, C_m3)
 
 # mixed model vs. model without random component: gls 
 C_m0=gls(logSimpson~interval*day, method="REML",data =diversity, na.action=na.omit)
-anova(C_m2, C_m0) #model with random effect is better
+anova(C_m2, C_m0) #M0 is better
 
 
-#Autocorrelation test (data are not independent) - only if do not have nas
-plot(ACF(C_m2), alpha=0.05)
+#Autocorrelation test 
+plot(ACF(C_m0), alpha=0.05)
 
 #Residuals
 par(mfrow=c(2,2),cex.axis=1.2, cex.lab=1.5)
 plot(resid(C_m0, type = "normalized"), ylab="residuales")
 hist(resid(C_m0, type = "normalized"), ylab="frecuencia",xlab="residuales", main="")
-plot(fitted(C_m0),resid(C_m2, type = "normalized"),ylab="residuales")
+plot(fitted(C_m0),resid(C_m0, type = "normalized"),ylab="residuales")
 qqnorm(resid(C_m0, type = "normalized"), main=""); qqline(resid(C_m0, type = "normalized"))
 
-#compare wiath model with autocorrelation
+#compare with model with autocorrelation
 C_m5=lme(logSimpson ~ interval*day, random=~0+day|MC, method="REML",
          corr=corAR1(0.6,form=~day|MC),na.action=na.omit,data=diversity)
-anova(C_m5, C_m0) #model without random effect is better
+anova(C_m5, C_m0) # M0
 
 
 # linear regression
 M1<-gls(logSimpson~interval*day, data =diversity)
 anova(M1)
 
+#Residuals
 op <- par(mfrow = c(2, 2), mar = c(4, 4, 2, 2))
 plot(M1, which = c(1), col = 1, add.smooth = FALSE,caption = "")
 plot(diversity$day, resid(M1), xlab = "Month",
@@ -513,32 +474,18 @@ par(op)
 vf1Fixed <- varFixed(~interval)
 M1.1<-gls(logSimpson ~ interval*day, data = diversity, weights = vf1Fixed)
 
-#note: propably the VarIdent would be a good choice, however here we see the lm is the better choice
-#Power of the variance covariate
-vf3 <- varPower(form = ~interval)
-M3<-gls(logSimpson ~ interval*day, data = diversity, weights = vf3)
-
-vf4 <- varPower(form = ~ interval | day)
-M4<-gls(logSimpson ~ interval*day, data = diversity, weights = vf4)
-
 #If the variance covariate can take the value of zero
 ## the exponential variance structure:
 vf5 <- varExp(form = ~interval)
 M5<-gls(logSimpson ~ interval*day, data = diversity, weights = vf5)
 
-#The varConstPower Variance Structure
-#The varPower should not be used if the variance covariate takes the value of zero.
-vf6 <- varConstPower(form = ~interval)
-M6<-gls(logSimpson ~ interval*day,  weights = vf6,data = diversity)
-
-vf7 <- varConstPower(form = ~interval| day)
-M7<-gls(logSimpson ~ interval*day,  weights = vf7,data = diversity)
 
 #Different variances per stratum
 vf2 <- varIdent(form = ~ 1|interval)
 M2<-gls(logSimpson ~ interval*day, data = diversity, weights = vf2)
-anova(M1, M2, M5) #compare models
 
+anova(M1, M2, M5) #compare models
+# AIC lowest for M1
 
 #check residuals for other model
 #Residuals
@@ -551,6 +498,8 @@ qqnorm(resid(M1, type = "normalized"), main=""); qqline(resid(M1, type = "normal
 #final model after AIC:
 M1.lm<-lm(logSimpson~interval*day, data =diversity)
 anova(M1.lm) #no sign. effects
+
+#check R2
 R2.lik(M1.lm)
 
 #### ANOSIM AND SIMPER TEST ####

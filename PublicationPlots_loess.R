@@ -190,7 +190,7 @@ RUE_N <- ggplot(subset(RUE12, nutrient == 'N_RUE'), aes(x = day, y = value, colo
          text = element_text(size=26))
 RUE_N
 plot_grid(total, phyto, RUE_N,zoo,  label_size = 20, labels = c('A','B','C','D'), hjust= c(-3),ncol = 2, rel_heights = c(1,1,1,1), rel_widths = c(1,1,1,1))
-ggsave(plot = last_plot(), file = 'Biomass.jpeg', width = 13, height = 11)
+#ggsave(plot = last_plot(), file = 'Biomass.jpeg', width = 13, height = 11)
 
 
 RUE_P <- ggplot(subset(RUE12, nutrient == 'P_RUE'), aes(x = day, y = value, color = fluctuation))+
@@ -207,10 +207,10 @@ RUE_P <- ggplot(subset(RUE12, nutrient == 'P_RUE'), aes(x = day, y = value, colo
          legend.key = element_blank(),
          text = element_text(size=26))
 RUE_P
-ggsave(plot = last_plot(), file = 'legendi.jpeg', width = 9, height = 5)
+#ggsave(plot = last_plot(), file = 'legendi.jpeg', width = 9, height = 5)
 
 plot_grid(dissNP,RUE_P,  label_size = 20, labels = c('A','B'),  hjust = -3, vjust = 1,ncol = 2, rel_heights = c(1,1,1,1), rel_widths = c(1,1,1,1))
-ggsave(plot = last_plot(), file = 'Fig3S.jpeg', width = 10, height = 5)
+#ggsave(plot = last_plot(), file = 'Fig3S.jpeg', width = 10, height = 5)
 
 #plot_grid(RUE_N, RUE_P,labels=c("A","B", 'C', 'D'),ncol = 2, label_size = 17.5, hjust = 0, vjust = 1.2)
 
@@ -280,7 +280,7 @@ NP
 
 
 plot_grid(CN, CP,CSi,NP, labels=c("A","B", 'C', 'D'),ncol = 2, label_size = 20, hjust = 0, vjust = 1)
-ggsave(plot = last_plot(), file = 'MolarRatio.png', width = 11, height = 9)
+#ggsave(plot = last_plot(), file = 'MolarRatio.png', width = 11, height = 9)
 
 ## dissolved nutrients ####
 diss <- Mastertable_fluctron %>%
@@ -341,7 +341,7 @@ dissSi <- ggplot(subset(diss, nutrient == 'diss_Si') , aes( x = day, y = value,c
 dissSi
 
 plot_grid(dissN, dissP,dissSi, labels=c("A","B", 'C', 'D'),ncol = 3, label_size = 18, hjust = 0, vjust = 1)
-ggsave(plot = last_plot(), file = 'DissNutrients.png', width = 13, height = 5)
+#ggsave(plot = last_plot(), file = 'DissNutrients.png', width = 13, height = 5)
 
 #### Phytoplankton Diversity ####
 
@@ -371,6 +371,8 @@ all_data <- left_join(counts, df, by = c('MC'))
 
 shannon_BV <- all_data %>%
   select(-phylum, -grid_length, -magnification, -'stripes/grids',-date, -volume, -counts) %>%
+  mutate(cells_ml = gsub(',', '.', cells_ml),
+         cells_ml = as.numeric(cells_ml)) %>%
   spread(key = species, value = cells_ml) %>%
   group_by(treatment_id, sampling) %>%
   separate(treatment_id, into = c('treatment', 'fluctuation'), '_')%>%  
@@ -403,12 +405,6 @@ diversity <- shannon_BV %>%
 #change levels
 diversity$fluctuation <- factor(as.factor(diversity$fluctuation),levels=c("0", "48", "36", '24', '12', '6'))
 
-#richness plots with raw data
-ggplot(diversity, aes(x = sampling, y = no, group = fluctuation)) +
-  geom_point(aes(color = fluctuation), pch =21, size=3)+
-  geom_smooth(aes(color = fluctuation),method = lm, se = F,formula =  y ~ x, size = 1)+  
-  scale_color_manual(values = c( '#000000','#0868ac','#41b6c4','#31a354','#addd8e','#fed976'))
-  
 
 #plot for species richness or shannon
 specRich<-ggplot(diversity, aes(x = sampling, y = log, group = fluctuation)) +
@@ -467,7 +463,7 @@ counts$cells_ml <- as.numeric(gsub(",", ".", counts$cells_ml))
 counts$MC = as.character(counts$MC)
 counts$cells_ml[is.na(counts$cells_ml)] <-0
 
-
+#merge data
 all_data <- left_join(counts, df, by = c('MC')) 
 
 #copy sampling 0 data to replicates
@@ -549,7 +545,7 @@ distance <- ggplot(data.dist1, aes(x = sampling2, y = mean.dist, group = Fluctua
          text = element_text(size=26))
 #save plots in grid
 plot_grid(specRich, specSimp, distance, labels=c("A","B", 'C'),ncol = 3, label_size = 18, hjust = -0.5, vjust = 1.1)
-ggsave(plot = last_plot(), file = 'specDiv.jpeg', width = 11, height = 5)
+#ggsave(plot = last_plot(), file = 'specDiv.jpeg', width = 12, height = 5)
 
 #### composition: stacked barplot ####
 #import  data 
@@ -610,7 +606,7 @@ species <- ggplot(rel_BV, aes( x = day, y = rel_V))+
           legend.key = element_blank(),
           text = element_text(size=20))
 species
-ggsave(plot=species, file = 'rel_ab_perspecies.png', width = 15, height = 9)
+#ggsave(plot=species, file = 'rel_ab_perspecies.png', width = 15, height = 9)
  
 #new df for dominant groups
 groups <- all_data%>%
@@ -647,7 +643,7 @@ group <- ggplot(groups, aes( x = day, y = rel_V))+
           legend.position  ='bottom',
           legend.key = element_blank(),
           text = element_text(size=20))
-ggsave(plot=group, file = 'rel_group.png', width = 15, height = 9)
+#ggsave(plot=group, file = 'rel_group.png', width = 15, height = 9)
 
 
 ##############################################################################
@@ -691,4 +687,4 @@ ggplot(Zoo_dominant_Groups, aes( x = day, y = rel_ab))+
           legend.background = element_blank(),
           legend.position  ='bottom',
           legend.key = element_blank())#
-ggsave(plot = last_plot(),'zooplanktongroups-relab.png', width = 8, height = 4)          
+#ggsave(plot = last_plot(),'zooplanktongroups-relab.png', width = 8, height = 4)          
