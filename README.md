@@ -13,7 +13,7 @@ List of R scripts:
 
 
 List of data files: 
-*Mastertable_fluctron.xlsx* - all data and meta data for phytoplankton and zooplankton biomass, abundance, pigment composition and stoichiometry.
+*Mastertable_fluctron.xlsx* - all data and meta data for phytoplankton and zooplankton biomass, abundance and stoichiometry.
 
 *phyto_new.csv* - Phytoplankton count data 
 
