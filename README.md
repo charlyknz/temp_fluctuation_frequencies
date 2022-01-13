@@ -3,6 +3,9 @@ R script used for the manuscript 'Phytoplankton community performance depends on
 
 by Charlotte Kunze, Miriam Gerhard, Marrit Jacob, Niklas Alexander Franke, Matthias Schröder, Maren Striebel
 
+Citation: 
+Kunze C, Gerhard M, Jacob M, Franke NA, Schröder M and Striebel M (2022). Phytoplankton Community Performance Depends on the Frequency of Temperature Fluctuations. Front. Mar. Sci. 8:812902. doi: 10.3389/fmars.2021.812902
+
 List of R scripts: 
 *PublicationPloets_loss.R* - script to create figures 
 
